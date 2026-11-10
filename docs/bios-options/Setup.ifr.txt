@@ -1,0 +1,3627 @@
+Program version: 1.6.1, Extraction mode: UEFI, SHA256: 3ca82d35ede1ce585332432de34fe43ecec2329da506770e2bbc892ceb8f2fe3
+FormSet Guid: 7B59104A-C00D-4158-87FF-F04D6396A915, Title: "Setup", Help: "Setup"
+	Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Class, Class: 0x1
+	Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: SubClass, SubClass: 0x0
+	DefaultStore DefaultId: 0x0, Name: ""
+	DefaultStore DefaultId: 0x1, Name: ""
+	VarStore Guid: EC87D643-EBA4-4BB5-A1E5-3F3E36B20DA9, VarStoreId: 0xF101, Size: 0xBE, Name: "Setup"
+	VarStore Guid: 8BE4DF61-93CA-11D2-AA0D-00E098032B8C, VarStoreId: 0xF009, Size: 0x2, Name: "PlatformLang"
+	VarStore Guid: 8BE4DF61-93CA-11D2-AA0D-00E098032B8C, VarStoreId: 0xF00A, Size: 0x2, Name: "PlatformLangCodes"
+	VarStore Guid: E770BB69-BCB4-4D04-9E97-23FF9456FEAC, VarStoreId: 0xF000, Size: 0x1, Name: "SystemAccess"
+	VarStore Guid: 9CF0F18E-7C7D-49DE-B5AA-BBBAD6B21007, VarStoreId: 0xF002, Size: 0x2, Name: "AMICallback"
+	VarStore Guid: C811FA38-42C8-4579-A9BB-60E94EDDFB34, VarStoreId: 0xF013, Size: 0x51, Name: "AMITSESetup"
+	VarStore Guid: B4909CF3-7B93-4751-9BD8-5BA8220B9BB2, VarStoreId: 0xF003, Size: 0x2, Name: "BootManager"
+	VarStore Guid: 8BE4DF61-93CA-11D2-AA0D-00E098032B8C, VarStoreId: 0xF005, Size: 0x2, Name: "Timeout"
+	VarStore Guid: 8BE4DF61-93CA-11D2-AA0D-00E098032B8C, VarStoreId: 0xF006, Size: 0x2, Name: "BootOrder"
+	VarStore Guid: 19D96D3F-6A6A-47D2-B195-7B2432DA3BE2, VarStoreId: 0xF00D, Size: 0x11C, Name: "AddBootOption"
+	VarStore Guid: F6C73719-F34C-479C-B32F-277FCBBCFE4F, VarStoreId: 0xF00E, Size: 0x2, Name: "DelBootOption"
+	VarStore Guid: A56074DB-65FE-45F7-BD21-2D2BDD8E9652, VarStoreId: 0xF007, Size: 0x2, Name: "LegacyDev"
+	VarStore Guid: A56074DB-65FE-45F7-BD21-2D2BDD8E9652, VarStoreId: 0xF016, Size: 0x2, Name: "LegacyGroup"
+	VarStore Guid: A56074DB-65FE-45F7-BD21-2D2BDD8E9652, VarStoreId: 0xF008, Size: 0x2, Name: "LegacyDevOrder"
+	VarStore Guid: 052E6EB0-F240-42C5-8309-45874545C6B4, VarStoreId: 0xF014, Size: 0x2, Name: "BootNowCount"
+	VarStore Guid: C57AD6B7-0515-40A8-9D21-551652854E37, VarStoreId: 0xF00B, Size: 0x2, Name: "Shell"
+	VarStore Guid: 31151F3D-2A7B-4A74-B13D-1D3A16D38A19, VarStoreId: 0x1, Size: 0x2, Name: "OemSetupFlagVolatile"
+	VarStore Guid: 438844C8-7D28-49C4-8328-0ECECFF585C2, VarStoreId: 0x2, Size: 0x2, Name: "PushButtonResetTrigger"
+	VarStore Guid: B66B8637-96C0-4615-B8BD-D98EFD5D3B17, VarStoreId: 0x3, Size: 0x1, Name: "AmiAmdSbSuppressIfSetupData"
+	VarStore Guid: C0F8BDA9-52C8-40DD-92FC-6EFFFEF9524A, VarStoreId: 0x4, Size: 0x1, Name: "AmiSbXhciSwitchSuppressIfSetupData"
+	VarStore Guid: EC87D643-EBA4-4BB5-A1E5-3F3E36B20DA9, VarStoreId: 0x5, Size: 0x7, Name: "SetupCpuFeatures"
+	VarStore Guid: C0B4FB05-15E5-4588-9FE9-B3D39C067715, VarStoreId: 0x6, Size: 0x2, Name: "DriverManager"
+	VarStore Guid: 8BE4DF61-93CA-11D2-AA0D-00E098032B8C, VarStoreId: 0x7, Size: 0x2, Name: "DriverOrder"
+	VarStore Guid: C143929C-BF5D-423B-999B-0F2DD2B61FF7, VarStoreId: 0x8, Size: 0x2, Name: "AmiGopPolicySetupData"
+	VarStoreEfi Guid: EC87D643-EBA4-4BB5-A1E5-3F3E36B20DA9, VarStoreId: 0x9, Attributes: 0x2, Size: 0x2, Name: "UsbMassDevNum"
+	VarStoreEfi Guid: EC87D643-EBA4-4BB5-A1E5-3F3E36B20DA9, VarStoreId: 0xA, Attributes: 0x2, Size: 0x20, Name: "UsbMassDevValid"
+	VarStoreEfi Guid: EC87D643-EBA4-4BB5-A1E5-3F3E36B20DA9, VarStoreId: 0xB, Attributes: 0x2, Size: 0x4, Name: "UsbControllerNum"
+	VarStoreEfi Guid: EC87D643-EBA4-4BB5-A1E5-3F3E36B20DA9, VarStoreId: 0xC, Attributes: 0x3, Size: 0x31, Name: "UsbSupport"
+	VarStore Guid: D1405D16-7AFC-4695-BB12-41459D3695A2, VarStoreId: 0xD, Size: 0x8, Name: "NetworkStackVar"
+	VarStore Guid: B0DAFBEB-C686-427F-83C8-F4839FE944B4, VarStoreId: 0xDDDD, Size: 0x2C, Name: "HddSecDynamicSetup"
+	VarStore Guid: C9456C5D-6CA5-4B5B-B1B2-C75C905BB90F, VarStoreId: 0xE, Size: 0x5, Name: "NvmeDriverManager"
+	VarStore Guid: 7B59104A-C00D-4158-87FF-F04D6396A915, VarStoreId: 0xF, Size: 0x7, Name: "SecureBootSetup"
+	VarStore Guid: 7B59104A-C00D-4158-87FF-F04D6396A915, VarStoreId: 0x10, Size: 0x6, Name: "SecureVarPresent"
+	VarStore Guid: 8BE4DF61-93CA-11D2-AA0D-00E098032B8C, VarStoreId: 0x11, Size: 0x1, Name: "VendorKeys"
+	VarStore Guid: 8BE4DF61-93CA-11D2-AA0D-00E098032B8C, VarStoreId: 0x12, Size: 0x1, Name: "SetupMode"
+	VarStore Guid: 8BE4DF61-93CA-11D2-AA0D-00E098032B8C, VarStoreId: 0x13, Size: 0x1, Name: "SecureBoot"
+	VarStore Guid: 8BE4DF61-93CA-11D2-AA0D-00E098032B8C, VarStoreId: 0x14, Size: 0x1, Name: "AuditMode"
+	VarStore Guid: 8BE4DF61-93CA-11D2-AA0D-00E098032B8C, VarStoreId: 0x15, Size: 0x1, Name: "DeployedMode"
+	VarStore Guid: 2798F49D-F760-480B-8055-916940C27740, VarStoreId: 0xDDDF, Size: 0x4A, Name: "TcgStorageDynamicSetupVar"
+	VarStore Guid: 0C923CA9-DF73-4AC8-B6D2-98DDC30D99FC, VarStoreId: 0x290C, Size: 0x1B, Name: "FixedBootPriorities"
+	VarStore Guid: 0C923CA9-DF73-4AC8-B6D2-98DDC30D99FC, VarStoreId: 0x290D, Size: 0x23, Name: "FixedBootGroup"
+	VarStore Guid: 0C923CA9-DF73-4AC8-B6D2-98DDC30D99FC, VarStoreId: 0x290E, Size: 0x23, Name: "FboSubmenuShow"
+	VarStore Guid: B63BF800-F267-4F55-9217-E97FB3B69846, VarStoreId: 0xF018, Size: 0x2, Name: "DynamicPageCount"
+	Form FormId: 0x2710, Title: "Setup"
+		Ref Prompt: "Main", Help: "", QuestionFlags: 0x0, QuestionId: 0x1, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2711
+		Ref Prompt: "Advanced", Help: "", QuestionFlags: 0x0, QuestionId: 0x2, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2712
+		SuppressIf 
+			EqIdVal QuestionId: 0x8, Value: 0x1
+			Ref Prompt: "Advanced", Help: "", QuestionFlags: 0x0, QuestionId: 0x3, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2713
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x8, Value: 0x1
+			Ref Prompt: "Chipset", Help: "", QuestionFlags: 0x0, QuestionId: 0x4, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2714
+		End 
+		Ref Prompt: "Security", Help: "", QuestionFlags: 0x0, QuestionId: 0x5, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2715
+		Ref Prompt: "Boot", Help: "", QuestionFlags: 0x0, QuestionId: 0x6, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2716
+		Ref Prompt: "Save & Exit", Help: "", QuestionFlags: 0x0, QuestionId: 0x7, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2717
+	End 
+	Form FormId: 0x2711, Title: "Main"
+		Subtitle Prompt: "BIOS Information", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x8, Value: 0x1
+			Text Prompt: "BIOS Vendor", Help: "", Text: "N/A"
+			Text Prompt: "Core Version", Help: "", Text: "N/A"
+			Text Prompt: "Compliancy", Help: "", Text: "N/A"
+		End 
+		Text Prompt: "BIOS Version", Help: "", Text: "N/A"
+		Text Prompt: "Build Date and Time", Help: "", Text: "N/A"
+		SuppressIf 
+			EqIdVal QuestionId: 0x8, Value: 0x1
+			SuppressIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x0
+				Text Prompt: "Access Level", Help: "", Text: "User"
+			End 
+			SuppressIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				Text Prompt: "Access Level", Help: "", Text: "Administrator"
+			End 
+		End 
+		Text Prompt: "EC Version", Help: "", Text: "N/A"
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "Product Information", Help: "", Flags: 0x0
+		End 
+		Text Prompt: "Manufacturer Name", Help: "", Text: "To be filled by O.E.M."
+		Text Prompt: "Product Name", Help: "", Text: "To be filled by O.E.M."
+		Text Prompt: "Serial Number", Help: "", Text: "To be filled by O.E.M."
+		Text Prompt: "BaseBoard Serial Number", Help: "", Text: "To be filled by O.E.M."
+		Text Prompt: "Asset Tag", Help: "", Text: "To be filled by O.E.M."
+		Text Prompt: "SKU Number", Help: "", Text: "To be filled by O.E.M."
+		Text Prompt: "UUID Number", Help: "", Text: "To be filled by O.E.M."
+		SuppressIf 
+			EqIdValList QuestionId: 0x13F, Values: [0]
+			Text Prompt: "Ethernet MAC Address", Help: "", Text: "N/A"
+		End 
+		SuppressIf 
+			EqIdValList QuestionId: 0x13F, Values: [0, 1]
+			Text Prompt: "Ethernet MAC Address 2", Help: "", Text: "N/A"
+		End 
+		SuppressIf 
+			EqIdValList QuestionId: 0x13E, Values: [0]
+			Text Prompt: "Ethernet MAC Address", Help: "", Text: "N/A"
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "Processor", Help: "", Flags: 0x0
+		End 
+		Text Prompt: "Processor Type", Help: "", Text: "N/A"
+		Text Prompt: "Processor Speed", Help: "", Text: "N/A"
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "NVMe Information", Help: "", Flags: 0x0
+		End 
+		Text Prompt: "M.2 SSD (NVME)", Help: "", Text: "[Not Installed]"
+		Text Prompt: "M.2 SSD (NVME)", Help: "", Text: "[Not Installed]"
+		SuppressIf 
+			True 
+			OneOf Prompt: "Setup Item Hide Control", Help: "Setup Item Hide Control", QuestionFlags: 0x10, QuestionId: 0x8, VarStoreId: 0xF101, VarOffset: 0x2, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1
+				Default DefaultId: 0x0 Value: 1
+				Default DefaultId: 0x1 Value: 1
+			End 
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "Memory Information", Help: "", Flags: 0x0
+		End 
+		Text Prompt: "Total Memory", Help: "Total Memory in the System.", Text: "N/A"
+		Text Prompt: "Memory Frequency", Help: "", Text: "N/A"
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			Uint64 Value: 0x1
+			SuppressIf 
+				EqIdVal QuestionId: 0x13D, Value: 0xFFFF
+				OneOf Prompt: "System Language", Help: "Choose the system default language", QuestionFlags: 0x0, QuestionId: 0x9, VarStoreId: 0xF009, VarOffset: 0x0, Flags: 0x11, Size: 16, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "" Value: 0
+					OneOfOption Option: "" Value: 1
+					Default DefaultId: 0x0 Value: 0
+					Default DefaultId: 0x1 Value: 0
+				End 
+			End 
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Date Prompt: "System Date", Help: "Set the Date. Use Tab to switch between Date elements.
+Default Ranges: 
+Year: 2000-2099 
+Months: 1-12 
+Days: Dependent on month
+Range of Years may vary.", QuestionFlags: 0x0, QuestionId: 0xA, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, Flags: 0x10
+			Default DefaultId: 0x0 Value: 2014-01-01
+		End 
+		Time Prompt: "System Time", Help: "Set the Time. Use Tab to switch between Time elements.", QuestionFlags: 0x0, QuestionId: 0xB, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, Flags: 0x10
+			Default DefaultId: 0x0 Value: 00:00:00
+		End 
+	End 
+	Form FormId: 0x2712, Title: "Advanced"
+		SuppressIf 
+			EqIdVal QuestionId: 0x8, Value: 0x1
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				OneOf Prompt: "BIOS Flash Enable", Help: "Enable/Disable BIOS Update Flash support,if disable,BIOS will can not be updated", QuestionFlags: 0x10, QuestionId: 0xC, VarStoreId: 0xF101, VarOffset: 0x9F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Disabled" Value: 0
+					OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+				End 
+				OneOf Prompt: "Wake On LAN", Help: "Enable/Disable Wake On Lan function.", QuestionFlags: 0x14, QuestionId: 0x291E, VarStoreId: 0xF101, VarOffset: 0x9E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Disabled" Value: 0
+					OneOfOption Option: "Enabled" Value: 1
+					Default DefaultId: 0x0 Value: 1
+					Default DefaultId: 0x1 Value: 1
+				End 
+				OneOf Prompt: "USB Boot", Help: "Enable/Disable USB Boot Support.", QuestionFlags: 0x10, QuestionId: 0xD, VarStoreId: 0xC, VarOffset: 0x2F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Disabled" Value: 0
+					OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+				End 
+			End 
+			Subtitle Prompt: "", Help: "", Flags: 0x0
+			End 
+		End 
+		Ref Prompt: "GFX Configuration", Help: "Integrated Graphics Settings", QuestionFlags: 0x0, QuestionId: 0xE, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2922
+		Ref Prompt: "Trusted Computing", Help: "Trusted Computing Settings", QuestionFlags: 0x0, QuestionId: 0xF, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2923
+		Ref Prompt: "CPU Configuration", Help: "CPU Configuration Parameters", QuestionFlags: 0x0, QuestionId: 0x10, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2920
+		Ref Prompt: "Memory Configuration", Help: "Memory Settings", QuestionFlags: 0x0, QuestionId: 0x11, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2924
+		Ref Prompt: "I/O Port Access", Help: "I/O Port Access Settings", QuestionFlags: 0x0, QuestionId: 0x12, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x292D
+	End 
+	Form FormId: 0x2920, Title: "CPU Configuration"
+		Subtitle Prompt: "CPU Configuration", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			OneOf Prompt: "NX Mode", Help: "Enable/disable No-execute page protection Function", QuestionFlags: 0x10, QuestionId: 0x13, VarStoreId: 0xF101, VarOffset: 0x50, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+			End 
+			OneOf Prompt: "Virtualization Technology", Help: "Enable/disable CPU Virtualization", QuestionFlags: 0x10, QuestionId: 0x14, VarStoreId: 0xF101, VarOffset: 0xA3, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1
+				OneOfOption Option: "Auto" Value: 255, Default, MfgDefault
+			End 
+			OneOf Prompt: "IOMMU(AMD-Vi)", Help: "Enable/Disable IOMMU(AMD-Vi)
+Hardware Virtualization", QuestionFlags: 0x10, QuestionId: 0x15, VarStoreId: 0xF101, VarOffset: 0xA2, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1
+				OneOfOption Option: "Auto" Value: 15, Default, MfgDefault
+			End 
+			OneOf Prompt: "AMD SMT(Hyper-Threading)", Help: "Enables or disables AMD SMT (multiple threads per core).", QuestionFlags: 0x10, QuestionId: 0x16, VarStoreId: 0xF101, VarOffset: 0xA0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+			End 
+			OneOf Prompt: "Core Performance Boost", Help: "Enable/disable Core Performance Boost(CPU Turbo)", QuestionFlags: 0x10, QuestionId: 0x17, VarStoreId: 0xF101, VarOffset: 0xA1, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+			End 
+		End 
+	End 
+	Form FormId: 0x2921, Title: "PCI Subsystem Settings"
+		Subtitle Prompt: "PCI, PCI-X and PCI Express Settings.", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			OneOf Prompt: "Above 4G Decoding", Help: "Enables or Disables 64bit capable Devices to be Decoded in Above 4G Address Space (Only if System Supports 64 bit PCI Decoding).", QuestionFlags: 0x10, QuestionId: 0x18, VarStoreId: 0xF101, VarOffset: 0x71, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1
+				Default DefaultId: 0x0 Value: 1
+				Default DefaultId: 0x1 Value: 1
+			End 
+		End 
+	End 
+	Form FormId: 0x2922, Title: "GFX Configuration"
+		Subtitle Prompt: "GFX Configuration", Help: "", Flags: 0x0
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			OneOf Prompt: "iGPU Configuration", Help: "Auto:Need reboot system for get UMA Frame buffer Size", QuestionFlags: 0x10, QuestionId: 0x19, VarStoreId: 0xF101, VarOffset: 0xA4, Flags: 0x10, Size: 8, Min: 0x1, Max: 0xF, Step: 0x0
+				OneOfOption Option: "Auto" Value: 15, Default
+				OneOfOption Option: "UMA_SPECIFIED" Value: 1
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x19, Value: 0x1
+					Not 
+				End 
+				SuppressIf 
+					QuestionRef1 QuestionId: 0x13C
+						Uint8 Value: 0x20
+						LessThan 
+						Not 
+					End 
+					OneOf Prompt: "UMA Frame buffer Size", Help: "Set UMA FB size", QuestionFlags: 0x10, QuestionId: 0x1A, VarStoreId: 0xF101, VarOffset: 0xA5, Flags: 0x12, Size: 32, Min: 0x200, Max: 0x2000, Step: 0x0
+						OneOfOption Option: "512M" Value: 512
+						OneOfOption Option: "1G" Value: 1024
+						OneOfOption Option: "2G" Value: 2048
+						OneOfOption Option: "3G" Value: 3072, Default, MfgDefault
+						OneOfOption Option: "4G" Value: 4096
+						OneOfOption Option: "6G" Value: 6144
+						OneOfOption Option: "8G" Value: 8192
+					End 
+				End 
+				SuppressIf 
+					QuestionRef1 QuestionId: 0x13C
+						Uint8 Value: 0x20
+						GreaterEqual 
+						Not 
+					End 
+					OneOf Prompt: "UMA Frame buffer Size", Help: "Set UMA FB size", QuestionFlags: 0x10, QuestionId: 0x1B, VarStoreId: 0xF101, VarOffset: 0xA5, Flags: 0x12, Size: 32, Min: 0x200, Max: 0x4000, Step: 0x0
+						OneOfOption Option: "512M" Value: 512
+						OneOfOption Option: "1G" Value: 1024
+						OneOfOption Option: "2G" Value: 2048
+						OneOfOption Option: "3G" Value: 3072, Default, MfgDefault
+						OneOfOption Option: "4G" Value: 4096
+						OneOfOption Option: "6G" Value: 6144
+						OneOfOption Option: "8G" Value: 8192
+						OneOfOption Option: "12G" Value: 12288
+						OneOfOption Option: "16G" Value: 16384
+					End 
+				End 
+			End 
+		End 
+	End 
+	Form FormId: 0x2923, Title: "Trusted Computing"
+		Subtitle Prompt: "Trusted Computing", Help: "", Flags: 0x0
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			OneOf Prompt: "AMD fTPM switch", Help: "To select Enable fTPM or Disable fTPM.", QuestionFlags: 0x10, QuestionId: 0x1C, VarStoreId: 0xF101, VarOffset: 0x18, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "fTPM Disabled" Value: 0
+				OneOfOption Option: "fTPM Enabled" Value: 1, Default, MfgDefault
+			End 
+		End 
+	End 
+	Form FormId: 0x2924, Title: "Memory Configuration"
+		Subtitle Prompt: "Memory Configuration", Help: "", Flags: 0x0
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			OneOf Prompt: "Maximum Memory Data Clock Speed", Help: "Specifies the maximum memory target speed in MT/s.
+The system will automatically limit to the highest supported speed if user input exceeds the maximum supported speed.", QuestionFlags: 0x10, QuestionId: 0x1D, VarStoreId: 0xF101, VarOffset: 0xA9, Flags: 0x11, Size: 16, Min: 0xC80, Max: 0xFFFF, Step: 0x0
+				OneOfOption Option: "Auto" Value: 65535
+				OneOfOption Option: "3200MT/s" Value: 3200
+				OneOfOption Option: "4267MT/s" Value: 4267
+				OneOfOption Option: "5500MT/s" Value: 5500
+				OneOfOption Option: "6400MT/s" Value: 6400
+				OneOfOption Option: "7500MT/S" Value: 7500
+				Default DefaultId: 0x0 Value: 6400
+				Default DefaultId: 0x1 Value: 6400
+			End 
+		End 
+	End 
+	Form FormId: 0x2925, Title: "EC Related Control"
+		Subtitle Prompt: "EC Related Control", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+		End 
+	End 
+	Form FormId: 0x292D, Title: "I/O Port Access"
+		Subtitle Prompt: "I/O Port Access", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			OneOf Prompt: "M.2 SSD Port #1", Help: "Enable/Disable M.2 SSD Port #1", QuestionFlags: 0x10, QuestionId: 0x1E, VarStoreId: 0xF101, VarOffset: 0xB4, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+			End 
+			OneOf Prompt: "M.2 SSD Port #2", Help: "Enable/Disable M.2 SSD Port #2", QuestionFlags: 0x10, QuestionId: 0x1F, VarStoreId: 0xF101, VarOffset: 0xB5, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+			End 
+			OneOf Prompt: "Wi-Fi", Help: "Enable/Disable Wireless LAN", QuestionFlags: 0x10, QuestionId: 0x20, VarStoreId: 0xF101, VarOffset: 0xB6, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+			End 
+			OneOf Prompt: "HD Audio", Help: "Enable/Disable OnBoard Audio Support", QuestionFlags: 0x10, QuestionId: 0x21, VarStoreId: 0xF101, VarOffset: 0xB8, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+			End 
+			SuppressIf 
+				EqIdVal QuestionId: 0x21, Value: 0x0
+			End 
+			OneOf Prompt: "Touchpad", Help: "Enable/Disable Touchpad", QuestionFlags: 0x10, QuestionId: 0x22, VarStoreId: 0xF101, VarOffset: 0xBA, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 4
+				OneOfOption Option: "Enabled" Value: 0, Default, MfgDefault
+			End 
+			Subtitle Prompt: "", Help: "", Flags: 0x0
+			End 
+			OneOf Prompt: "Webcam", Help: "Enable/Disable Integrated Camera", QuestionFlags: 0x14, QuestionId: 0x2926, VarStoreId: 0xF101, VarOffset: 0x41, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+			End 
+			OneOf Prompt: "Bluetooth", Help: "Enable/Disable Bluetooth", QuestionFlags: 0x14, QuestionId: 0x2927, VarStoreId: 0xF101, VarOffset: 0x42, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+			End 
+			OneOf Prompt: "Card Reader", Help: "Enable/Disable Card Reader", QuestionFlags: 0x14, QuestionId: 0x2928, VarStoreId: 0xF101, VarOffset: 0x40, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+			End 
+			OneOf Prompt: "USB-C Port Left Back", Help: "Enable/Disable USB-C Port Left Back", QuestionFlags: 0x14, QuestionId: 0x2929, VarStoreId: 0xF101, VarOffset: 0x45, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+			End 
+			OneOf Prompt: "USB-C Port Left Front", Help: "Enable/Disable USB-C Port Left Front", QuestionFlags: 0x14, QuestionId: 0x292A, VarStoreId: 0xF101, VarOffset: 0x47, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+			End 
+			OneOf Prompt: "USB3-A Port Right", Help: "Enable/Disable USB3-A Port Right", QuestionFlags: 0x14, QuestionId: 0x292B, VarStoreId: 0xF101, VarOffset: 0x3D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+			End 
+			OneOf Prompt: "USB3-A Port Left", Help: "Enable/Disable USB3-A Port Left", QuestionFlags: 0x14, QuestionId: 0x292C, VarStoreId: 0xF101, VarOffset: 0x3C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+			End 
+		End 
+	End 
+	Form FormId: 0x2713, Title: "Advanced"
+		SuppressIf 
+			EqIdVal QuestionId: 0x13B, Value: 0x1
+			SuppressIf 
+				EqIdVal QuestionId: 0x13A, Value: 0x1
+					EqIdVal QuestionId: 0x139, Value: 0x1
+					Or 
+				End 
+				Ref Prompt: "Trusted Computing", Help: "Trusted Computing Settings", QuestionFlags: 0x0, QuestionId: 0x23, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x271B
+			End 
+			SuppressIf 
+				EqIdVal QuestionId: 0x13A, Value: 0x0
+					EqIdVal QuestionId: 0x139, Value: 0x1
+					Or 
+				End 
+				Ref Prompt: "Trusted Computing", Help: "Trusted Computing Settings", QuestionFlags: 0x0, QuestionId: 0x24, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x271C
+			End 
+			SuppressIf 
+				EqIdVal QuestionId: 0x139, Value: 0x0
+				Ref Prompt: "Trusted Computing", Help: "Trusted Computing Settings", QuestionFlags: 0x0, QuestionId: 0x25, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x271A
+			End 
+		End 
+		Ref Prompt: "AMD fTPM configuration", Help: "AMD fTPM Settings", QuestionFlags: 0x0, QuestionId: 0x26, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x271D
+		Ref Prompt: "ACPI Settings", Help: "System ACPI Parameters.", QuestionFlags: 0x0, QuestionId: 0x27, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x271E
+		Ref Prompt: "AMD CBS", Help: "AMD CBS Setup Page", QuestionFlags: 0x0, QuestionId: 0x28, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x7000, RefQuestionId: 0x0, FormSetGuid: BFB68FED-210C-41FD-B7C9-9E41468C74F9
+		Ref Prompt: "AMD PBS", Help: "AMD PBS Setup Page", QuestionFlags: 0x0, QuestionId: 0x29, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0xB, RefQuestionId: 0x0, FormSetGuid: B863B959-0EC6-4033-99C1-8FD89F040222
+		Ref Prompt: "UEFI Variables Protection", Help: "NVRAM Runtime Variable Protection Settings", QuestionFlags: 0x0, QuestionId: 0x2A, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x272E
+		Ref Prompt: "CPU Configuration", Help: "CPU Configuration Parameters", QuestionFlags: 0x0, QuestionId: 0x2B, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2730
+		Ref Prompt: "IDE Configuration", Help: "IDE Configuration", QuestionFlags: 0x0, QuestionId: 0x2C, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x1, RefQuestionId: 0x0, FormSetGuid: 4FB6EC2A-AC01-4EC7-AD06-21ADD5BD461F
+		Ref Prompt: "AmiAgesaChipsetWrapper Configuration", Help: "AmiAgesaChipsetWrapper Configuration Parameters", QuestionFlags: 0x0, QuestionId: 0x2D, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2736
+		SuppressIf 
+			EqIdVal QuestionId: 0x138, Value: 0x0
+			Ref Prompt: "AMI Graphic Output Protocol Policy", Help: "User Select Monitor Output by Graphic Output Protocol", QuestionFlags: 0x0, QuestionId: 0x2E, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2740
+		End 
+		Ref Prompt: "Debug Port Table Configuration", Help: "Enable or Disable DBGP and DBG2 Tables", QuestionFlags: 0x4, QuestionId: 0x2741, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2742
+		Ref Prompt: "PCI Subsystem Settings", Help: "PCI, PCI-X and PCI Express Settings.", QuestionFlags: 0x0, QuestionId: 0x2F, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2743
+		Ref Prompt: "USB Configuration", Help: "USB Configuration Parameters", QuestionFlags: 0x0, QuestionId: 0x30, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2747
+		Ref Prompt: "NVMe Configuration", Help: "NVMe Device Options Settings", QuestionFlags: 0x0, QuestionId: 0x31, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x27F2
+		SuppressIf 
+			True 
+			Ref Prompt: "Demo Board", Help: "Demo Board Parameters", QuestionFlags: 0x0, QuestionId: 0x32, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x291B
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			EqIdValList QuestionId: 0x137, Values: [65535]
+			Ref Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x33, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2713
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+	End 
+	Form FormId: 0x271A, Title: "Trusted Computing"
+		Subtitle Prompt: "Configuration", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "AMD fTPM switch", Help: "To select Enable fTPM or Disable fTPM.", QuestionFlags: 0x10, QuestionId: 0x34, VarStoreId: 0xF101, VarOffset: 0x18, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "fTPM Disabled" Value: 0
+			OneOfOption Option: "fTPM Enabled" Value: 1, Default, MfgDefault
+		End 
+		Text Prompt: "  NO Security Device Found", Help: "", Text: ""
+	End 
+	Form FormId: 0x271B, Title: "Trusted Computing"
+		Subtitle Prompt: "Configuration", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x135, Value: 0x0
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				OneOf Prompt: "AMD fTPM switch", Help: "To select Enable fTPM or Disable fTPM.", QuestionFlags: 0x10, QuestionId: 0x35, VarStoreId: 0xF101, VarOffset: 0x18, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "fTPM Disabled" Value: 0
+					OneOfOption Option: "fTPM Enabled" Value: 1, Default, MfgDefault
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x135, Value: 0x0
+				EqIdVal QuestionId: 0x35, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				OneOf Prompt: "  TPM State", Help: "Enable/Disable Security Device. NOTE: Your Computer will reboot during restart in order to change State of the Device.", QuestionFlags: 0x10, QuestionId: 0x36, VarStoreId: 0xF101, VarOffset: 0x13, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "fTPM Disabled" Value: 0
+					OneOfOption Option: "fTPM Enabled" Value: 1, Default, MfgDefault
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x135, Value: 0x0
+				EqIdVal QuestionId: 0x35, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x136, Value: 0x1
+					Or 
+					EqIdVal QuestionId: 0x36, Value: 0x0
+					Or 
+				End 
+				OneOf Prompt: "Pending operation", Help: "Schedule an Operation for the Security Device. NOTE: Your Computer will reboot during restart in order to change State of Security Device.", QuestionFlags: 0x10, QuestionId: 0x37, VarStoreId: 0xF101, VarOffset: 0x14, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x5, Step: 0x0
+					OneOfOption Option: "None" Value: 0, Default, MfgDefault
+					OneOfOption Option: "TPM Clear" Value: 5
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x134, Value: 0x0
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				OneOf Prompt: "  Security Device Support", Help: "To select Enable fTPM or Disable fTPM.", QuestionFlags: 0x10, QuestionId: 0x38, VarStoreId: 0xF101, VarOffset: 0x18, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Disable" Value: 0
+					OneOfOption Option: "Enable" Value: 1, Default, MfgDefault
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x134, Value: 0x0
+				EqIdVal QuestionId: 0x38, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				OneOf Prompt: "  TCM State", Help: "Enable/Disable Security Device. NOTE: Your Computer will reboot during restart in order to change State of the Device.", QuestionFlags: 0x10, QuestionId: 0x39, VarStoreId: 0xF101, VarOffset: 0x13, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "fTPM Disabled" Value: 0
+					OneOfOption Option: "fTPM Enabled" Value: 1, Default, MfgDefault
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x134, Value: 0x0
+				EqIdVal QuestionId: 0x38, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x136, Value: 0x1
+					Or 
+					EqIdVal QuestionId: 0x39, Value: 0x0
+					Or 
+				End 
+				OneOf Prompt: "Pending operation", Help: "Schedule an Operation for the Security Device. NOTE: Your Computer will reboot during restart in order to change State of Security Device.", QuestionFlags: 0x10, QuestionId: 0x3A, VarStoreId: 0xF101, VarOffset: 0x14, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x5, Step: 0x0
+					OneOfOption Option: "None" Value: 0, Default, MfgDefault
+					OneOfOption Option: "TPM Clear" Value: 5
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x38, Value: 0x0
+				EqIdVal QuestionId: 0x134, Value: 0x1
+				Or 
+			End 
+			OneOf Prompt: "  Device Select", Help: "TPM 1.2 will restrict support to TPM 1.2 devices, TPM 2.0 will restrict support to TPM 2.0 devices, Auto will support both with the default set to TPM 2.0 devices if not found, TPM 1.2 devices will be enumerated ", QuestionFlags: 0x10, QuestionId: 0x3B, VarStoreId: 0xF101, VarOffset: 0x25, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+				OneOfOption Option: "TPM 1.2" Value: 0
+				OneOfOption Option: "TPM 2.0" Value: 1
+				OneOfOption Option: "Auto" Value: 2, Default, MfgDefault
+			End 
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "Current Status Information", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x135, Value: 0x0
+				EqIdVal QuestionId: 0x38, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x39, Value: 0x0
+					EqIdVal QuestionId: 0x39, Value: 0x1
+					Or 
+				End 
+				Text Prompt: "  Firmware Version:", Help: "", Text: ""
+				Text Prompt: "  Vendor:", Help: "", Text: ""
+			End 
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x135, Value: 0x0
+				EqIdVal QuestionId: 0x38, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x39, Value: 0x0
+					EqIdVal QuestionId: 0x39, Value: 0x1
+					Or 
+				End 
+				Text Prompt: "  TPM Enabled Status:", Help: "None", Text: "N/A, reset required"
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x135, Value: 0x0
+				EqIdVal QuestionId: 0x38, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x39, Value: 0x0
+					EqIdVal QuestionId: 0x39, Value: 0x1
+					Or 
+				End 
+				Text Prompt: "  TPM Active Status:", Help: "None", Text: "N/A, reset required"
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x135, Value: 0x0
+				EqIdVal QuestionId: 0x38, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x39, Value: 0x0
+					EqIdVal QuestionId: 0x39, Value: 0x1
+					Or 
+				End 
+				Text Prompt: "  TPM Owner Status:", Help: "None", Text: "N/A, reset required"
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x134, Value: 0x0
+				EqIdVal QuestionId: 0x38, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x39, Value: 0x0
+					EqIdVal QuestionId: 0x39, Value: 0x1
+					Or 
+				End 
+				Text Prompt: "  TCM Enabled Status:", Help: "None", Text: "N/A, reset required"
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x134, Value: 0x0
+				EqIdVal QuestionId: 0x38, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x39, Value: 0x0
+					EqIdVal QuestionId: 0x39, Value: 0x1
+					Or 
+				End 
+				Text Prompt: "  TCM Active Status:", Help: "None", Text: "N/A, reset required"
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x134, Value: 0x0
+				EqIdVal QuestionId: 0x38, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x39, Value: 0x0
+					EqIdVal QuestionId: 0x39, Value: 0x1
+					Or 
+				End 
+				Text Prompt: "  TCM Owner Status:", Help: "None", Text: "N/A, reset required"
+			End 
+		End 
+	End 
+	Form FormId: 0x271C, Title: "Trusted Computing"
+		Subtitle Prompt: "  TPM 2.0 Device Found", Help: "", Flags: 0x0
+		End 
+		Text Prompt: "  Firmware Version:", Help: "", Text: ""
+		Text Prompt: "  Vendor:", Help: "", Text: ""
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "AMD fTPM switch", Help: "To select Enable fTPM or Disable fTPM.", QuestionFlags: 0x10, QuestionId: 0x3C, VarStoreId: 0xF101, VarOffset: 0x18, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "fTPM Disabled" Value: 0
+			OneOfOption Option: "fTPM Enabled" Value: 1, Default, MfgDefault
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3C, Value: 0x0
+			Text Prompt: "  Active PCR banks", Help: "", Text: "N/A, reset required"
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3C, Value: 0x0
+			Text Prompt: "  Available PCR banks", Help: "", Text: "N/A, reset required"
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0x47, Value: 0x1
+			SuppressIf 
+				EqIdVal QuestionId: 0x3C, Value: 0x0
+					EqIdVal QuestionId: 0x12F, Value: 0x0
+					Or 
+				End 
+				OneOf Prompt: "  SHA-1 PCR Bank", Help: "Enable or Disable SHA-1 PCR Bank", QuestionFlags: 0x10, QuestionId: 0x3D, VarStoreId: 0xF101, VarOffset: 0x2C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					Default DefaultId: 0x0 Value: 0
+					Default DefaultId: 0x1 Value: 0
+					OneOfOption Option: "Disabled" Value: 0
+					OneOfOption Option: "Enabled" Value: 1
+				End 
+			End 
+			SuppressIf 
+				EqIdVal QuestionId: 0x3C, Value: 0x0
+					EqIdVal QuestionId: 0x133, Value: 0x0
+					Or 
+				End 
+				OneOf Prompt: "  SHA256 PCR Bank", Help: "Enable or Disable SHA256 PCR Bank", QuestionFlags: 0x10, QuestionId: 0x3E, VarStoreId: 0xF101, VarOffset: 0x2D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+					Default DefaultId: 0x0 Value: 2
+					Default DefaultId: 0x1 Value: 2
+					OneOfOption Option: "Disabled" Value: 0
+					OneOfOption Option: "Enabled" Value: 2
+				End 
+			End 
+			SuppressIf 
+				EqIdVal QuestionId: 0x3C, Value: 0x0
+					EqIdVal QuestionId: 0x132, Value: 0x0
+					Or 
+				End 
+				OneOf Prompt: "  SHA384 PCR Bank", Help: "Enable or Disable SHA384 PCR Bank", QuestionFlags: 0x10, QuestionId: 0x3F, VarStoreId: 0xF101, VarOffset: 0x2E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					Default DefaultId: 0x0 Value: 0
+					Default DefaultId: 0x1 Value: 0
+					OneOfOption Option: "Disabled" Value: 0
+					OneOfOption Option: "Enabled" Value: 4
+				End 
+			End 
+			SuppressIf 
+				EqIdVal QuestionId: 0x3C, Value: 0x0
+					EqIdVal QuestionId: 0x131, Value: 0x0
+					Or 
+				End 
+				OneOf Prompt: "  SHA512 PCR Bank", Help: "Enable or Disable SHA512 PCR Bank", QuestionFlags: 0x10, QuestionId: 0x40, VarStoreId: 0xF101, VarOffset: 0x2F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x8, Step: 0x0
+					Default DefaultId: 0x0 Value: 0
+					Default DefaultId: 0x1 Value: 0
+					OneOfOption Option: "Disabled" Value: 0
+					OneOfOption Option: "Enabled" Value: 8
+				End 
+			End 
+			SuppressIf 
+				EqIdVal QuestionId: 0x3C, Value: 0x0
+					EqIdVal QuestionId: 0x130, Value: 0x0
+					Or 
+				End 
+				OneOf Prompt: "  SM3_256 PCR Bank", Help: "Enable or Disable SM3_256 PCR Bank", QuestionFlags: 0x10, QuestionId: 0x41, VarStoreId: 0xF101, VarOffset: 0x30, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					Default DefaultId: 0x0 Value: 0
+					Default DefaultId: 0x1 Value: 0
+					OneOfOption Option: "Disabled" Value: 0
+					OneOfOption Option: "Enabled" Value: 1
+				End 
+			End 
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3C, Value: 0x0
+			OneOf Prompt: "  Pending operation", Help: "Schedule an Operation for the Security Device. NOTE: Your Computer will reboot during restart in order to change State of Security Device.", QuestionFlags: 0x10, QuestionId: 0x42, VarStoreId: 0xF101, VarOffset: 0x14, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "None" Value: 0, Default, MfgDefault
+				OneOfOption Option: "TPM Clear" Value: 1
+			End 
+			OneOf Prompt: "  Platform Hierarchy", Help: "Enable or Disable Platform Hierarchy", QuestionFlags: 0x10, QuestionId: 0x43, VarStoreId: 0xF101, VarOffset: 0x21, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+			End 
+			OneOf Prompt: "  Storage Hierarchy", Help: "Enable or Disable Storage Hierarchy", QuestionFlags: 0x10, QuestionId: 0x44, VarStoreId: 0xF101, VarOffset: 0x22, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+			End 
+			OneOf Prompt: "  Endorsement Hierarchy", Help: "Enable or Disable Endorsement Hierarchy", QuestionFlags: 0x10, QuestionId: 0x45, VarStoreId: 0xF101, VarOffset: 0x23, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+			End 
+			OneOf Prompt: "  Physical Presence Spec Version", Help: "  Select to Tell O.S. to support PPI Spec Version 1.2 or 1.3. Note some HCK tests might not support 1.3.", QuestionFlags: 0x10, QuestionId: 0x46, VarStoreId: 0xF101, VarOffset: 0x32, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "1.2" Value: 0
+				OneOfOption Option: "1.3" Value: 1, Default, MfgDefault
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3C, Value: 0x0
+				EqIdVal QuestionId: 0x12F, Value: 0x0
+				Or 
+			End 
+			OneOf Prompt: "  TPM 2.0 UEFI Spec Version", Help: "Select the TCG2 Spec Version Support,
+
+TCG_1_2: the Compatible mode for Win8/Win10,
+
+TCG_2: Support new TCG2 protocol and event format for Win10 or later", QuestionFlags: 0x10, QuestionId: 0x47, VarStoreId: 0xF101, VarOffset: 0x20, Flags: 0x10, Size: 8, Min: 0x1, Max: 0x2, Step: 0x0
+				OneOfOption Option: "TCG_1_2" Value: 1
+				OneOfOption Option: "TCG_2" Value: 2, Default, MfgDefault
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3C, Value: 0x0
+			GrayOutIf 
+				True 
+				OneOf Prompt: "  TPM 2.0 InterfaceType", Help: "  Select the Communication Interface to TPM 20 Device.", QuestionFlags: 0x10, QuestionId: 0x48, VarStoreId: 0xF101, VarOffset: 0x24, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "CRB" Value: 0, Default, MfgDefault
+					OneOfOption Option: "TIS" Value: 1
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x3C, Value: 0x0
+			OneOf Prompt: "  Device Select", Help: "TPM 1.2 will restrict support to TPM 1.2 devices, TPM 2.0 will restrict support to TPM 2.0 devices, Auto will support both with the default set to TPM 2.0 devices if not found, TPM 1.2 devices will be enumerated ", QuestionFlags: 0x10, QuestionId: 0x49, VarStoreId: 0xF101, VarOffset: 0x25, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+				OneOfOption Option: "TPM 1.2" Value: 0
+				OneOfOption Option: "TPM 2.0" Value: 1
+				OneOfOption Option: "Auto" Value: 2, Default, MfgDefault
+			End 
+		End 
+	End 
+	Form FormId: 0x271D, Title: "AMD fTPM configuration"
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			OneOf Prompt: "Erase fTPM NV for factory reset", Help: "When New CPU is installed, Select "Enabled" to reset fTPM, if you have BitLocker or encryption-enabled system, the system will not boot without a recovery key. Select "Disabled" to keep previous fTPM record and continue system boot, fTPM will NOT be enabled with new CPU unless fTPM is reset (reinitialized), you could swap back to the old CPU to recover TPM related keys and data.", QuestionFlags: 0x10, QuestionId: 0x4A, VarStoreId: 0xF101, VarOffset: 0x33, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+			End 
+		End 
+	End 
+	Form FormId: 0x271E, Title: "ACPI Settings"
+		Subtitle Prompt: "ACPI Settings", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			CheckBox Prompt: "Enable ACPI Auto Configuration", Help: "Enables or Disables BIOS ACPI Auto Configuration.", QuestionFlags: 0x0, QuestionId: 0x4B, VarStoreId: 0xF101, VarOffset: 0x34, Flags: 0x0, Default: Disabled, MfgDefault: Disabled
+				Default DefaultId: 0x0 Value: 0
+				Default DefaultId: 0x1 Value: 0
+			End 
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x4B, Value: 0x1
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				CheckBox Prompt: "Enable Hibernation", Help: "Enables or Disables System ability to Hibernate (OS/S4 Sleep State). This option may not be effective with some operating systems.", QuestionFlags: 0x0, QuestionId: 0x4C, VarStoreId: 0xF101, VarOffset: 0x38, Flags: 0x0, Default: Disabled, MfgDefault: Disabled
+					Default DefaultId: 0x0 Value: 1
+					Default DefaultId: 0x1 Value: 1
+				End 
+				OneOf Prompt: "ACPI Sleep State", Help: "Select the highest ACPI sleep state the system will enter when the SUSPEND button is pressed.", QuestionFlags: 0x10, QuestionId: 0x4D, VarStoreId: 0xF101, VarOffset: 0x35, Flags: 0x11, Size: 16, Min: 0x0, Max: 0x2, Step: 0x0
+					OneOfOption Option: "Suspend Disabled" Value: 0
+					OneOfOption Option: "S3 (Suspend to RAM)" Value: 2, Default, MfgDefault
+				End 
+				CheckBox Prompt: "Lock Legacy Resources", Help: "Enables or Disables Lock of Legacy Resources", QuestionFlags: 0x10, QuestionId: 0x4E, VarStoreId: 0xF101, VarOffset: 0x37, Flags: 0x0, Default: Disabled, MfgDefault: Disabled
+					Default DefaultId: 0x0 Value: 0
+					Default DefaultId: 0x1 Value: 0
+				End 
+			End 
+		End 
+	End 
+	Form FormId: 0x272E, Title: "UEFI Variables Protection"
+		OneOf Prompt: "Password protection of Runtime Variables", Help: "Control the NVRAM Runtime Variable protection through System Admin Password", QuestionFlags: 0x10, QuestionId: 0x4F, VarStoreId: 0xF101, VarOffset: 0x4B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Enable" Value: 1
+			OneOfOption Option: "Disable" Value: 0
+			Default DefaultId: 0x0 Value: 1
+			Default DefaultId: 0x1 Value: 1
+		End 
+	End 
+	Form FormId: 0x2730, Title: "CPU Configuration"
+		Subtitle Prompt: "CPU Configuration", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "PSS Support", Help: "Enable/disable the generation of ACPI _PPC, _PSS, and _PCT objects.", QuestionFlags: 0x10, QuestionId: 0x50, VarStoreId: 0xF101, VarOffset: 0x4C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x12E, Value: 0x0
+				Not 
+				EqIdVal QuestionId: 0x50, Value: 0x0
+				Or 
+			End 
+			OneOf Prompt: "PPC Adjustment", Help: "Provide to adjust _PPC object.", QuestionFlags: 0x10, QuestionId: 0x51, VarStoreId: 0xF101, VarOffset: 0x4E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x0, Step: 0x0
+				OneOfOption Option: "PState 0" Value: 0, Default, MfgDefault
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x12E, Value: 0x1
+				Not 
+				EqIdVal QuestionId: 0x50, Value: 0x0
+				Or 
+			End 
+			OneOf Prompt: "PPC Adjustment", Help: "Provide to adjust _PPC object.", QuestionFlags: 0x10, QuestionId: 0x52, VarStoreId: 0xF101, VarOffset: 0x4E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "PState 0" Value: 0, Default, MfgDefault
+				OneOfOption Option: "PState 1" Value: 1
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x12E, Value: 0x2
+				Not 
+				EqIdVal QuestionId: 0x50, Value: 0x0
+				Or 
+			End 
+			OneOf Prompt: "PPC Adjustment", Help: "Provide to adjust _PPC object.", QuestionFlags: 0x10, QuestionId: 0x53, VarStoreId: 0xF101, VarOffset: 0x4E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+				OneOfOption Option: "PState 0" Value: 0, Default, MfgDefault
+				OneOfOption Option: "PState 1" Value: 1
+				OneOfOption Option: "PState 2" Value: 2
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x12E, Value: 0x3
+				Not 
+				EqIdVal QuestionId: 0x50, Value: 0x0
+				Or 
+			End 
+			OneOf Prompt: "PPC Adjustment", Help: "Provide to adjust _PPC object.", QuestionFlags: 0x10, QuestionId: 0x54, VarStoreId: 0xF101, VarOffset: 0x4E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+				OneOfOption Option: "PState 0" Value: 0, Default, MfgDefault
+				OneOfOption Option: "PState 1" Value: 1
+				OneOfOption Option: "PState 2" Value: 2
+				OneOfOption Option: "PState 3" Value: 3
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x12E, Value: 0x4
+				Not 
+				EqIdVal QuestionId: 0x50, Value: 0x0
+				Or 
+			End 
+			OneOf Prompt: "PPC Adjustment", Help: "Provide to adjust _PPC object.", QuestionFlags: 0x10, QuestionId: 0x55, VarStoreId: 0xF101, VarOffset: 0x4E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+				OneOfOption Option: "PState 0" Value: 0, Default, MfgDefault
+				OneOfOption Option: "PState 1" Value: 1
+				OneOfOption Option: "PState 2" Value: 2
+				OneOfOption Option: "PState 3" Value: 3
+				OneOfOption Option: "PState 4" Value: 4
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x12E, Value: 0x5
+				Not 
+				EqIdVal QuestionId: 0x50, Value: 0x0
+				Or 
+			End 
+			OneOf Prompt: "PPC Adjustment", Help: "Provide to adjust _PPC object.", QuestionFlags: 0x10, QuestionId: 0x56, VarStoreId: 0xF101, VarOffset: 0x4E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x5, Step: 0x0
+				OneOfOption Option: "PState 0" Value: 0, Default, MfgDefault
+				OneOfOption Option: "PState 1" Value: 1
+				OneOfOption Option: "PState 2" Value: 2
+				OneOfOption Option: "PState 3" Value: 3
+				OneOfOption Option: "PState 4" Value: 4
+				OneOfOption Option: "PState 5" Value: 5
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x12E, Value: 0x6
+				Not 
+				EqIdVal QuestionId: 0x50, Value: 0x0
+				Or 
+			End 
+			OneOf Prompt: "PPC Adjustment", Help: "Provide to adjust _PPC object.", QuestionFlags: 0x10, QuestionId: 0x57, VarStoreId: 0xF101, VarOffset: 0x4E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x6, Step: 0x0
+				OneOfOption Option: "PState 0" Value: 0, Default, MfgDefault
+				OneOfOption Option: "PState 1" Value: 1
+				OneOfOption Option: "PState 2" Value: 2
+				OneOfOption Option: "PState 3" Value: 3
+				OneOfOption Option: "PState 4" Value: 4
+				OneOfOption Option: "PState 5" Value: 5
+				OneOfOption Option: "PState 6" Value: 6
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x12E, Value: 0x7
+				Not 
+				EqIdVal QuestionId: 0x50, Value: 0x0
+				Or 
+			End 
+			OneOf Prompt: "PPC Adjustment", Help: "Provide to adjust _PPC object.", QuestionFlags: 0x10, QuestionId: 0x58, VarStoreId: 0xF101, VarOffset: 0x4E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x7, Step: 0x0
+				OneOfOption Option: "PState 0" Value: 0, Default, MfgDefault
+				OneOfOption Option: "PState 1" Value: 1
+				OneOfOption Option: "PState 2" Value: 2
+				OneOfOption Option: "PState 3" Value: 3
+				OneOfOption Option: "PState 4" Value: 4
+				OneOfOption Option: "PState 5" Value: 5
+				OneOfOption Option: "PState 6" Value: 6
+				OneOfOption Option: "PState 7" Value: 7
+			End 
+		End 
+		OneOf Prompt: "NX Mode", Help: "Enable/disable No-execute page protection Function", QuestionFlags: 0x10, QuestionId: 0x59, VarStoreId: 0xF101, VarOffset: 0x50, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+		End 
+		Ref Prompt: "Node 0 Information", Help: "View Memory Information related to Node 0", QuestionFlags: 0x0, QuestionId: 0x5A, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2731
+	End 
+	Form FormId: 0x2731, Title: "Node 0 Information"
+		Subtitle Prompt: "N/A", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "N/A", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "Microcode Not loaded", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "--------- Cache per core ---------", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+	End 
+	Form FormId: 0x2735, Title: "UEFI CPU Configuration"
+		Subtitle Prompt: "UEFI CPU Configuration", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "Smm Isolation", Help: "Smm Isolation enable/disable. This is for DRTM level 3 firmware protection", QuestionFlags: 0x10, QuestionId: 0x5B, VarStoreId: 0xF101, VarOffset: 0x6B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			Default DefaultId: 0x0 Value: 1
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+	End 
+	Form FormId: 0x2736, Title: "AmiAgesaChipsetWrapper Configuration"
+		Subtitle Prompt: "AmiAgesaChipsetWrapper Configuration", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "PCR7 WA Support", Help: "Set PcdAmdPspDmaProtectionStatusTpmMeasurement and PcdAmdPspTsmeStatusTpmMeasurement to false", QuestionFlags: 0x10, QuestionId: 0x5C, VarStoreId: 0xF101, VarOffset: 0x6C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Auto" Value: 2, Default, MfgDefault
+		End 
+		OneOf Prompt: "Enable Dual Vga Controllers", Help: "Enable/Disable Dual Vga Controllers", QuestionFlags: 0x10, QuestionId: 0x5D, VarStoreId: 0xF101, VarOffset: 0x6D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default, MfgDefault
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+	End 
+	Form FormId: 0x2740, Title: "AMI Graphic Output Protocol Policy"
+		Subtitle Prompt: "Unknown Device", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "Unknown Driver", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x12D, Value: 0x1
+				Not 
+			End 
+			OneOf Prompt: "Output Select", Help: "Output Interface", QuestionFlags: 0x4, QuestionId: 0x2737, VarStoreId: 0xF101, VarOffset: 0x6E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x0, Step: 0x0
+				OneOfOption Option: "Unknown Device" Value: 0, Default, MfgDefault
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x12D, Value: 0x2
+				Not 
+			End 
+			OneOf Prompt: "Output Select", Help: "Output Interface", QuestionFlags: 0x4, QuestionId: 0x2738, VarStoreId: 0xF101, VarOffset: 0x6E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Unknown Device" Value: 0, Default, MfgDefault
+				OneOfOption Option: "Unknown Device" Value: 1
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x12D, Value: 0x3
+				Not 
+			End 
+			OneOf Prompt: "Output Select", Help: "Output Interface", QuestionFlags: 0x4, QuestionId: 0x2739, VarStoreId: 0xF101, VarOffset: 0x6E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+				OneOfOption Option: "Unknown Device" Value: 0, Default, MfgDefault
+				OneOfOption Option: "Unknown Device" Value: 1
+				OneOfOption Option: "Unknown Device" Value: 2
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x12D, Value: 0x4
+				Not 
+			End 
+			OneOf Prompt: "Output Select", Help: "Output Interface", QuestionFlags: 0x4, QuestionId: 0x273A, VarStoreId: 0xF101, VarOffset: 0x6E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+				OneOfOption Option: "Unknown Device" Value: 0, Default, MfgDefault
+				OneOfOption Option: "Unknown Device" Value: 1
+				OneOfOption Option: "Unknown Device" Value: 2
+				OneOfOption Option: "Unknown Device" Value: 3
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x12D, Value: 0x5
+				Not 
+			End 
+			OneOf Prompt: "Output Select", Help: "Output Interface", QuestionFlags: 0x4, QuestionId: 0x273B, VarStoreId: 0xF101, VarOffset: 0x6E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+				OneOfOption Option: "Unknown Device" Value: 0, Default, MfgDefault
+				OneOfOption Option: "Unknown Device" Value: 1
+				OneOfOption Option: "Unknown Device" Value: 2
+				OneOfOption Option: "Unknown Device" Value: 3
+				OneOfOption Option: "Unknown Device" Value: 4
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x12D, Value: 0x6
+				Not 
+			End 
+			OneOf Prompt: "Output Select", Help: "Output Interface", QuestionFlags: 0x4, QuestionId: 0x273C, VarStoreId: 0xF101, VarOffset: 0x6E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x5, Step: 0x0
+				OneOfOption Option: "Unknown Device" Value: 0, Default, MfgDefault
+				OneOfOption Option: "Unknown Device" Value: 1
+				OneOfOption Option: "Unknown Device" Value: 2
+				OneOfOption Option: "Unknown Device" Value: 3
+				OneOfOption Option: "Unknown Device" Value: 4
+				OneOfOption Option: "Unknown Device" Value: 5
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x12D, Value: 0x7
+				Not 
+			End 
+			OneOf Prompt: "Output Select", Help: "Output Interface", QuestionFlags: 0x4, QuestionId: 0x273D, VarStoreId: 0xF101, VarOffset: 0x6E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x6, Step: 0x0
+				OneOfOption Option: "Unknown Device" Value: 0, Default, MfgDefault
+				OneOfOption Option: "Unknown Device" Value: 1
+				OneOfOption Option: "Unknown Device" Value: 2
+				OneOfOption Option: "Unknown Device" Value: 3
+				OneOfOption Option: "Unknown Device" Value: 4
+				OneOfOption Option: "Unknown Device" Value: 5
+				OneOfOption Option: "Unknown Device" Value: 6
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x12D, Value: 0x8
+				Not 
+			End 
+			OneOf Prompt: "Output Select", Help: "Output Interface", QuestionFlags: 0x4, QuestionId: 0x273E, VarStoreId: 0xF101, VarOffset: 0x6E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x7, Step: 0x0
+				OneOfOption Option: "Unknown Device" Value: 0, Default, MfgDefault
+				OneOfOption Option: "Unknown Device" Value: 1
+				OneOfOption Option: "Unknown Device" Value: 2
+				OneOfOption Option: "Unknown Device" Value: 3
+				OneOfOption Option: "Unknown Device" Value: 4
+				OneOfOption Option: "Unknown Device" Value: 5
+				OneOfOption Option: "Unknown Device" Value: 6
+				OneOfOption Option: "Unknown Device" Value: 7
+			End 
+		End 
+	End 
+	Form FormId: 0x2742, Title: "Debug Port Table"
+		Subtitle Prompt: "Debug Port Table", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "Debug Port Table", Help: "Debug Port Table", QuestionFlags: 0x10, QuestionId: 0x5E, VarStoreId: 0xF101, VarOffset: 0x6F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			Default DefaultId: 0x0 Value: 0
+			OneOfOption Option: "Disabled" Value: 0, MfgDefault
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		OneOf Prompt: "Debug Port Table 2", Help: "Debug Port Table 2", QuestionFlags: 0x10, QuestionId: 0x5F, VarStoreId: 0xF101, VarOffset: 0x70, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			Default DefaultId: 0x0 Value: 0
+			OneOfOption Option: "Disabled" Value: 0, MfgDefault
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+	End 
+	Form FormId: 0x2743, Title: "PCI Subsystem Settings"
+		Text Prompt: "PCI Bus Driver Version", Help: "PCI, PCI-X and PCI Express Settings.", Text: "00.00"
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "PCI Devices Common Settings:", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			Uint64 Value: 0x1
+				Uint64 Value: 0x0
+				Equal 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				OneOf Prompt: "PCI Latency Timer", Help: "Value to be programmed into PCI Latency Timer Register.", QuestionFlags: 0x10, QuestionId: 0x60, VarStoreId: 0xF101, VarOffset: 0x75, Flags: 0x10, Size: 8, Min: 0x20, Max: 0xF8, Step: 0x0
+					OneOfOption Option: "32 PCI Bus Clocks" Value: 32, Default, MfgDefault
+					OneOfOption Option: "64 PCI Bus Clocks" Value: 64
+					OneOfOption Option: "96 PCI Bus Clocks" Value: 96
+					OneOfOption Option: "128 PCI Bus Clocks" Value: 128
+					OneOfOption Option: "160 PCI Bus Clocks" Value: 160
+					OneOfOption Option: "192 PCI Bus Clocks" Value: 192
+					OneOfOption Option: "224 PCI Bus Clocks" Value: 224
+					OneOfOption Option: "248 PCI Bus Clocks" Value: 248
+				End 
+			End 
+		End 
+		SuppressIf 
+			Uint64 Value: 0x1
+				Uint64 Value: 0x0
+				Equal 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				OneOf Prompt: "PCI-X Latency Timer", Help: "Value to be programmed into PCI Latency Timer Register.", QuestionFlags: 0x10, QuestionId: 0x61, VarStoreId: 0xF101, VarOffset: 0x79, Flags: 0x10, Size: 8, Min: 0x20, Max: 0xF8, Step: 0x0
+					OneOfOption Option: "32 PCI Bus Clocks" Value: 32
+					OneOfOption Option: "64 PCI Bus Clocks" Value: 64, Default, MfgDefault
+					OneOfOption Option: "96 PCI Bus Clocks" Value: 96
+					OneOfOption Option: "128 PCI Bus Clocks" Value: 128
+					OneOfOption Option: "160 PCI Bus Clocks" Value: 160
+					OneOfOption Option: "192 PCI Bus Clocks" Value: 192
+					OneOfOption Option: "224 PCI Bus Clocks" Value: 224
+					OneOfOption Option: "248 PCI Bus Clocks" Value: 248
+				End 
+			End 
+		End 
+		SuppressIf 
+			Uint64 Value: 0x1
+				Uint64 Value: 0x0
+				Equal 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				OneOf Prompt: "VGA Palette Snoop", Help: "Enables or Disables VGA Palette Registers Snooping.", QuestionFlags: 0x10, QuestionId: 0x62, VarStoreId: 0xF101, VarOffset: 0x76, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Disabled" Value: 0
+					OneOfOption Option: "Enabled" Value: 1
+					Default DefaultId: 0x0 Value: 0
+					Default DefaultId: 0x1 Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			Uint64 Value: 0x1
+				Uint64 Value: 0x0
+				Equal 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				OneOf Prompt: "PERR# Generation", Help: "Enables or Disables PCI Device to Generate PERR#.", QuestionFlags: 0x10, QuestionId: 0x63, VarStoreId: 0xF101, VarOffset: 0x77, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Disabled" Value: 0
+					OneOfOption Option: "Enabled" Value: 1
+					Default DefaultId: 0x0 Value: 0
+					Default DefaultId: 0x1 Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			Uint64 Value: 0x1
+				Uint64 Value: 0x0
+				Equal 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				OneOf Prompt: "SERR# Generation", Help: "Enables or Disables PCI Device to Generate SERR#.", QuestionFlags: 0x10, QuestionId: 0x64, VarStoreId: 0xF101, VarOffset: 0x78, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Disabled" Value: 0
+					OneOfOption Option: "Enabled" Value: 1
+					Default DefaultId: 0x0 Value: 0
+					Default DefaultId: 0x1 Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			Uint64 Value: 0x1
+				Uint64 Value: 0x0
+				Equal 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				OneOf Prompt: "Above 4G Decoding", Help: "Enables or Disables 64bit capable Devices to be Decoded in Above 4G Address Space (Only if System Supports 64 bit PCI Decoding).", QuestionFlags: 0x10, QuestionId: 0x65, VarStoreId: 0xF101, VarOffset: 0x71, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Disabled" Value: 0
+					OneOfOption Option: "Enabled" Value: 1
+					Default DefaultId: 0x0 Value: 1
+					Default DefaultId: 0x1 Value: 1
+				End 
+			End 
+		End 
+		SuppressIf 
+			Uint64 Value: 0x1
+				Uint64 Value: 0x0
+				Equal 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				OneOf Prompt: "SR-IOV Support", Help: "If system has SR-IOV capable PCIe Devices, this option Enables or Disables Single Root IO Virtualization Support.", QuestionFlags: 0x10, QuestionId: 0x66, VarStoreId: 0xF101, VarOffset: 0x73, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Disabled" Value: 0
+					OneOfOption Option: "Enabled" Value: 1
+					Default DefaultId: 0x0 Value: 0
+					Default DefaultId: 0x1 Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			Uint64 Value: 0x1
+				Uint64 Value: 0x0
+				Equal 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				OneOf Prompt: "BME DMA Mitigation", Help: "Re-enable Bus Master Attribute disabled during Pci enumeration for PCI Bridges after SMM Locked ", QuestionFlags: 0x10, QuestionId: 0x67, VarStoreId: 0xF101, VarOffset: 0x74, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Disabled" Value: 0
+					OneOfOption Option: "Enabled" Value: 1
+					Default DefaultId: 0x0 Value: 0
+					Default DefaultId: 0x1 Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			Uint64 Value: 0x0
+				Uint64 Value: 0x0
+				Equal 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				OneOf Prompt: "Don't Reset VC-TC Mapping", Help: "If system has Vitrtual Channels, Software can reset Traffic Class mapping through Virtual Channels, to it's default state. Setting this option to Enabled will not modify VC Resources.", QuestionFlags: 0x10, QuestionId: 0x68, VarStoreId: 0xF101, VarOffset: 0x85, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Disabled" Value: 0
+					OneOfOption Option: "Enabled" Value: 1
+					Default DefaultId: 0x0 Value: 0
+					Default DefaultId: 0x1 Value: 0
+				End 
+			End 
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			Uint64 Value: 0x1
+				Uint64 Value: 0x0
+				Equal 
+			End 
+			SuppressIf 
+				Uint64 Value: 0x1
+					Uint64 Value: 0x0
+					Equal 
+				End 
+				GrayOutIf 
+					EqIdVal QuestionId: 0xE9, Value: 0x1
+					Ref Prompt: "PCI Express Settings", Help: "Change PCI Express Devices Settings.", QuestionFlags: 0x0, QuestionId: 0x69, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2744
+				End 
+			End 
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			Uint64 Value: 0x1
+				Uint64 Value: 0x0
+				Equal 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				Ref Prompt: "PCI Hot-Plug Settings", Help: "Change PCI Express Hot-Plug and Standard HP Controller Settings.", QuestionFlags: 0x0, QuestionId: 0x6A, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2746
+			End 
+		End 
+	End 
+	Form FormId: 0x2744, Title: "PCI Express Settings"
+		Subtitle Prompt: "PCI Express Device Register Settings", Help: "", Flags: 0x0
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			OneOf Prompt: "Relaxed Ordering", Help: "Enables or Disables PCI Express Device Relaxed Ordering.", QuestionFlags: 0x10, QuestionId: 0x6B, VarStoreId: 0xF101, VarOffset: 0x7A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1
+				Default DefaultId: 0x0 Value: 1
+				Default DefaultId: 0x1 Value: 1
+			End 
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			OneOf Prompt: "Extended Tag", Help: "If ENABLED allows Device to use 8-bit Tag field as a requester.", QuestionFlags: 0x10, QuestionId: 0x6C, VarStoreId: 0xF101, VarOffset: 0x7B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1
+				Default DefaultId: 0x0 Value: 0
+				Default DefaultId: 0x1 Value: 0
+			End 
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			OneOf Prompt: "No Snoop", Help: "Enables or Disables PCI Express Device No Snoop option.", QuestionFlags: 0x10, QuestionId: 0x6D, VarStoreId: 0xF101, VarOffset: 0x7C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1
+				Default DefaultId: 0x0 Value: 1
+				Default DefaultId: 0x1 Value: 1
+			End 
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			OneOf Prompt: "Maximum Payload", Help: "Set Maximum Payload of PCI Express Device or allow System BIOS to select the value.", QuestionFlags: 0x10, QuestionId: 0x6E, VarStoreId: 0xF101, VarOffset: 0x7D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x37, Step: 0x0
+				OneOfOption Option: "Auto" Value: 55, Default, MfgDefault
+				OneOfOption Option: "128 Bytes" Value: 0
+				OneOfOption Option: "256 Bytes" Value: 1
+				OneOfOption Option: "512 Bytes" Value: 2
+				OneOfOption Option: "1024 Bytes" Value: 3
+				OneOfOption Option: "2048 Bytes" Value: 4
+				OneOfOption Option: "4096 Bytes" Value: 5
+			End 
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			OneOf Prompt: "Maximum Read Request", Help: "Set Maximum Read Request Size of PCI Express Device or allow System BIOS to select the value.", QuestionFlags: 0x10, QuestionId: 0x6F, VarStoreId: 0xF101, VarOffset: 0x7E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x37, Step: 0x0
+				OneOfOption Option: "Auto" Value: 55, Default, MfgDefault
+				OneOfOption Option: "128 Bytes" Value: 0
+				OneOfOption Option: "256 Bytes" Value: 1
+				OneOfOption Option: "512 Bytes" Value: 2
+				OneOfOption Option: "1024 Bytes" Value: 3
+				OneOfOption Option: "2048 Bytes" Value: 4
+				OneOfOption Option: "4096 Bytes" Value: 5
+			End 
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "PCI Express Link Register Settings", Help: "", Flags: 0x0
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+		End 
+		Subtitle Prompt: "WARNING: Enabling ASPM may cause some", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "         PCI-E devices to fail", Help: "", Flags: 0x0
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			OneOf Prompt: "Extended Synch", Help: "If ENABLED allows generation of Extended Synchronization patterns.", QuestionFlags: 0x10, QuestionId: 0x70, VarStoreId: 0xF101, VarOffset: 0x80, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1
+				Default DefaultId: 0x0 Value: 0
+				Default DefaultId: 0x1 Value: 0
+			End 
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			OneOf Prompt: "Link Training Retry", Help: "Defines number of Retry Attempts software will take to retrain the link if previous training attempt was unsuccessful.", QuestionFlags: 0x10, QuestionId: 0x71, VarStoreId: 0xF101, VarOffset: 0x81, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x5, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "2" Value: 2
+				OneOfOption Option: "3" Value: 3
+				OneOfOption Option: "5" Value: 5, Default, MfgDefault
+			End 
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			Numeric Prompt: "Link Training Timeout (uS)", Help: "Defines number of Microseconds software will wait before polling 'Link Training' bit in Link Status register. Value range from 10 to 10000 uS.", QuestionFlags: 0x10, QuestionId: 0x72, VarStoreId: 0xF101, VarOffset: 0x82, Flags: 0x11, Size: 16, Min: 0xA, Max: 0x2710, Step: 0xA
+				Default DefaultId: 0x0 Value: 1000
+				Default DefaultId: 0x1 Value: 1000
+			End 
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			OneOf Prompt: "Unpopulated Links", Help: "In order to save power, software will disable unpopulated PCI Express links, if this option set to 'Disable Link'.", QuestionFlags: 0x10, QuestionId: 0x73, VarStoreId: 0xF101, VarOffset: 0x84, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Keep Link ON" Value: 0
+				OneOfOption Option: "Disabled" Value: 1
+				Default DefaultId: 0x0 Value: 0
+				Default DefaultId: 0x1 Value: 0
+			End 
+		End 
+	End 
+	Form FormId: 0x2746, Title: "PCI Hot-Plug Settings"
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "PCI Hot-Plug Settings", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			OneOf Prompt: "BIOS Hot-Plug Support", Help: "If ENABLED allows BIOS build in Hot-Plug support. Use this feature if OS does not support PCI Express and SHPC hot-plug natively.", QuestionFlags: 0x10, QuestionId: 0x74, VarStoreId: 0xF101, VarOffset: 0x94, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1
+				Default DefaultId: 0x0 Value: 1
+				Default DefaultId: 0x1 Value: 1
+			End 
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x74, Value: 0x0
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				OneOf Prompt: "PCI Buses Padding", Help: "Pad PCI Buses behind the bridge for Hot-Plug.", QuestionFlags: 0x10, QuestionId: 0x75, VarStoreId: 0xF101, VarOffset: 0x95, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x5, Step: 0x0
+					OneOfOption Option: "Disabled" Value: 0
+					OneOfOption Option: "1" Value: 1, Default, MfgDefault
+					OneOfOption Option: "2" Value: 2
+					OneOfOption Option: "3" Value: 3
+					OneOfOption Option: "4" Value: 4
+					OneOfOption Option: "5" Value: 5
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x74, Value: 0x0
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				OneOf Prompt: "I/O Resources Padding", Help: "Pad PCI I/O Resources behind the bridge for Hot-Plug.", QuestionFlags: 0x10, QuestionId: 0x76, VarStoreId: 0xF101, VarOffset: 0x96, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x20, Step: 0x0
+					OneOfOption Option: "Disabled" Value: 0
+					OneOfOption Option: "4 K" Value: 4, Default, MfgDefault
+					OneOfOption Option: "8 K" Value: 8
+					OneOfOption Option: "16 K" Value: 16
+					OneOfOption Option: "32 K" Value: 32
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x74, Value: 0x0
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				OneOf Prompt: "MMIO 32 bit Resources Padding", Help: "Pad PCI MMIO 32-bit Resources behind the bridge for Hot-Plug.", QuestionFlags: 0x10, QuestionId: 0x77, VarStoreId: 0xF101, VarOffset: 0x97, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x80, Step: 0x0
+					OneOfOption Option: "Disabled" Value: 0
+					OneOfOption Option: "1 M" Value: 1
+					OneOfOption Option: "2 M" Value: 2
+					OneOfOption Option: "4 M" Value: 4
+					OneOfOption Option: "8 M" Value: 8
+					OneOfOption Option: "16 M" Value: 16, Default, MfgDefault
+					OneOfOption Option: "32 M" Value: 32
+					OneOfOption Option: "64 M" Value: 64
+					OneOfOption Option: "128 M" Value: 128
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x74, Value: 0x0
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				OneOf Prompt: "PFMMIO 32 bit Resources Padding", Help: "Pad PCI MMIO 32-bit Prefetchable Resources behind the bridge for Hot-Plug.", QuestionFlags: 0x10, QuestionId: 0x78, VarStoreId: 0xF101, VarOffset: 0x98, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x80, Step: 0x0
+					OneOfOption Option: "Disabled" Value: 0
+					OneOfOption Option: "1 M" Value: 1
+					OneOfOption Option: "2 M" Value: 2
+					OneOfOption Option: "4 M" Value: 4
+					OneOfOption Option: "8 M" Value: 8
+					OneOfOption Option: "16 M" Value: 16, Default, MfgDefault
+					OneOfOption Option: "32 M" Value: 32
+					OneOfOption Option: "64 M" Value: 64
+					OneOfOption Option: "128 M" Value: 128
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x74, Value: 0x0
+				EqIdVal QuestionId: 0x65, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				OneOf Prompt: "PFMMIO 64 bit Resources Padding", Help: "Pad PCI MMIO 64-bit Prefetchable Resources behind the bridge for Hot-Plug.", QuestionFlags: 0x10, QuestionId: 0x79, VarStoreId: 0xF101, VarOffset: 0x9B, Flags: 0x11, Size: 16, Min: 0x0, Max: 0x2000, Step: 0x0
+					OneOfOption Option: "Disabled" Value: 0, Default, MfgDefault
+					OneOfOption Option: "1 M" Value: 1
+					OneOfOption Option: "2 M" Value: 2
+					OneOfOption Option: "4 M" Value: 4
+					OneOfOption Option: "8 M" Value: 8
+					OneOfOption Option: "16 M" Value: 16
+					OneOfOption Option: "32 M" Value: 32
+					OneOfOption Option: "64 M" Value: 64
+					OneOfOption Option: "128 M" Value: 128
+					OneOfOption Option: "256 M" Value: 256
+					OneOfOption Option: "512 M" Value: 512
+					OneOfOption Option: "1 G" Value: 1024
+					OneOfOption Option: "2 G" Value: 2048
+					OneOfOption Option: "4 G" Value: 4096
+					OneOfOption Option: "8 G" Value: 8192
+				End 
+				Subtitle Prompt: "", Help: "", Flags: 0x0
+				End 
+				Subtitle Prompt: "WARNING:
+Due to the Bridge Architecture Specification
+Software can not apply selected padding for
+64 and 32 bit PFMMIO window at the same time.
+User must pick which PFMMIO he wants to padd
+by setting another resource to Disable state.
+If both PFMMIO set, 32 bit resource will be used.", Help: "", Flags: 0x0
+				End 
+			End 
+		End 
+	End 
+	Form FormId: 0x2747, Title: "USB Configuration"
+		Subtitle Prompt: "USB Configuration", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Text Prompt: "USB Module Version", Help: "", Text: "00.00"
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Text Prompt: "USB Controllers:", Help: "", Text: ""
+		Subtitle Prompt: "N/A", Help: "", Flags: 0x0
+		End 
+		Text Prompt: "USB Devices:", Help: "", Text: ""
+		Subtitle Prompt: "N/A", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			EqIdId QuestionId: 0x7A, OtherQuestionId: 0x7A
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				OneOf Prompt: "USB Support", Help: "USB Support Parameters", QuestionFlags: 0x10, QuestionId: 0x7A, VarStoreId: 0xC, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Disabled" Value: 0
+					OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				OneOf Prompt: "Legacy USB Support", Help: "Enables Legacy USB support. AUTO option disables legacy support if no USB devices are connected. DISABLE option will keep USB devices available only for EFI applications.", QuestionFlags: 0x10, QuestionId: 0x7B, VarStoreId: 0xC, VarOffset: 0x1, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+					OneOfOption Option: "Enabled" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Disabled" Value: 1
+					OneOfOption Option: "Auto" Value: 2
+				End 
+			End 
+		End 
+		SuppressIf 
+			True 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				OneOf Prompt: "XHCI Legacy Support", Help: "Enable/Disable XHCI Controller Legacy support.", QuestionFlags: 0x10, QuestionId: 0x7C, VarStoreId: 0xC, VarOffset: 0x2A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+					OneOfOption Option: "Disabled" Value: 0
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x129, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				OneOf Prompt: "XHCI Hand-off", Help: "This is a workaround for OSes without XHCI hand-off support. The XHCI ownership change should be claimed by XHCI driver.", QuestionFlags: 0x10, QuestionId: 0x7D, VarStoreId: 0xC, VarOffset: 0x2B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Enabled" Value: 1
+					OneOfOption Option: "Disabled" Value: 0
+					Default DefaultId: 0x0 Value: 1
+					Default DefaultId: 0x1 Value: 1
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x12A, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				OneOf Prompt: "EHCI Hand-off", Help: "This is a workaround for OSes without EHCI hand-off support. The EHCI ownership change should be claimed by EHCI driver.", QuestionFlags: 0x10, QuestionId: 0x7E, VarStoreId: 0xC, VarOffset: 0x2, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Disabled" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Enabled" Value: 1
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x12C, Value: 0x0
+					EqIdVal QuestionId: 0x12B, Value: 0x0
+					And 
+					EqIdVal QuestionId: 0x12A, Value: 0x0
+					And 
+					EqIdVal QuestionId: 0x129, Value: 0x0
+					And 
+					Or 
+				End 
+				OneOf Prompt: "USB Boot", Help: "Enable/Disable USB Boot Support.", QuestionFlags: 0x10, QuestionId: 0x7F, VarStoreId: 0xC, VarOffset: 0x2F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Disabled" Value: 0
+					OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+				End 
+			End 
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Text Prompt: "USB hardware delays and time-outs:", Help: "", Text: ""
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x12C, Value: 0x0
+					EqIdVal QuestionId: 0x12B, Value: 0x0
+					And 
+					EqIdVal QuestionId: 0x12A, Value: 0x0
+					And 
+					EqIdVal QuestionId: 0x129, Value: 0x0
+					And 
+					Or 
+				End 
+				OneOf Prompt: "USB transfer time-out", Help: "The time-out value for Control, Bulk, and Interrupt transfers.", QuestionFlags: 0x10, QuestionId: 0x80, VarStoreId: 0xC, VarOffset: 0x9, Flags: 0x10, Size: 8, Min: 0x1, Max: 0x14, Step: 0x0
+					OneOfOption Option: "1 sec" Value: 1
+					OneOfOption Option: "5 sec" Value: 5
+					OneOfOption Option: "10 sec" Value: 10
+					OneOfOption Option: "20 sec" Value: 20, Default, MfgDefault
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x12C, Value: 0x0
+					EqIdVal QuestionId: 0x12B, Value: 0x0
+					And 
+					EqIdVal QuestionId: 0x12A, Value: 0x0
+					And 
+					EqIdVal QuestionId: 0x129, Value: 0x0
+					And 
+					Or 
+				End 
+				OneOf Prompt: "Device reset time-out", Help: "USB mass storage device Start Unit command time-out.", QuestionFlags: 0x10, QuestionId: 0x81, VarStoreId: 0xC, VarOffset: 0x8, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+					OneOfOption Option: "10 sec" Value: 0
+					OneOfOption Option: "20 sec" Value: 1, Default, MfgDefault
+					OneOfOption Option: "30 sec" Value: 2
+					OneOfOption Option: "40 sec" Value: 3
+				End 
+			End 
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+				EqIdVal QuestionId: 0x12C, Value: 0x0
+				EqIdVal QuestionId: 0x12B, Value: 0x0
+				And 
+				EqIdVal QuestionId: 0x12A, Value: 0x0
+				And 
+				EqIdVal QuestionId: 0x129, Value: 0x0
+				And 
+				Or 
+			End 
+			OneOf Prompt: "Device power-up delay", Help: "Maximum time the device will take before it properly reports itself to the Host Controller. 'Auto' uses default value: for a Root port it is 100 ms, for a Hub port the delay is taken from Hub descriptor.", QuestionFlags: 0x10, QuestionId: 0x82, VarStoreId: 0xC, VarOffset: 0x2C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+				OneOfOption Option: "Manual" Value: 1
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x82, Value: 0x0
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x12C, Value: 0x0
+					EqIdVal QuestionId: 0x12B, Value: 0x0
+					And 
+					EqIdVal QuestionId: 0x12A, Value: 0x0
+					And 
+					EqIdVal QuestionId: 0x129, Value: 0x0
+					And 
+					Or 
+				End 
+				Numeric Prompt: "Device power-up delay in seconds", Help: "Delay range is 1..40 seconds, in one second increments", QuestionFlags: 0x10, QuestionId: 0x83, VarStoreId: 0xC, VarOffset: 0x2D, Flags: 0x10, Size: 8, Min: 0x1, Max: 0x28, Step: 0x1
+					Default DefaultId: 0x0 Value: 5
+					Default DefaultId: 0x1 Value: 5
+				End 
+			End 
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x128, Value: 0x0
+				Or 
+			End 
+			Text Prompt: "Mass Storage Devices:", Help: "", Text: ""
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x127, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x84, VarStoreId: 0xC, VarOffset: 0xA, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x126, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x85, VarStoreId: 0xC, VarOffset: 0xB, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x125, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x86, VarStoreId: 0xC, VarOffset: 0xC, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x124, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x87, VarStoreId: 0xC, VarOffset: 0xD, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x123, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x88, VarStoreId: 0xC, VarOffset: 0xE, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x122, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x89, VarStoreId: 0xC, VarOffset: 0xF, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x121, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x8A, VarStoreId: 0xC, VarOffset: 0x10, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x120, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x8B, VarStoreId: 0xC, VarOffset: 0x11, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x11F, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x8C, VarStoreId: 0xC, VarOffset: 0x12, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x11E, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x8D, VarStoreId: 0xC, VarOffset: 0x13, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x11D, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x8E, VarStoreId: 0xC, VarOffset: 0x14, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x11C, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x8F, VarStoreId: 0xC, VarOffset: 0x15, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x11B, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x90, VarStoreId: 0xC, VarOffset: 0x16, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x11A, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x91, VarStoreId: 0xC, VarOffset: 0x17, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x119, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x92, VarStoreId: 0xC, VarOffset: 0x18, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x118, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x93, VarStoreId: 0xC, VarOffset: 0x19, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x117, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x94, VarStoreId: 0xC, VarOffset: 0x1A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x116, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x95, VarStoreId: 0xC, VarOffset: 0x1B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x115, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x96, VarStoreId: 0xC, VarOffset: 0x1C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x114, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x97, VarStoreId: 0xC, VarOffset: 0x1D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x113, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x98, VarStoreId: 0xC, VarOffset: 0x1E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x112, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x99, VarStoreId: 0xC, VarOffset: 0x1F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x111, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x9A, VarStoreId: 0xC, VarOffset: 0x20, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x110, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x9B, VarStoreId: 0xC, VarOffset: 0x21, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x10F, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x9C, VarStoreId: 0xC, VarOffset: 0x22, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x10E, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x9D, VarStoreId: 0xC, VarOffset: 0x23, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x10D, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x9E, VarStoreId: 0xC, VarOffset: 0x24, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x10C, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0x9F, VarStoreId: 0xC, VarOffset: 0x25, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x10B, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0xA0, VarStoreId: 0xC, VarOffset: 0x26, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x10A, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0xA1, VarStoreId: 0xC, VarOffset: 0x27, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x109, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0xA2, VarStoreId: 0xC, VarOffset: 0x28, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7A, Value: 0x0
+				EqIdVal QuestionId: 0x108, Value: 0x0
+				Or 
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+					EqIdVal QuestionId: 0x7B, Value: 0x1
+					Or 
+				End 
+				OneOf Prompt: "N/A", Help: "Mass storage device emulation type. 'AUTO' enumerates devices according to their media format. Optical drives are emulated as 'CDROM', drives with no media will be emulated according to a drive type.", QuestionFlags: 0x10, QuestionId: 0xA3, VarStoreId: 0xC, VarOffset: 0x29, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "Auto" Value: 0, Default, MfgDefault
+					OneOfOption Option: "Floppy" Value: 1
+					OneOfOption Option: "Forced FDD" Value: 2
+					OneOfOption Option: "Hard Disk" Value: 3
+					OneOfOption Option: "CD-ROM" Value: 4
+				End 
+			End 
+		End 
+		Text Prompt: "", Help: "", Text: ""
+		SuppressIf 
+			True 
+			SuppressIf 
+				EqIdVal QuestionId: 0xE8, Value: 0xB
+				Action Prompt: "", Help: "", QuestionFlags: 0x4, QuestionId: 0x2748, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, QuestionConfig: ""
+				End 
+			End 
+		End 
+	End 
+	Form FormId: 0x27F2, Title: "NVMe Configuration"
+		Subtitle Prompt: "NVMe controller and Drive information", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x107, Value: 0x0
+				Not 
+			End 
+			Subtitle Prompt: "No NVME Device Found", Help: "", Flags: 0x0
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x106, Value: 0x0
+			Text Prompt: "Controller 0", Help: "NVMe controller and Drive information.", Text: "Empty"
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x106, Value: 0x0
+			Text Prompt: "Nvme Size", Help: "", Text: "Empty"
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x105, Value: 0x0
+			Text Prompt: "Controller 1", Help: "NVMe controller and Drive information.", Text: "Empty"
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x105, Value: 0x0
+			Text Prompt: "Nvme Size", Help: "", Text: "Empty"
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x104, Value: 0x0
+			Text Prompt: "Controller 2", Help: "NVMe controller and Drive information.", Text: "Empty"
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x104, Value: 0x0
+			Text Prompt: "Nvme Size", Help: "", Text: "Empty"
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x103, Value: 0x0
+			Text Prompt: "Controller 3", Help: "NVMe controller and Drive information.", Text: "Empty"
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x103, Value: 0x0
+			Text Prompt: "Nvme Size", Help: "", Text: "Empty"
+		End 
+	End 
+	Form FormId: 0x291B, Title: "Demo Board"
+		OneOf Prompt: "Onboard PCIE LAN PXE ROM", Help: "The Onboard PCIE LAN PXE ROM ", QuestionFlags: 0x10, QuestionId: 0xA4, VarStoreId: 0xF101, VarOffset: 0x9D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+	End 
+	Form FormId: 0x2714, Title: "Chipset"
+		Ref Prompt: "South Bridge", Help: "South Bridge Parameters", QuestionFlags: 0x0, QuestionId: 0xA5, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2727
+		Ref Prompt: "GFX Configuration", Help: "GFX Configuration", QuestionFlags: 0x0, QuestionId: 0xA6, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2732
+		Ref Prompt: "North Bridge", Help: "North Bridge Parameters", QuestionFlags: 0x0, QuestionId: 0xA7, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2733
+	End 
+	Form FormId: 0x2727, Title: "South Bridge"
+		Ref Prompt: "SB USB Configuration", Help: "Options For SB USB Configuration", QuestionFlags: 0x0, QuestionId: 0xA8, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2728
+		SuppressIf 
+			True 
+			Ref Prompt: "SB MISC DEBUG Configuration", Help: "Options For SB MISC DEBUG Configuration", QuestionFlags: 0x0, QuestionId: 0xA9, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x272D
+		End 
+	End 
+	Form FormId: 0x2728, Title: "SB USB Configuration"
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			Ref Prompt: "USB0 Ports", Help: "Options For SB USB Configuration", QuestionFlags: 0x0, QuestionId: 0xAA, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2729
+			Ref Prompt: "USB1 Ports", Help: "Options For SB USB Configuration", QuestionFlags: 0x0, QuestionId: 0xAB, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x272A
+			Ref Prompt: "USB3 Ports", Help: "Options For SB USB Configuration", QuestionFlags: 0x0, QuestionId: 0xAC, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x272B
+			Ref Prompt: "USB4 Ports", Help: "Options For SB USB Configuration", QuestionFlags: 0x0, QuestionId: 0xAD, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x272C
+			Subtitle Prompt: "", Help: "", Flags: 0x0
+			End 
+		End 
+	End 
+	Form FormId: 0x2729, Title: "USB0 Ports"
+		OneOf Prompt: "XHCI0 Port 0 ", Help: "Enabled/Disabled XHCI0 Port 0", QuestionFlags: 0x14, QuestionId: 0x2722, VarStoreId: 0xF101, VarOffset: 0x3C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+		End 
+		OneOf Prompt: "XHCI0 Port 1 ", Help: "Enabled/Disabled XHCI0 Port 1", QuestionFlags: 0x14, QuestionId: 0x2723, VarStoreId: 0xF101, VarOffset: 0x3D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x102, Value: 0x1
+			OneOf Prompt: "XHCI0 2.0 Port 0 ", Help: "Enabled/Disabled XHCI0 2.0 Port 0", QuestionFlags: 0x10, QuestionId: 0xAE, VarStoreId: 0xF101, VarOffset: 0x3E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+			End 
+			OneOf Prompt: "XHCI0 2.0 Port 1 ", Help: "Enabled/Disabled XHCI0 2.0 Port 1", QuestionFlags: 0x10, QuestionId: 0xAF, VarStoreId: 0xF101, VarOffset: 0x3F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+			End 
+		End 
+		OneOf Prompt: "XHCI0 2.0 Port 2 ", Help: "Enabled/Disabled XHCI0 2.0 Port 2", QuestionFlags: 0x10, QuestionId: 0xB0, VarStoreId: 0xF101, VarOffset: 0x40, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+		End 
+		OneOf Prompt: "XHCI0 2.0 Port 3 ", Help: "Enabled/Disabled XHCI0 2.0 Port 3", QuestionFlags: 0x10, QuestionId: 0xB1, VarStoreId: 0xF101, VarOffset: 0x41, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+		End 
+		OneOf Prompt: "XHCI0 2.0 Port 4 ", Help: "Enabled/Disabled XHCI0 2.0 Port 4", QuestionFlags: 0x10, QuestionId: 0xB2, VarStoreId: 0xF101, VarOffset: 0x42, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+		End 
+	End 
+	Form FormId: 0x272A, Title: "USB1 Ports"
+		OneOf Prompt: "XHCI1 Port 0 ", Help: "Enabled/Disabled XHCI1 Port 0", QuestionFlags: 0x14, QuestionId: 0x2724, VarStoreId: 0xF101, VarOffset: 0x43, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x102, Value: 0x1
+			OneOf Prompt: "XHCI1 2.0 Port 0 ", Help: "Enabled/Disabled XHCI1 2.0 Port 0", QuestionFlags: 0x10, QuestionId: 0xB3, VarStoreId: 0xF101, VarOffset: 0x44, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+			End 
+		End 
+	End 
+	Form FormId: 0x272B, Title: "USB3 Ports"
+		OneOf Prompt: "XHCI3 Port 0 ", Help: "Enabled/Disabled XHCI3 Port 0", QuestionFlags: 0x14, QuestionId: 0x2725, VarStoreId: 0xF101, VarOffset: 0x45, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x102, Value: 0x1
+			OneOf Prompt: "XHCI3 2.0 Port 0 ", Help: "Enabled/Disabled XHCI3 2.0 Port 0", QuestionFlags: 0x10, QuestionId: 0xB4, VarStoreId: 0xF101, VarOffset: 0x46, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+			End 
+		End 
+	End 
+	Form FormId: 0x272C, Title: "USB4 Ports"
+		OneOf Prompt: "XHCI4 Port 0 ", Help: "Enabled/Disabled XHCI4 Port 0", QuestionFlags: 0x14, QuestionId: 0x2726, VarStoreId: 0xF101, VarOffset: 0x47, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x102, Value: 0x1
+			OneOf Prompt: "XHCI4 2.0 Port 0 ", Help: "Enabled/Disabled XHCI4 2.0 Port 0", QuestionFlags: 0x10, QuestionId: 0xB5, VarStoreId: 0xF101, VarOffset: 0x48, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+			End 
+		End 
+	End 
+	Form FormId: 0x272D, Title: "SB MISC DEBUG Configuration"
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			OneOf Prompt: "HPET ACPI table In SB", Help: "HPET Function Switch", QuestionFlags: 0x10, QuestionId: 0xB6, VarStoreId: 0xF101, VarOffset: 0x4A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1
+				OneOfOption Option: "Auto" Value: 255, Default, MfgDefault
+			End 
+		End 
+	End 
+	Form FormId: 0x2732, Title: "GFX Configuration"
+		Subtitle Prompt: "GFX Configuration", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "IGD - AmdGop Output Priority", Help: "Sample Code", QuestionFlags: 0x10, QuestionId: 0xB7, VarStoreId: 0xF101, VarOffset: 0x51, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Default" Value: 0, Default, MfgDefault
+			OneOfOption Option: "Manually" Value: 1
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0xB7, Value: 0x0
+			Subtitle Prompt: "", Help: "", Flags: 0x0
+			End 
+			OneOf Prompt: "  Priority1", Help: "For Multi Connector Display Priority", QuestionFlags: 0x10, QuestionId: 0xB8, VarStoreId: 0xF101, VarOffset: 0x52, Flags: 0x12, Size: 32, Min: 0x0, Max: 0x9, Step: 0x0
+				OneOfOption Option: "CRT" Value: 0, Default, MfgDefault
+				OneOfOption Option: "LCD" Value: 1
+				OneOfOption Option: "CRT2" Value: 2
+				OneOfOption Option: "DFP1" Value: 3
+				OneOfOption Option: "DFP2" Value: 4
+				OneOfOption Option: "DFP3" Value: 5
+				OneOfOption Option: "DFP4" Value: 6
+				OneOfOption Option: "DFP5" Value: 7
+				OneOfOption Option: "DFP6" Value: 8
+				OneOfOption Option: "DFP7" Value: 9
+			End 
+			OneOf Prompt: "  Priority2", Help: "For Multi Connector Display Priority", QuestionFlags: 0x10, QuestionId: 0xB9, VarStoreId: 0xF101, VarOffset: 0x56, Flags: 0x12, Size: 32, Min: 0x0, Max: 0x9, Step: 0x0
+				OneOfOption Option: "CRT" Value: 0
+				OneOfOption Option: "LCD" Value: 1, Default, MfgDefault
+				OneOfOption Option: "CRT2" Value: 2
+				OneOfOption Option: "DFP1" Value: 3
+				OneOfOption Option: "DFP2" Value: 4
+				OneOfOption Option: "DFP3" Value: 5
+				OneOfOption Option: "DFP4" Value: 6
+				OneOfOption Option: "DFP5" Value: 7
+				OneOfOption Option: "DFP6" Value: 8
+				OneOfOption Option: "DFP7" Value: 9
+			End 
+			OneOf Prompt: "  Priority3", Help: "For Multi Connector Display Priority", QuestionFlags: 0x10, QuestionId: 0xBA, VarStoreId: 0xF101, VarOffset: 0x5A, Flags: 0x12, Size: 32, Min: 0x0, Max: 0x9, Step: 0x0
+				OneOfOption Option: "CRT" Value: 0
+				OneOfOption Option: "LCD" Value: 1
+				OneOfOption Option: "CRT2" Value: 2
+				OneOfOption Option: "DFP1" Value: 3, Default, MfgDefault
+				OneOfOption Option: "DFP2" Value: 4
+				OneOfOption Option: "DFP3" Value: 5
+				OneOfOption Option: "DFP4" Value: 6
+				OneOfOption Option: "DFP5" Value: 7
+				OneOfOption Option: "DFP6" Value: 8
+				OneOfOption Option: "DFP7" Value: 9
+			End 
+			OneOf Prompt: "  Priority4", Help: "For Multi Connector Display Priority", QuestionFlags: 0x10, QuestionId: 0xBB, VarStoreId: 0xF101, VarOffset: 0x5E, Flags: 0x12, Size: 32, Min: 0x0, Max: 0x9, Step: 0x0
+				OneOfOption Option: "CRT" Value: 0
+				OneOfOption Option: "LCD" Value: 1
+				OneOfOption Option: "CRT2" Value: 2
+				OneOfOption Option: "DFP1" Value: 3
+				OneOfOption Option: "DFP2" Value: 4, Default, MfgDefault
+				OneOfOption Option: "DFP3" Value: 5
+				OneOfOption Option: "DFP4" Value: 6
+				OneOfOption Option: "DFP5" Value: 7
+				OneOfOption Option: "DFP6" Value: 8
+				OneOfOption Option: "DFP7" Value: 9
+			End 
+			OneOf Prompt: "  Priority5", Help: "For Multi Connector Display Priority", QuestionFlags: 0x10, QuestionId: 0xBC, VarStoreId: 0xF101, VarOffset: 0x62, Flags: 0x12, Size: 32, Min: 0x0, Max: 0x9, Step: 0x0
+				OneOfOption Option: "CRT" Value: 0
+				OneOfOption Option: "LCD" Value: 1
+				OneOfOption Option: "CRT2" Value: 2
+				OneOfOption Option: "DFP1" Value: 3
+				OneOfOption Option: "DFP2" Value: 4
+				OneOfOption Option: "DFP3" Value: 5, Default, MfgDefault
+				OneOfOption Option: "DFP4" Value: 6
+				OneOfOption Option: "DFP5" Value: 7
+				OneOfOption Option: "DFP6" Value: 8
+				OneOfOption Option: "DFP7" Value: 9
+			End 
+			OneOf Prompt: "  Priority6", Help: "For Multi Connector Display Priority", QuestionFlags: 0x10, QuestionId: 0xBD, VarStoreId: 0xF101, VarOffset: 0x66, Flags: 0x12, Size: 32, Min: 0x0, Max: 0x9, Step: 0x0
+				OneOfOption Option: "CRT" Value: 0
+				OneOfOption Option: "LCD" Value: 1
+				OneOfOption Option: "CRT2" Value: 2
+				OneOfOption Option: "DFP1" Value: 3
+				OneOfOption Option: "DFP2" Value: 4
+				OneOfOption Option: "DFP3" Value: 5
+				OneOfOption Option: "DFP4" Value: 6
+				OneOfOption Option: "DFP5" Value: 7, Default, MfgDefault
+				OneOfOption Option: "DFP6" Value: 8
+				OneOfOption Option: "DFP7" Value: 9
+			End 
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Numeric Prompt: "IGD - AmdGop Bootup Brightness Level", Help: "Lcd Only, Range 0 - 255", QuestionFlags: 0x10, QuestionId: 0xBE, VarStoreId: 0xF101, VarOffset: 0x6A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+			Default DefaultId: 0x0 Value: 255
+			Default DefaultId: 0x1 Value: 255
+		End 
+	End 
+	Form FormId: 0x2733, Title: "North Bridge"
+		Subtitle Prompt: "North Bridge Configuration", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0x65, Value: 0x0
+		End 
+		Subtitle Prompt: "Memory Information", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "N/A", Help: "", Flags: 0x0
+		End 
+		Ref Prompt: "Socket 0 Information", Help: "View Information related to Socket 0", QuestionFlags: 0x0, QuestionId: 0xBF, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2734
+	End 
+	Form FormId: 0x2734, Title: "Socket 0 Information"
+		Subtitle Prompt: "Socket 0 Information", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "  Starting Address: Unknown", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "    Ending Address: Unknown", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "Dimm0: Not Present", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "Dimm1: Not Present", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "Dimm2: Not Present", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "Dimm3: Not Present", Help: "", Flags: 0x0
+		End 
+	End 
+	Form FormId: 0x2715, Title: "Security"
+		Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Label, LabelNumber: 0xF54
+		Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Label, LabelNumber: 0xF55
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "Security Setting", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x0
+			Text Prompt: "Access Level", Help: "", Text: "User"
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			Text Prompt: "Access Level", Help: "", Text: "Administrator"
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0xC0, Value: 0x0
+				Not 
+			End 
+			Text Prompt: "Administrator Password", Help: "", Text: "Not Installed"
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0xC0, Value: 0x0
+			Text Prompt: "Administrator Password", Help: "", Text: "Installed"
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0xC1, Value: 0x0
+				Not 
+			End 
+			Text Prompt: "User Password", Help: "", Text: "Not Installed"
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0xC1, Value: 0x0
+			Text Prompt: "User Password", Help: "", Text: "Installed"
+		End 
+		SuppressIf 
+			Uint64 Value: 0x1
+			Subtitle Prompt: "Password Description", Help: "", Flags: 0x0
+			End 
+			Subtitle Prompt: "", Help: "", Flags: 0x0
+			End 
+			Subtitle Prompt: "If ONLY the Administrator's password is set,", Help: "", Flags: 0x0
+			End 
+			Subtitle Prompt: "then this only limits access to Setup and is", Help: "", Flags: 0x0
+			End 
+			Subtitle Prompt: "only asked for when entering Setup.", Help: "", Flags: 0x0
+			End 
+			Subtitle Prompt: "If ONLY the User's password is set, then this", Help: "", Flags: 0x0
+			End 
+			Subtitle Prompt: "is a power on password and must be entered to", Help: "", Flags: 0x0
+			End 
+			Subtitle Prompt: "boot or enter Setup. In Setup the User will", Help: "", Flags: 0x0
+			End 
+			Subtitle Prompt: "have Administrator rights.", Help: "", Flags: 0x0
+			End 
+			Subtitle Prompt: "The password length must be", Help: "", Flags: 0x0
+			End 
+			Subtitle Prompt: "in the following range:", Help: "", Flags: 0x0
+			End 
+			Text Prompt: "Minimum length", Help: "", Text: "N/A"
+			Text Prompt: "Maximum length", Help: "", Text: "N/A"
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			Password Prompt: "Change Administrator Password", Help: "Set Administrator Password", QuestionFlags: 0x0, QuestionId: 0xC0, VarStoreId: 0xF013, VarStoreInfo: 0x28, MinSize: 0x3, MaxSize: 0x14
+			End 
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xC0, Value: 0x0
+			Password Prompt: "Change User Password", Help: "Set User Password", QuestionFlags: 0x0, QuestionId: 0xC1, VarStoreId: 0xF013, VarStoreInfo: 0x0, MinSize: 0x3, MaxSize: 0x14
+			End 
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Label, LabelNumber: 0x102A
+		Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Label, LabelNumber: 0x102A
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Label, LabelNumber: 0x108F
+		Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Label, LabelNumber: 0x108F
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Label, LabelNumber: 0x1028
+		Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Label, LabelNumber: 0x1029
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Ref Prompt: "Secure Boot", Help: "Secure Boot configuration", QuestionFlags: 0x4, QuestionId: 0x27F3, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x27F4
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Label, LabelNumber: 0x108D
+			Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Label, LabelNumber: 0x108E
+		End 
+	End 
+	Form FormId: 0x27F0, Title: "HDD Security Configuration"
+		Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Label, LabelNumber: 0x1026
+		Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Label, LabelNumber: 0x1027
+	End 
+	Form FormId: 0x27F4, Title: "Secure Boot"
+		SuppressIf 
+			EqIdVal QuestionId: 0xFF, Value: 0x1
+				Not 
+			End 
+			Text Prompt: "System Mode", Help: "", Text: "Deployed"
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x100, Value: 0x1
+				Not 
+			End 
+			Text Prompt: "System Mode", Help: "", Text: "Audit"
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0xFF, Value: 0x1
+				EqIdVal QuestionId: 0x100, Value: 0x1
+				Or 
+				EqIdVal QuestionId: 0xFE, Value: 0x0
+				Or 
+			End 
+			Text Prompt: "System Mode", Help: "", Text: "Setup"
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0xFF, Value: 0x1
+				EqIdVal QuestionId: 0x100, Value: 0x1
+				Or 
+				EqIdVal QuestionId: 0xFE, Value: 0x1
+				Or 
+			End 
+			Text Prompt: "System Mode", Help: "", Text: "User"
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			OneOf Prompt: "Secure Boot", Help: "Secure Boot feature is Active if Secure Boot is Enabled,
+Platform Key(PK) is enrolled and the System is in User mode.
+The mode change requires platform reset", QuestionFlags: 0x14, QuestionId: 0x27F5, VarStoreId: 0xF, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				Default DefaultId: 0x0 Value: 1
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, MfgDefault
+			End 
+			SuppressIf 
+				EqIdVal QuestionId: 0x101, Value: 0x0
+					Not 
+				End 
+				Text Prompt: "", Help: "", Text: "Not Active"
+			End 
+			SuppressIf 
+				EqIdVal QuestionId: 0x101, Value: 0x1
+					Not 
+				End 
+				Text Prompt: "", Help: "", Text: "Active"
+			End 
+			Subtitle Prompt: "", Help: "", Flags: 0x0
+			End 
+			OneOf Prompt: "Secure Boot Mode", Help: "Secure Boot mode options:
+Standard or Custom.
+In Custom mode, Secure Boot Policy variables can be configured by a physically present user without full authentication", QuestionFlags: 0x14, QuestionId: 0x27F6, VarStoreId: 0xF, VarOffset: 0x1, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				Default DefaultId: 0x0 Value: 0
+				OneOfOption Option: "Standard" Value: 0, MfgDefault
+				OneOfOption Option: "Custom" Value: 1
+			End 
+			GrayOutIf 
+				EqIdVal QuestionId: 0x27F6, Value: 0x0
+				Ref Prompt: "Restore Factory Keys", Help: "Force System to User Mode.
+Install factory default Secure Boot key databases", QuestionFlags: 0x14, QuestionId: 0x27F7, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x27F4
+				GrayOutIf 
+					EqIdVal QuestionId: 0xFC, Value: 0x0
+					Ref Prompt: "Reset To Setup Mode", Help: "Delete all Secure Boot key databases from NVRAM", QuestionFlags: 0x14, QuestionId: 0x27F8, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x27F4
+				End 
+				SuppressIf 
+					EqIdVal QuestionId: 0x100, Value: 0x1
+						EqIdVal QuestionId: 0xFF, Value: 0x1
+						Or 
+					End 
+					Ref Prompt: "Enter Audit Mode", Help: "Enter Audit Mode workflow.
+Transitions from User to Audit
+Mode will result in erasing of PK variable", QuestionFlags: 0x14, QuestionId: 0x27F9, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x27F4
+				End 
+				SuppressIf 
+					EqIdVal QuestionId: 0xFF, Value: 0x1
+						EqIdVal QuestionId: 0xFE, Value: 0x1
+						Or 
+					End 
+					Ref Prompt: "Enter Deployed Mode", Help: "Transition between Deployment
+and User Modes", QuestionFlags: 0x14, QuestionId: 0x27FA, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x27F4
+				End 
+				SuppressIf 
+					EqIdVal QuestionId: 0xFF, Value: 0x0
+						EqIdVal QuestionId: 0xFE, Value: 0x1
+						Or 
+					End 
+					Ref Prompt: "Exit Deployed Mode", Help: "Transition between Deployment
+and User Modes", QuestionFlags: 0x14, QuestionId: 0x27FB, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x27F4
+				End 
+				Subtitle Prompt: "", Help: "", Flags: 0x0
+				End 
+				Ref Prompt: "Expert Key Management", Help: "Enables expert users to modify Secure Boot Policy variables without variable authentication", QuestionFlags: 0x4, QuestionId: 0x27FC, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x27FE
+			End 
+		End 
+	End 
+	Form FormId: 0x27FE, Title: "Expert Key Management"
+		SuppressIf 
+			EqIdVal QuestionId: 0xFD, Value: 0x1
+				Not 
+			End 
+			Text Prompt: "Vendor Keys", Help: "", Text: "Valid"
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0xFD, Value: 0x0
+				Not 
+			End 
+			Text Prompt: "Vendor Keys", Help: "", Text: "Modified"
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "Factory Key Provision", Help: "Install factory default Secure Boot keys after the platform reset and while the System is in Setup mode", QuestionFlags: 0x14, QuestionId: 0x27FF, VarStoreId: 0xF, VarOffset: 0x2, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			Default DefaultId: 0x0 Value: 1
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, MfgDefault
+		End 
+		Ref Prompt: "Restore Factory Keys", Help: "Force System to User Mode.
+Install factory default Secure Boot key databases", QuestionFlags: 0x14, QuestionId: 0x2800, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x27FE
+		GrayOutIf 
+			EqIdVal QuestionId: 0xFC, Value: 0x0
+			Ref Prompt: "Reset To Setup Mode", Help: "Delete all Secure Boot key databases from NVRAM", QuestionFlags: 0x14, QuestionId: 0x2801, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x27FE
+		End 
+		Ref Prompt: "Enroll Efi Image", Help: "Allow Efi image to run in Secure Boot mode.
+Enroll SHA256 Hash certificate of a PE image into Authorized Signature Database (db)", QuestionFlags: 0x4, QuestionId: 0x2802, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x27FE
+		GrayOutIf 
+			EqIdVal QuestionId: 0xFC, Value: 0x0
+				EqIdVal QuestionId: 0xFB, Value: 0x0
+				And 
+				EqIdVal QuestionId: 0xFA, Value: 0x0
+				And 
+				EqIdVal QuestionId: 0xF9, Value: 0x0
+				And 
+				EqIdVal QuestionId: 0xF8, Value: 0x0
+				And 
+				EqIdVal QuestionId: 0xF7, Value: 0x0
+				And 
+			End 
+			Ref Prompt: "Export Secure Boot variables", Help: "Save NVRAM content of Secure Boot variable to a file", QuestionFlags: 0x4, QuestionId: 0x2803, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x27FE
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "Secure Boot variable      | Size| Keys| Key Source", Help: "", Flags: 0x0
+		End 
+		Ref Prompt: " ", Help: "Enroll Factory Defaults or load certificates from a file:
+ 1.Public Key Certificate:
+  a)EFI_SIGNATURE_LIST
+  b)EFI_CERT_X509 (DER)
+  c)EFI_CERT_RSA2048 (bin)
+  d)EFI_CERT_SHAXXX
+ 2.Authenticated UEFI Variable
+ 3.EFI PE/COFF Image(SHA256)
+Key Source:
+ Factory,Modified,Mixed", QuestionFlags: 0x14, QuestionId: 0x2804, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x27FE
+		Ref Prompt: " ", Help: "Enroll Factory Defaults or load certificates from a file:
+ 1.Public Key Certificate:
+  a)EFI_SIGNATURE_LIST
+  b)EFI_CERT_X509 (DER)
+  c)EFI_CERT_RSA2048 (bin)
+  d)EFI_CERT_SHAXXX
+ 2.Authenticated UEFI Variable
+ 3.EFI PE/COFF Image(SHA256)
+Key Source:
+ Factory,Modified,Mixed", QuestionFlags: 0x4, QuestionId: 0x2805, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x27FE
+		Ref Prompt: " ", Help: "Enroll Factory Defaults or load certificates from a file:
+ 1.Public Key Certificate:
+  a)EFI_SIGNATURE_LIST
+  b)EFI_CERT_X509 (DER)
+  c)EFI_CERT_RSA2048 (bin)
+  d)EFI_CERT_SHAXXX
+ 2.Authenticated UEFI Variable
+ 3.EFI PE/COFF Image(SHA256)
+Key Source:
+ Factory,Modified,Mixed", QuestionFlags: 0x4, QuestionId: 0x2806, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x27FE
+		Ref Prompt: " ", Help: "Enroll Factory Defaults or load certificates from a file:
+ 1.Public Key Certificate:
+  a)EFI_SIGNATURE_LIST
+  b)EFI_CERT_X509 (DER)
+  c)EFI_CERT_RSA2048 (bin)
+  d)EFI_CERT_SHAXXX
+ 2.Authenticated UEFI Variable
+ 3.EFI PE/COFF Image(SHA256)
+Key Source:
+ Factory,Modified,Mixed", QuestionFlags: 0x4, QuestionId: 0x2807, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x27FE
+		Ref Prompt: " ", Help: "Enroll Factory Defaults or load certificates from a file:
+ 1.Public Key Certificate:
+  a)EFI_SIGNATURE_LIST
+  b)EFI_CERT_X509 (DER)
+  c)EFI_CERT_RSA2048 (bin)
+  d)EFI_CERT_SHAXXX
+ 2.Authenticated UEFI Variable
+ 3.EFI PE/COFF Image(SHA256)
+Key Source:
+ Factory,Modified,Mixed", QuestionFlags: 0x4, QuestionId: 0x2808, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x27FE
+		Ref Prompt: " ", Help: "Enroll Factory Defaults or load certificates from a file:
+ 1.Public Key Certificate:
+  a)EFI_SIGNATURE_LIST
+  b)EFI_CERT_X509 (DER)
+  c)EFI_CERT_RSA2048 (bin)
+  d)EFI_CERT_SHAXXX
+ 2.Authenticated UEFI Variable
+ 3.EFI PE/COFF Image(SHA256)
+Key Source:
+ Factory,Modified,Mixed", QuestionFlags: 0x4, QuestionId: 0x2809, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x27FE
+	End 
+	Form FormId: 0x28F3, Title: "TCG Storage device Security Configuration"
+		Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Label, LabelNumber: 0x108B
+		Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Label, LabelNumber: 0x108C
+	End 
+	Form FormId: 0x28F4, Title: "TCG Storage device Security Configuration"
+		Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Label, LabelNumber: 0x1091
+		Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Label, LabelNumber: 0x1092
+	End 
+	Form FormId: 0x2716, Title: "Boot"
+		Subtitle Prompt: "Boot Configuration", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x8, Value: 0x1
+			Numeric Prompt: "Setup Prompt Timeout", Help: "Number of seconds to wait for setup activation key. 65535(0xFFFF) means indefinite waiting.", QuestionFlags: 0x0, QuestionId: 0xC2, VarStoreId: 0xF005, VarOffset: 0x0, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 1
+				Default DefaultId: 0x1 Value: 1
+			End 
+			OneOf Prompt: "Bootup NumLock State", Help: "Select the keyboard NumLock state", QuestionFlags: 0x10, QuestionId: 0xC3, VarStoreId: 0xF101, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "On" Value: 1
+				OneOfOption Option: "Off" Value: 0
+				Default DefaultId: 0x0 Value: 0
+				Default DefaultId: 0x1 Value: 0
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x8, Value: 0x1
+			CheckBox Prompt: "Quiet Boot", Help: "Enables or disables Quiet Boot option", QuestionFlags: 0x0, QuestionId: 0xC4, VarStoreId: 0xF013, VarOffset: 0x50, Flags: 0x0, Default: Disabled, MfgDefault: Disabled
+				Default DefaultId: 0x0 Value: 1
+				Default DefaultId: 0x1 Value: 1
+			End 
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			OneOf Prompt: "Fast Boot", Help: "Enables or disables boot with initialization of a minimal set of devices required to launch active boot option. Has no effect for BBS boot options.", QuestionFlags: 0x10, QuestionId: 0xC5, VarStoreId: 0xF101, VarOffset: 0x7, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				Default DefaultId: 0x0 Value: 1
+				OneOfOption Option: "Disabled" Value: 0, MfgDefault
+				OneOfOption Option: "Enabled" Value: 1
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x8, Value: 0x1
+			SuppressIf 
+				EqIdVal QuestionId: 0xC5, Value: 0x0
+				GrayOutIf 
+					EqIdVal QuestionId: 0xC5, Value: 0x0
+					OneOf Prompt: " SATA Support", Help: "If Last Boot SATA Devices Only, Only last boot SATA device will be available in Post. If All SATA Devices, all SATA devices will be available in OS and Post.", QuestionFlags: 0x10, QuestionId: 0xC6, VarStoreId: 0xF101, VarOffset: 0x8, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+						Default DefaultId: 0x0 Value: 0
+						OneOfOption Option: "Last Boot SATA Devices Only" Value: 0
+						OneOfOption Option: "All SATA Devices" Value: 1, MfgDefault
+					End 
+				End 
+			End 
+			SuppressIf 
+				EqIdVal QuestionId: 0xC5, Value: 0x0
+				GrayOutIf 
+					EqIdVal QuestionId: 0xC5, Value: 0x0
+					OneOf Prompt: " NVMe Support", Help: "If Disabled, NVMe device will be skipped.", QuestionFlags: 0x10, QuestionId: 0xC7, VarStoreId: 0xF101, VarOffset: 0xF, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+						Default DefaultId: 0x0 Value: 1
+						OneOfOption Option: "Disabled" Value: 0
+						OneOfOption Option: "Enabled" Value: 1, MfgDefault
+					End 
+				End 
+			End 
+			SuppressIf 
+				EqIdVal QuestionId: 0xC5, Value: 0x0
+				GrayOutIf 
+					EqIdVal QuestionId: 0xC5, Value: 0x0
+					OneOf Prompt: " UFS Support", Help: "If Disabled, UFS device will be skipped.", QuestionFlags: 0x10, QuestionId: 0xC8, VarStoreId: 0xF101, VarOffset: 0x10, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+						Default DefaultId: 0x0 Value: 0
+						OneOfOption Option: "Disabled" Value: 0
+						OneOfOption Option: "Enabled" Value: 1, MfgDefault
+					End 
+				End 
+			End 
+			SuppressIf 
+				EqIdVal QuestionId: 0xC5, Value: 0x0
+				GrayOutIf 
+					EqIdVal QuestionId: 0xC5, Value: 0x1
+					OneOf Prompt: " VGA Support", Help: "If Auto, only install Legacy OpRom with Legacy OS and logo would NOT be shown during post. Efi driver will still be installed with EFI OS.", QuestionFlags: 0x10, QuestionId: 0xC9, VarStoreId: 0xF101, VarOffset: 0x9, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+						Default DefaultId: 0x0 Value: 1
+						OneOfOption Option: "Auto" Value: 0
+						OneOfOption Option: "EFI Driver" Value: 1, MfgDefault
+					End 
+				End 
+			End 
+			SuppressIf 
+				EqIdVal QuestionId: 0xC5, Value: 0x0
+				GrayOutIf 
+					EqIdVal QuestionId: 0xC5, Value: 0x0
+					OneOf Prompt: " USB Support", Help: "If Disabled, all USB devices will NOT be available until after OS boot. If Partial Initial, USB Mass Storage and specific USB port/device will NOT be available before OS boot. If Enabled, all USB devices will be available in OS and Post.", QuestionFlags: 0x10, QuestionId: 0xCA, VarStoreId: 0xF101, VarOffset: 0xA, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+						Default DefaultId: 0x0 Value: 1
+						OneOfOption Option: "Disabled" Value: 0
+						OneOfOption Option: "Full Initial" Value: 1, MfgDefault
+						OneOfOption Option: "Partial Initial" Value: 2
+					End 
+				End 
+			End 
+			SuppressIf 
+				EqIdVal QuestionId: 0xC5, Value: 0x0
+				GrayOutIf 
+					EqIdVal QuestionId: 0xC5, Value: 0x0
+					OneOf Prompt: " PS2 Devices Support", Help: "If Disabled, PS2 devices will be skipped.", QuestionFlags: 0x10, QuestionId: 0xCB, VarStoreId: 0xF101, VarOffset: 0xB, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+						Default DefaultId: 0x0 Value: 1
+						OneOfOption Option: "Disabled" Value: 0
+						OneOfOption Option: "Enabled" Value: 1, MfgDefault
+					End 
+				End 
+			End 
+			SuppressIf 
+				EqIdVal QuestionId: 0xC5, Value: 0x0
+				GrayOutIf 
+					EqIdVal QuestionId: 0xC5, Value: 0x0
+					OneOf Prompt: " Network Stack Driver Support", Help: "If Disabled, NetWork Stack Driver will be skipped.", QuestionFlags: 0x10, QuestionId: 0xCC, VarStoreId: 0xF101, VarOffset: 0xE, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+						Default DefaultId: 0x0 Value: 0
+						OneOfOption Option: "Disabled" Value: 0
+						OneOfOption Option: "Enabled" Value: 1, MfgDefault
+					End 
+				End 
+			End 
+			SuppressIf 
+				EqIdVal QuestionId: 0xC5, Value: 0x0
+				OneOf Prompt: "Redirection Support", Help: "If disable, Redirection function will be disabled.", QuestionFlags: 0x10, QuestionId: 0xCD, VarStoreId: 0xF101, VarOffset: 0xD, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					Default DefaultId: 0x0 Value: 0
+					OneOfOption Option: "Disabled" Value: 0, MfgDefault
+					OneOfOption Option: "Enabled" Value: 1
+				End 
+			End 
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			EqIdValList QuestionId: 0xF6, Values: [0]
+			Subtitle Prompt: "Driver Option Priorities", Help: "", Flags: 0x0
+			End 
+		End 
+		SuppressIf 
+			EqIdValList QuestionId: 0xF6, Values: [65535]
+			OneOf Prompt: "Driver Option #%d", Help: "Sets the system driver order", QuestionFlags: 0x0, QuestionId: 0xCE, VarStoreId: 0x7, VarOffset: 0x0, Flags: 0x11, Size: 16, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "" Value: 0, Default, MfgDefault
+				OneOfOption Option: "" Value: 1
+			End 
+		End 
+		SuppressIf 
+			True 
+			OneOf Prompt: "Boot mode select", Help: "Select boot mode LEGACY/UEFI", QuestionFlags: 0x14, QuestionId: 0x290F, VarStoreId: 0x290C, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "LEGACY" Value: 0
+				OneOfOption Option: "UEFI" Value: 1
+				Default DefaultId: 0x0 Value: 1
+				Default DefaultId: 0x1 Value: 1
+			End 
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "FIXED BOOT ORDER Priorities", Help: "", Flags: 0x0
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			SuppressIf 
+				EqIdValList QuestionId: 0x290F, Values: [0, 2, 3, 4, 5]
+				OneOf Prompt: "Boot Option #1", Help: "Sets the system boot order", QuestionFlags: 0x4, QuestionId: 0x2080, VarStoreId: 0x290C, VarOffset: 0xF, Flags: 0x11, Size: 16, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "NVME" Value: 0, Default
+					OneOfOption Option: "Hard Disk" Value: 1
+					OneOfOption Option: "USB Device" Value: 2
+					OneOfOption Option: "Network" Value: 3
+					OneOfOption Option: "CD/DVD" Value: 4
+				End 
+			End 
+			SuppressIf 
+				EqIdValList QuestionId: 0x290F, Values: [0, 2, 3, 4, 5]
+				OneOf Prompt: "Boot Option #2", Help: "Sets the system boot order", QuestionFlags: 0x4, QuestionId: 0x2081, VarStoreId: 0x290C, VarOffset: 0x11, Flags: 0x11, Size: 16, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "NVME" Value: 0
+					OneOfOption Option: "Hard Disk" Value: 1, Default
+					OneOfOption Option: "USB Device" Value: 2
+					OneOfOption Option: "Network" Value: 3
+					OneOfOption Option: "CD/DVD" Value: 4
+				End 
+			End 
+			SuppressIf 
+				EqIdValList QuestionId: 0x290F, Values: [0, 2, 3, 4, 5]
+				OneOf Prompt: "Boot Option #3", Help: "Sets the system boot order", QuestionFlags: 0x4, QuestionId: 0x2082, VarStoreId: 0x290C, VarOffset: 0x13, Flags: 0x11, Size: 16, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "NVME" Value: 0
+					OneOfOption Option: "Hard Disk" Value: 1
+					OneOfOption Option: "USB Device" Value: 2, Default
+					OneOfOption Option: "Network" Value: 3
+					OneOfOption Option: "CD/DVD" Value: 4
+				End 
+			End 
+			SuppressIf 
+				EqIdValList QuestionId: 0x290F, Values: [0, 2, 3, 4, 5]
+				OneOf Prompt: "Boot Option #4", Help: "Sets the system boot order", QuestionFlags: 0x4, QuestionId: 0x2083, VarStoreId: 0x290C, VarOffset: 0x15, Flags: 0x11, Size: 16, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "NVME" Value: 0
+					OneOfOption Option: "Hard Disk" Value: 1
+					OneOfOption Option: "USB Device" Value: 2
+					OneOfOption Option: "Network" Value: 3, Default
+					OneOfOption Option: "CD/DVD" Value: 4
+				End 
+			End 
+			SuppressIf 
+				EqIdValList QuestionId: 0x290F, Values: [0, 2, 3, 4, 5]
+				OneOf Prompt: "Boot Option #5", Help: "Sets the system boot order", QuestionFlags: 0x4, QuestionId: 0x2084, VarStoreId: 0x290C, VarOffset: 0x17, Flags: 0x11, Size: 16, Min: 0x0, Max: 0x4, Step: 0x0
+					OneOfOption Option: "NVME" Value: 0
+					OneOfOption Option: "Hard Disk" Value: 1
+					OneOfOption Option: "USB Device" Value: 2
+					OneOfOption Option: "Network" Value: 3
+					OneOfOption Option: "CD/DVD" Value: 4, Default
+				End 
+			End 
+			SuppressIf 
+				True 
+				OneOf Prompt: "", Help: "Sets the system boot order", QuestionFlags: 0x4, QuestionId: 0xCF, VarStoreId: 0x290C, VarOffset: 0x19, Flags: 0x11, Size: 16, Min: 0xFF, Max: 0xFF, Step: 0x0
+					OneOfOption Option: "Hard Disk" Value: 255, Default
+				End 
+			End 
+			SuppressIf 
+				EqIdValList QuestionId: 0x290F, Values: [1, 2, 3, 4, 5]
+				OneOf Prompt: "Boot Option #1", Help: "Sets the system boot order", QuestionFlags: 0x4, QuestionId: 0x2000, VarStoreId: 0x290C, VarOffset: 0x1, Flags: 0x11, Size: 16, Min: 0x0, Max: 0x5, Step: 0x0
+					OneOfOption Option: "Hard Disk" Value: 0, Default
+					OneOfOption Option: "NVME" Value: 1
+					OneOfOption Option: "CD/DVD" Value: 2
+					OneOfOption Option: "SD" Value: 3
+					OneOfOption Option: "USB Device" Value: 4
+					OneOfOption Option: "Network" Value: 5
+				End 
+			End 
+			SuppressIf 
+				EqIdValList QuestionId: 0x290F, Values: [1, 2, 3, 4, 5]
+				OneOf Prompt: "Boot Option #2", Help: "Sets the system boot order", QuestionFlags: 0x4, QuestionId: 0x2001, VarStoreId: 0x290C, VarOffset: 0x3, Flags: 0x11, Size: 16, Min: 0x0, Max: 0x5, Step: 0x0
+					OneOfOption Option: "Hard Disk" Value: 0
+					OneOfOption Option: "NVME" Value: 1, Default
+					OneOfOption Option: "CD/DVD" Value: 2
+					OneOfOption Option: "SD" Value: 3
+					OneOfOption Option: "USB Device" Value: 4
+					OneOfOption Option: "Network" Value: 5
+				End 
+			End 
+			SuppressIf 
+				EqIdValList QuestionId: 0x290F, Values: [1, 2, 3, 4, 5]
+				OneOf Prompt: "Boot Option #3", Help: "Sets the system boot order", QuestionFlags: 0x4, QuestionId: 0x2002, VarStoreId: 0x290C, VarOffset: 0x5, Flags: 0x11, Size: 16, Min: 0x0, Max: 0x5, Step: 0x0
+					OneOfOption Option: "Hard Disk" Value: 0
+					OneOfOption Option: "NVME" Value: 1
+					OneOfOption Option: "CD/DVD" Value: 2, Default
+					OneOfOption Option: "SD" Value: 3
+					OneOfOption Option: "USB Device" Value: 4
+					OneOfOption Option: "Network" Value: 5
+				End 
+			End 
+			SuppressIf 
+				EqIdValList QuestionId: 0x290F, Values: [1, 2, 3, 4, 5]
+				OneOf Prompt: "Boot Option #4", Help: "Sets the system boot order", QuestionFlags: 0x4, QuestionId: 0x2003, VarStoreId: 0x290C, VarOffset: 0x7, Flags: 0x11, Size: 16, Min: 0x0, Max: 0x5, Step: 0x0
+					OneOfOption Option: "Hard Disk" Value: 0
+					OneOfOption Option: "NVME" Value: 1
+					OneOfOption Option: "CD/DVD" Value: 2
+					OneOfOption Option: "SD" Value: 3, Default
+					OneOfOption Option: "USB Device" Value: 4
+					OneOfOption Option: "Network" Value: 5
+				End 
+			End 
+			SuppressIf 
+				EqIdValList QuestionId: 0x290F, Values: [1, 2, 3, 4, 5]
+				OneOf Prompt: "Boot Option #5", Help: "Sets the system boot order", QuestionFlags: 0x4, QuestionId: 0x2004, VarStoreId: 0x290C, VarOffset: 0x9, Flags: 0x11, Size: 16, Min: 0x0, Max: 0x5, Step: 0x0
+					OneOfOption Option: "Hard Disk" Value: 0
+					OneOfOption Option: "NVME" Value: 1
+					OneOfOption Option: "CD/DVD" Value: 2
+					OneOfOption Option: "SD" Value: 3
+					OneOfOption Option: "USB Device" Value: 4, Default
+					OneOfOption Option: "Network" Value: 5
+				End 
+			End 
+			SuppressIf 
+				EqIdValList QuestionId: 0x290F, Values: [1, 2, 3, 4, 5]
+				OneOf Prompt: "Boot Option #6", Help: "Sets the system boot order", QuestionFlags: 0x4, QuestionId: 0x2005, VarStoreId: 0x290C, VarOffset: 0xB, Flags: 0x11, Size: 16, Min: 0x0, Max: 0x5, Step: 0x0
+					OneOfOption Option: "Hard Disk" Value: 0
+					OneOfOption Option: "NVME" Value: 1
+					OneOfOption Option: "CD/DVD" Value: 2
+					OneOfOption Option: "SD" Value: 3
+					OneOfOption Option: "USB Device" Value: 4
+					OneOfOption Option: "Network" Value: 5, Default
+				End 
+			End 
+			SuppressIf 
+				True 
+				OneOf Prompt: "", Help: "Sets the system boot order", QuestionFlags: 0x4, QuestionId: 0xD0, VarStoreId: 0x290C, VarOffset: 0xD, Flags: 0x11, Size: 16, Min: 0xFF, Max: 0xFF, Step: 0x0
+					OneOfOption Option: "Hard Disk" Value: 255, Default
+				End 
+			End 
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Ref Prompt: "Network Stack Configuration", Help: "Network Stack Settings", QuestionFlags: 0x0, QuestionId: 0xD1, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2749
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			SuppressIf 
+				EqIdValList QuestionId: 0x290F, Values: [0]
+				SuppressIf 
+					EqIdValList QuestionId: 0xF5, Values: [0]
+					SuppressIf 
+						EqIdValList QuestionId: 0xF4, Values: [0]
+						Ref Prompt: "UEFI NVME Drive BBS Priorities", Help: "Specifies the Boot Device Priority sequence from available UEFI NVME Drives.", QuestionFlags: 0x0, QuestionId: 0xD2, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2910, RefQuestionId: 0x0, FormSetGuid: DE8AB926-EFDA-4C23-BBC4-98FD29AA0069
+					End 
+				End 
+			End 
+			SuppressIf 
+				EqIdValList QuestionId: 0x290F, Values: [0]
+				SuppressIf 
+					EqIdValList QuestionId: 0xF3, Values: [0]
+					SuppressIf 
+						EqIdValList QuestionId: 0xF2, Values: [0]
+						Ref Prompt: "UEFI Hard Disk Drive BBS Priorities", Help: "Specifies the Boot Device Priority sequence from available UEFI Hard Disk Drives.", QuestionFlags: 0x0, QuestionId: 0xD3, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2911, RefQuestionId: 0x0, FormSetGuid: DE8AB926-EFDA-4C23-BBC4-98FD29AA0069
+					End 
+				End 
+			End 
+			SuppressIf 
+				EqIdValList QuestionId: 0x290F, Values: [0]
+				SuppressIf 
+					EqIdValList QuestionId: 0xF1, Values: [0]
+					SuppressIf 
+						EqIdValList QuestionId: 0xF0, Values: [0]
+						Ref Prompt: "UEFI USB Drive BBS Priorities", Help: "Specifies the Boot Device Priority sequence from available UEFI USB Drives.", QuestionFlags: 0x0, QuestionId: 0xD4, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2912, RefQuestionId: 0x0, FormSetGuid: DE8AB926-EFDA-4C23-BBC4-98FD29AA0069
+					End 
+				End 
+			End 
+			SuppressIf 
+				EqIdValList QuestionId: 0x290F, Values: [0]
+				SuppressIf 
+					EqIdValList QuestionId: 0xEF, Values: [0]
+					SuppressIf 
+						EqIdValList QuestionId: 0xEE, Values: [0]
+						Ref Prompt: "UEFI NETWORK Drive BBS Priorities", Help: "Specifies the Boot Device Priority sequence from available UEFI NETWORK Drives.", QuestionFlags: 0x0, QuestionId: 0xD5, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2913, RefQuestionId: 0x0, FormSetGuid: DE8AB926-EFDA-4C23-BBC4-98FD29AA0069
+					End 
+				End 
+			End 
+			SuppressIf 
+				EqIdValList QuestionId: 0x290F, Values: [0]
+				SuppressIf 
+					EqIdValList QuestionId: 0xED, Values: [0]
+					SuppressIf 
+						EqIdValList QuestionId: 0xEC, Values: [0]
+						Ref Prompt: "UEFI CDROM/DVD Drive BBS Priorities", Help: "Specifies the Boot Device Priority sequence from available UEFI CDROM/DVD Drives.", QuestionFlags: 0x0, QuestionId: 0xD6, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2914, RefQuestionId: 0x0, FormSetGuid: DE8AB926-EFDA-4C23-BBC4-98FD29AA0069
+					End 
+				End 
+			End 
+		End 
+	End 
+	Form FormId: 0x2749, Title: "Network Stack Configuration"
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			OneOf Prompt: "Network Stack", Help: "Enable/Disable UEFI Network Stack", QuestionFlags: 0x10, QuestionId: 0xD7, VarStoreId: 0xD, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1
+				Default DefaultId: 0x0 Value: 1
+				Default DefaultId: 0x1 Value: 1
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0xD7, Value: 0x0
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				OneOf Prompt: "IPv4 PXE Support", Help: "Enable/Disable IPv4 PXE boot support. If disabled, IPv4 PXE boot support will not be available.", QuestionFlags: 0x10, QuestionId: 0xD8, VarStoreId: 0xD, VarOffset: 0x1, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Disabled" Value: 0
+					OneOfOption Option: "Enabled" Value: 1
+					Default DefaultId: 0x0 Value: 1
+					Default DefaultId: 0x1 Value: 1
+				End 
+			End 
+			OneOf Prompt: "IPv4 HTTP Support", Help: "Enable/Disable IPv4 HTTP boot support. If disabled, IPv4 HTTP boot support will not be available.", QuestionFlags: 0x10, QuestionId: 0xD9, VarStoreId: 0xD, VarOffset: 0x6, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1
+				Default DefaultId: 0x0 Value: 0
+				Default DefaultId: 0x1 Value: 0
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0xD7, Value: 0x0
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				OneOf Prompt: "IPv6 PXE Support", Help: "Enable/Disable IPv6 PXE boot support. If disabled, IPv6 PXE boot support will not be available.", QuestionFlags: 0x10, QuestionId: 0xDA, VarStoreId: 0xD, VarOffset: 0x2, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Disabled" Value: 0
+					OneOfOption Option: "Enabled" Value: 1
+					Default DefaultId: 0x0 Value: 0
+					Default DefaultId: 0x1 Value: 0
+				End 
+			End 
+			OneOf Prompt: "IPv6 HTTP Support", Help: "Enable/Disable IPv6 HTTP boot support. If disabled, IPv6 HTTP boot support will not be available.", QuestionFlags: 0x10, QuestionId: 0xDB, VarStoreId: 0xD, VarOffset: 0x7, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1
+				Default DefaultId: 0x0 Value: 0
+				Default DefaultId: 0x1 Value: 0
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x8, Value: 0x1
+			SuppressIf 
+				EqIdVal QuestionId: 0xD7, Value: 0x0
+				Numeric Prompt: "PXE boot wait time", Help: "Wait time in seconds to press ESC key to abort the PXE boot. Use either +/- or numeric keys to set the value.", QuestionFlags: 0x10, QuestionId: 0xDC, VarStoreId: 0xD, VarOffset: 0x4, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x5, Step: 0x1
+					Default DefaultId: 0x0 Value: 5
+					Default DefaultId: 0x1 Value: 5
+				End 
+			End 
+			SuppressIf 
+				EqIdVal QuestionId: 0xD7, Value: 0x0
+				Numeric Prompt: "Media detect count", Help: "Number of times the presence of media will be checked. Use either +/- or numeric keys to set the value.", QuestionFlags: 0x10, QuestionId: 0xDD, VarStoreId: 0xD, VarOffset: 0x5, Flags: 0x10, Size: 8, Min: 0x1, Max: 0x32, Step: 0x1
+					Default DefaultId: 0x0 Value: 5
+					Default DefaultId: 0x1 Value: 5
+				End 
+			End 
+		End 
+	End 
+	SuppressIf 
+		EqIdVal QuestionId: 0x8, Value: 0x1
+	End 
+	Form FormId: 0x2717, Title: "Save & Exit"
+		SuppressIf 
+			EqIdVal QuestionId: 0x8, Value: 0x1
+			Subtitle Prompt: "Save Options", Help: "", Flags: 0x0
+			End 
+			Subtitle Prompt: "", Help: "", Flags: 0x0
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0xE8, Value: 0x9
+			Ref Prompt: "Save Changes and Reset", Help: "Reset the system after saving the changes.", QuestionFlags: 0x0, QuestionId: 0xDE, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2717
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0xE8, Value: 0xA
+			Ref Prompt: "Discard Changes and Reset", Help: "Reset system setup without saving any changes.", QuestionFlags: 0x0, QuestionId: 0xDF, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2717
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x8, Value: 0x1
+			Subtitle Prompt: "", Help: "", Flags: 0x0
+			End 
+			Subtitle Prompt: "", Help: "", Flags: 0x0
+			End 
+			Subtitle Prompt: "Default Options", Help: "", Flags: 0x0
+			End 
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			SuppressIf 
+				EqIdVal QuestionId: 0xE8, Value: 0x5
+				Ref Prompt: "Restore Defaults", Help: "Restore/Load Default values for all the setup options.", QuestionFlags: 0x0, QuestionId: 0xE0, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2717
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x8, Value: 0x1
+			SuppressIf 
+				EqIdVal QuestionId: 0xE8, Value: 0x6
+				Ref Prompt: "Save as User Defaults", Help: "Save the changes done so far as User Defaults.", QuestionFlags: 0x0, QuestionId: 0xE1, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2717
+			End 
+			SuppressIf 
+				EqIdVal QuestionId: 0xE8, Value: 0x7
+				Ref Prompt: "Restore User Defaults", Help: "Restore the User Defaults to all the setup options.", QuestionFlags: 0x0, QuestionId: 0xE2, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2717
+			End 
+		End 
+		Subtitle Prompt: "", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: "Boot Override", Help: "", Flags: 0x0
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			SuppressIf 
+				EqIdValList QuestionId: 0xEB, Values: [65535]
+				Ref Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0xE3, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2717
+			End 
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0xE9, Value: 0x1
+			SuppressIf 
+				EqIdValList QuestionId: 0xEA, Values: [1]
+				Ref Prompt: "Launch EFI Shell from filesystem device", Help: "Attempts to Launch EFI Shell application (Shell.efi) from one of the available filesystem devices", QuestionFlags: 0x0, QuestionId: 0xE4, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2717
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x8, Value: 0x1
+			GrayOutIf 
+				EqIdVal QuestionId: 0xE9, Value: 0x1
+				SuppressIf 
+					EqIdVal QuestionId: 0xE8, Value: 0x19
+					Ref Prompt: "Ship Mode", Help: "Reset the system after enter into ship mode", QuestionFlags: 0x0, QuestionId: 0xE5, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2717
+				End 
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x8, Value: 0x1
+			OneOf Prompt: "EC Mirror Support", Help: "Enabled: Support
+Disabled: Not Support", QuestionFlags: 0x10, QuestionId: 0xE6, VarStoreId: 0xF101, VarOffset: 0x3, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+				OneOfOption Option: "Force EC Mirror Once" Value: 15
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default, MfgDefault
+			End 
+		End 
+		SuppressIf 
+			EqIdValList QuestionId: 0xE7, Values: [1]
+			SuppressIf 
+				EqIdVal QuestionId: 0x8, Value: 0x1
+				Action Prompt: "Windows - Push Button Reset", Help: "Trigger Windows Push Button Reset", QuestionFlags: 0x14, QuestionId: 0x271F, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, QuestionConfig: ""
+				End 
+			End 
+		End 
+		DisableIf 
+			True 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0xE7, VarStoreId: 0x2, VarOffset: 0x0, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xFFFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0xE8, VarStoreId: 0xF002, VarOffset: 0x0, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xFFFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0xE9, VarStoreId: 0xF000, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0xEA, VarStoreId: 0xF00B, VarOffset: 0x0, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xFFFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0xEB, VarStoreId: 0xF003, VarOffset: 0x0, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xFFFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0xEC, VarStoreId: 0x290E, VarOffset: 0x19, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0xED, VarStoreId: 0x290D, VarOffset: 0x19, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0xEE, VarStoreId: 0x290E, VarOffset: 0x1A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0xEF, VarStoreId: 0x290D, VarOffset: 0x1A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0xF0, VarStoreId: 0x290E, VarOffset: 0x20, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0xF1, VarStoreId: 0x290D, VarOffset: 0x20, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0xF2, VarStoreId: 0x290E, VarOffset: 0x12, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0xF3, VarStoreId: 0x290D, VarOffset: 0x12, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0xF4, VarStoreId: 0x290E, VarOffset: 0x18, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0xF5, VarStoreId: 0x290D, VarOffset: 0x18, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0xF6, VarStoreId: 0x6, VarOffset: 0x0, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xFFFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0xF7, VarStoreId: 0x10, VarOffset: 0x2, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0xF8, VarStoreId: 0x10, VarOffset: 0x1, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0xF9, VarStoreId: 0x10, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0xFA, VarStoreId: 0x10, VarOffset: 0x3, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0xFB, VarStoreId: 0x10, VarOffset: 0x4, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0xFC, VarStoreId: 0x10, VarOffset: 0x5, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0xFD, VarStoreId: 0x11, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0xFE, VarStoreId: 0x12, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0xFF, VarStoreId: 0x15, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x100, VarStoreId: 0x14, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x101, VarStoreId: 0x13, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x102, VarStoreId: 0x4, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x103, VarStoreId: 0xE, VarOffset: 0x3, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x104, VarStoreId: 0xE, VarOffset: 0x2, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x105, VarStoreId: 0xE, VarOffset: 0x1, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x106, VarStoreId: 0xE, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x107, VarStoreId: 0xE, VarOffset: 0x4, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x108, VarStoreId: 0xA, VarOffset: 0x1F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x109, VarStoreId: 0xA, VarOffset: 0x1E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x10A, VarStoreId: 0xA, VarOffset: 0x1D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x10B, VarStoreId: 0xA, VarOffset: 0x1C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x10C, VarStoreId: 0xA, VarOffset: 0x1B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x10D, VarStoreId: 0xA, VarOffset: 0x1A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x10E, VarStoreId: 0xA, VarOffset: 0x19, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x10F, VarStoreId: 0xA, VarOffset: 0x18, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x110, VarStoreId: 0xA, VarOffset: 0x17, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x111, VarStoreId: 0xA, VarOffset: 0x16, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x112, VarStoreId: 0xA, VarOffset: 0x15, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x113, VarStoreId: 0xA, VarOffset: 0x14, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x114, VarStoreId: 0xA, VarOffset: 0x13, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x115, VarStoreId: 0xA, VarOffset: 0x12, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x116, VarStoreId: 0xA, VarOffset: 0x11, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x117, VarStoreId: 0xA, VarOffset: 0x10, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x118, VarStoreId: 0xA, VarOffset: 0xF, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x119, VarStoreId: 0xA, VarOffset: 0xE, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x11A, VarStoreId: 0xA, VarOffset: 0xD, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x11B, VarStoreId: 0xA, VarOffset: 0xC, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x11C, VarStoreId: 0xA, VarOffset: 0xB, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x11D, VarStoreId: 0xA, VarOffset: 0xA, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x11E, VarStoreId: 0xA, VarOffset: 0x9, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x11F, VarStoreId: 0xA, VarOffset: 0x8, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x120, VarStoreId: 0xA, VarOffset: 0x7, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x121, VarStoreId: 0xA, VarOffset: 0x6, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x122, VarStoreId: 0xA, VarOffset: 0x5, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x123, VarStoreId: 0xA, VarOffset: 0x4, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x124, VarStoreId: 0xA, VarOffset: 0x3, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x125, VarStoreId: 0xA, VarOffset: 0x2, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x126, VarStoreId: 0xA, VarOffset: 0x1, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x127, VarStoreId: 0xA, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x128, VarStoreId: 0x9, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x129, VarStoreId: 0xB, VarOffset: 0x3, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x12A, VarStoreId: 0xB, VarOffset: 0x2, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x12B, VarStoreId: 0xB, VarOffset: 0x1, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x12C, VarStoreId: 0xB, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x12D, VarStoreId: 0x8, VarOffset: 0x1, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x12E, VarStoreId: 0xF101, VarOffset: 0x4D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x12F, VarStoreId: 0xF101, VarOffset: 0x27, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x130, VarStoreId: 0xF101, VarOffset: 0x2B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x131, VarStoreId: 0xF101, VarOffset: 0x2A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x132, VarStoreId: 0xF101, VarOffset: 0x29, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x133, VarStoreId: 0xF101, VarOffset: 0x28, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x134, VarStoreId: 0xF101, VarOffset: 0x1A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x135, VarStoreId: 0xF101, VarOffset: 0x19, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x136, VarStoreId: 0xF101, VarOffset: 0x16, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x137, VarStoreId: 0xF018, VarOffset: 0x0, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xFFFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x138, VarStoreId: 0x8, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x139, VarStoreId: 0xF101, VarOffset: 0x1B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x13A, VarStoreId: 0xF101, VarOffset: 0x1F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x13B, VarStoreId: 0xF101, VarOffset: 0x1D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x13C, VarStoreId: 0xF101, VarOffset: 0xB1, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x13D, VarStoreId: 0xF00A, VarOffset: 0x0, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xFFFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x13E, VarStoreId: 0x1, VarOffset: 0x1, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x13F, VarStoreId: 0x1, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+		End 
+	End 
+End 

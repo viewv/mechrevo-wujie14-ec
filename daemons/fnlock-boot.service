@@ -1,0 +1,15 @@
+# systemd服务: 开机确保Fn锁生效
+# 安装: sudo cp fnlock-boot.service /etc/systemd/system/
+#       sudo cp ec_power_fn.py /usr/local/bin/
+#       sudo systemctl enable --now fnlock-boot
+[Unit]
+Description=Wujie14 Fn Lock (F1-F12 direct media keys)
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /usr/local/bin/ec_power_fn.py fnlock on
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

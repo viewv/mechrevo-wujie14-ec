@@ -1,0 +1,2429 @@
+Program version: 1.6.1, Extraction mode: UEFI, SHA256: 5cc2040282d20b3473a33de09e559bc3bb843b223c7346ca3819c803fc2c4043
+FormSet Guid: B863B959-0EC6-4033-99C1-8FD89F040222, Title: "AMD PBS", Help: "AMD PBS Setup Page"
+	Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Class, Class: 0x1
+	Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: SubClass, SubClass: 0x0
+	DefaultStore DefaultId: 0x0, Name: ""
+	DefaultStore DefaultId: 0x1, Name: ""
+	VarStore Guid: A339D746-F678-49B3-9FC7-54CE0F9DF226, VarStoreId: 0x1, Size: 0x500, Name: "AMD_PBS_SETUP"
+	Form FormId: 0xB, Title: "AMD PBS Option"
+		Ref Prompt: "AMD Firmware Version", Help: "Show all of AMD Firmware Version", QuestionFlags: 0x0, QuestionId: 0x1, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0xC
+		SuppressIf 
+			True 
+			Ref Prompt: "PCI Express Configurations", Help: "PCI Express Configurations", QuestionFlags: 0x0, QuestionId: 0x2, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x15
+		End 
+		Ref Prompt: "Power Saving Configurations", Help: "Power Saving Configurations", QuestionFlags: 0x0, QuestionId: 0x3, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x16
+		Ref Prompt: "Graphics Configurations", Help: "Graphics Configurations", QuestionFlags: 0x0, QuestionId: 0x4, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x17
+		Ref Prompt: "Display Configurations", Help: "Display Configurations", QuestionFlags: 0x0, QuestionId: 0x5, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x18
+		Ref Prompt: "USB/Thunderbolt Configurations", Help: "USB/Thunderbolt Configurations", QuestionFlags: 0x0, QuestionId: 0x6, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x1F
+		Ref Prompt: "Audio Configurations", Help: "Audio Configurations", QuestionFlags: 0x0, QuestionId: 0x7, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x19
+		Ref Prompt: "I2C Configurations", Help: "I2C Configurations", QuestionFlags: 0x0, QuestionId: 0x8, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x1A
+		Ref Prompt: "Thermal Configurations", Help: "Thermal Configurations", QuestionFlags: 0x0, QuestionId: 0x9, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x1B
+		Ref Prompt: "MP2 Configurations", Help: "MP2 Configurations", QuestionFlags: 0x0, QuestionId: 0xA, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x1C
+		Ref Prompt: "EC/PD Configurations", Help: "EC/PD Configurations", QuestionFlags: 0x0, QuestionId: 0xB, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x1D
+		Ref Prompt: "Debug Configurations", Help: "Debug Configurations", QuestionFlags: 0x0, QuestionId: 0xC, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x1E
+		Ref Prompt: "AMD PMF Settings", Help: "Config AMD PMF Settings", QuestionFlags: 0x0, QuestionId: 0xD, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0xD
+		SuppressIf 
+			EqIdVal QuestionId: 0x1D4, Value: 0x31
+				Not 
+				EqIdVal QuestionId: 0x1D4, Value: 0x20
+				Not 
+				And 
+				EqIdVal QuestionId: 0x1D4, Value: 0x45
+				Not 
+				And 
+				EqIdVal QuestionId: 0x1D4, Value: 0x46
+				Not 
+				And 
+			End 
+			OneOf Prompt: "Enable SLT check", Help: "Enable SLT check", QuestionFlags: 0x14, QuestionId: 0xE, VarStoreId: 0x1, VarOffset: 0x7D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default
+				OneOfOption Option: "Force SLT check halt" Value: 2
+			End 
+		End 
+		OneOf Prompt: "Above 4GB MMIO Limit", Help: "Select Above 4GB MMIO Limit to 35~48bits limit.", QuestionFlags: 0x14, QuestionId: 0xF, VarStoreId: 0x1, VarOffset: 0x3D, Flags: 0x10, Size: 8, Min: 0x23, Max: 0x30, Step: 0x0
+			OneOfOption Option: "35bit (32GB)" Value: 35
+			OneOfOption Option: "36bit (64GB)" Value: 36
+			OneOfOption Option: "37bit (128GB)" Value: 37
+			OneOfOption Option: "38bit (256GB)" Value: 38
+			OneOfOption Option: "39bit (512GB)" Value: 39
+			OneOfOption Option: "40bit (1TB)" Value: 40, Default
+			OneOfOption Option: "41bit (2TB)" Value: 41
+			OneOfOption Option: "42bit (4TB)" Value: 42
+			OneOfOption Option: "43bit (8TB)" Value: 43
+			OneOfOption Option: "44bit (16TB)" Value: 44
+			OneOfOption Option: "45bit (32TB)" Value: 45
+			OneOfOption Option: "46bit (64TB)" Value: 46
+			OneOfOption Option: "47bit (128TB)" Value: 47
+			OneOfOption Option: "48bit (256TB)" Value: 48
+		End 
+		OneOf Prompt: "Wireless LAN Recovery", Help: "Wireless LAN Recovery suppport Enable/Disable", QuestionFlags: 0x14, QuestionId: 0x10, VarStoreId: 0x1, VarOffset: 0x51, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Dummy reset" Value: 2
+		End 
+		OneOf Prompt: "Bluetooth PLDR", Help: "Bluetooth PLDR suppport Enable/Disable", QuestionFlags: 0x14, QuestionId: 0x11, VarStoreId: 0x1, VarOffset: 0x8F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Dummy reset" Value: 2
+		End 
+		OneOf Prompt: "Wireless Button", Help: "Enable/Disable Wireless Button", QuestionFlags: 0x14, QuestionId: 0x12, VarStoreId: 0x1, VarOffset: 0x91, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "HID Based" Value: 3
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x1D3, Value: 0x1
+			OneOf Prompt: "5V_S5 voltage.", Help: "5V_S5 voltage setting for ANPEC PSA", QuestionFlags: 0x14, QuestionId: 0x13, VarStoreId: 0x1, VarOffset: 0x50, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+				OneOfOption Option: "5v_ALW(default)" Value: 0, Default
+				OneOfOption Option: "5v_ALW +60mv" Value: 1
+				OneOfOption Option: "5v_ALW +100mv" Value: 2
+			End 
+		End 
+		OneOf Prompt: "AMD KVM Mouse Protocol", Help: "Swtich KVM Mouse Protocol between Absolut/Simple", QuestionFlags: 0x14, QuestionId: 0x14, VarStoreId: 0x1, VarOffset: 0x34, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "Absolute" Value: 0
+			OneOfOption Option: "Simple" Value: 1
+			OneOfOption Option: "Auto" Value: 3, Default
+		End 
+		OneOf Prompt: "Processor Aggregator Device", Help: "Enable/Disable Processor Aggregator Device", QuestionFlags: 0x14, QuestionId: 0x15, VarStoreId: 0x1, VarOffset: 0x7E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x15, Value: 0x0
+			OneOf Prompt: " Core Count Control", Help: "Enable/Disable Core Count Control", QuestionFlags: 0x14, QuestionId: 0x16, VarStoreId: 0x1, VarOffset: 0x7F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0, Default
+				OneOfOption Option: "Enabled" Value: 1
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x15, Value: 0x0
+				EqIdVal QuestionId: 0x16, Value: 0x0
+				Or 
+			End 
+			Numeric Prompt: "  Core Count SW_SCI_GPE_ID", Help: "Select Core Count SW_SCI_GPE_ID range:0 ~ 31, default:25", QuestionFlags: 0x0, QuestionId: 0x17, VarStoreId: 0x1, VarOffset: 0x90, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1F, Step: 0x0
+				Default DefaultId: 0x0 Value: 25
+			End 
+		End 
+		OneOf Prompt: "APIC Software Enable", Help: "Enable/Disable APIC Software Enable", QuestionFlags: 0x14, QuestionId: 0x18, VarStoreId: 0x1, VarOffset: 0x3A3, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		OneOf Prompt: "Dynamic P3T limit", Help: "Set PEAK_PACKAGE_POWER_LIMIT dynamically at runtime by considering system overall power limit", QuestionFlags: 0x14, QuestionId: 0x19, VarStoreId: 0x1, VarOffset: 0x45D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enable for DC-only case (include fake DC)" Value: 1, Default
+			OneOfOption Option: "Enabled" Value: 2
+		End 
+		OneOf Prompt: "Dynamic LID", Help: "Dynamic LID", QuestionFlags: 0x14, QuestionId: 0x1A, VarStoreId: 0x1, VarOffset: 0x481, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		OneOf Prompt: "HDMI 3.0G Tx SLEW", Help: "HDMI 3.0G Tx SLEW", QuestionFlags: 0x14, QuestionId: 0x1B, VarStoreId: 0x1, VarOffset: 0x488, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0x1B, Value: 0x0
+			Numeric Prompt: "HDMI 3.0G Tx Slew Control Value", Help: "HDMI 3.0G Tx Slew Control Value (0 ~ 255)", QuestionFlags: 0x0, QuestionId: 0x1C, VarStoreId: 0x1, VarOffset: 0x489, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 20
+			End 
+		End 
+	End 
+	Form FormId: 0xC, Title: "AMD Firmware Version"
+		Subtitle Prompt: "AMD Firmware Version", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		Text Prompt: "AGESA Version", Help: " ", Text: "0"
+		Text Prompt: "PSP BootLoader Version", Help: " ", Text: "0"
+		Text Prompt: "PSP SecureOS Version", Help: " ", Text: "0"
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		Text Prompt: "ABL Version", Help: " ", Text: "0"
+		Text Prompt: "APCB Version", Help: " ", Text: "0"
+		Text Prompt: "APOB Version", Help: " ", Text: "0"
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		Text Prompt: "Ucode Patch Version", Help: " ", Text: "0"
+		Text Prompt: "SMU FW Version", Help: " ", Text: "0"
+		Text Prompt: "ZSC FW Version", Help: " ", Text: "0"
+		Text Prompt: "MPIO FW Version", Help: " ", Text: "0"
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		Text Prompt: "MP2 FW Version", Help: " ", Text: "0"
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		Text Prompt: "XHCI FW Version", Help: " ", Text: "0"
+		Text Prompt: "VBIOS FW Version", Help: " ", Text: "0"
+		Text Prompt: "GOP Driver Version", Help: " ", Text: "0"
+		SuppressIf 
+			True 
+			Subtitle Prompt: " ", Help: "", Flags: 0x0
+			End 
+			Text Prompt: "EC FW Version", Help: " ", Text: "0"
+			Text Prompt: "PD0 FW Version", Help: " ", Text: "0"
+			Text Prompt: "PD0 Custom", Help: " ", Text: "0"
+			Text Prompt: "PD0 SKU", Help: " ", Text: "0"
+			Text Prompt: "PD0 Mini Type", Help: " ", Text: "0"
+			Text Prompt: "Re-timer", Help: " ", Text: "0"
+			Text Prompt: "PD1 FW Version", Help: " ", Text: "0"
+			Text Prompt: "PD1 Custom", Help: " ", Text: "0"
+			Text Prompt: "PD1 SKU", Help: " ", Text: "0"
+			Text Prompt: "PD1 Mini Type", Help: " ", Text: "0"
+			Subtitle Prompt: " ", Help: "", Flags: 0x0
+			End 
+			Text Prompt: "AIM-T(MPM) Part1 FW Version", Help: " ", Text: "0"
+			Text Prompt: "AIM-T(MPM) Part2 FW Version", Help: " ", Text: "0"
+		End 
+	End 
+	Form FormId: 0x15, Title: "PCI Express Configurations"
+		Subtitle Prompt: "PCI Express Configurations", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "Pcie Dxio Timing ControlEnable", Help: "Pcie Dxio Timing Control Enable
+  Custom: Customize timing
+  Disabled: DXIO default ", QuestionFlags: 0x10, QuestionId: 0x1D, VarStoreId: 0x1, VarOffset: 0x3BA, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0
+			OneOfOption Option: "Auto" Value: 15, Default
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Disabled" Value: 0
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x1D, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "PCIE Link Receiver Detection Polling", Help: "ex; 200000 micro second ", QuestionFlags: 0x10, QuestionId: 0x1E, VarStoreId: 0x1, VarOffset: 0x3BB, Flags: 0x22, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 0
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x1D, Value: 0x1
+				Not 
+			End 
+			Numeric Prompt: "PCIE Link L0 Polling", Help: "ex; 200000 micro second ", QuestionFlags: 0x10, QuestionId: 0x1F, VarStoreId: 0x1, VarOffset: 0x3BF, Flags: 0x22, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 0
+			End 
+		End 
+		OneOf Prompt: "WWAN device support", Help: "WWAN device support", QuestionFlags: 0x14, QuestionId: 0x20, VarStoreId: 0x1, VarOffset: 0x3C3, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Fibocom L860 R+" Value: 1
+		End 
+		OneOf Prompt: "SD Power Enable", Help: "Enable or disable the power of SD", QuestionFlags: 0x14, QuestionId: 0x21, VarStoreId: 0x1, VarOffset: 0x7A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		SuppressIf 
+			True 
+			OneOf Prompt: "DT/SSD1 MUX select", Help: "PCIE/SSD1 multi-selection", QuestionFlags: 0x14, QuestionId: 0x22, VarStoreId: 0x1, VarOffset: 0x73, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "PCIE x4/x2" Value: 0, Default
+				OneOfOption Option: "SSD1 x4/x2" Value: 1
+			End 
+			OneOf Prompt: "SSD1/SATA MUX select", Help: "SSD1/SATA multi-selection", QuestionFlags: 0x14, QuestionId: 0x23, VarStoreId: 0x1, VarOffset: 0x75, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "SSD1 x4/x2" Value: 0, Default
+				OneOfOption Option: "SATA" Value: 1
+			End 
+			OneOf Prompt: "ODD/SSD1 MUX select", Help: "SSD1/SATA multi-selection", QuestionFlags: 0x14, QuestionId: 0x24, VarStoreId: 0x1, VarOffset: 0x74, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "ODD" Value: 0
+				OneOfOption Option: "SSD1 x4/x2" Value: 1, Default
+			End 
+			OneOf Prompt: "Wwan/Pciex1 MUX select", Help: "Wwan/Pciex1 multi-selection", QuestionFlags: 0x14, QuestionId: 0x25, VarStoreId: 0x1, VarOffset: 0x72, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Wwan" Value: 0, Default
+				OneOfOption Option: "Pcie x1" Value: 1
+			End 
+			OneOf Prompt: "Wwan/GBE MUX select", Help: "Wwan(x2)/GBE multi-selection", QuestionFlags: 0x14, QuestionId: 0x26, VarStoreId: 0x1, VarOffset: 0x76, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Wwan" Value: 0
+				OneOfOption Option: "GBE" Value: 1, Default
+			End 
+		End 
+		OneOf Prompt: "WWAN Power Enable", Help: "Mutually exclusive with PCIEx1 option", QuestionFlags: 0x14, QuestionId: 0x7FB, VarStoreId: 0x1, VarOffset: 0xF, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x99, Value: 0x1
+			OneOf Prompt: "PCIEx1 Slot Power Enable", Help: "Mutually exclusive with WWAN option", QuestionFlags: 0x14, QuestionId: 0x7FC, VarStoreId: 0x1, VarOffset: 0x11, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0, Default
+				OneOfOption Option: "Enabled" Value: 1
+			End 
+		End 
+		OneOf Prompt: "M.2 SSD0 Slot Power Enable", Help: "Enable or disable the power of M.2 SSD0 Slot", QuestionFlags: 0x14, QuestionId: 0x27, VarStoreId: 0x1, VarOffset: 0x77, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		OneOf Prompt: "M.2 SSD1 Slot Power Enable", Help: "Mutually exclusive with PCIEx4 option", QuestionFlags: 0x14, QuestionId: 0x7E8, VarStoreId: 0x1, VarOffset: 0x78, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x99, Value: 0x1
+			OneOf Prompt: "DT Slot Power Enable", Help: "Enable or disable the power of DT(PCIEx4/PCIEx2) Slot, Mutually exclusive with SSD1 option", QuestionFlags: 0x14, QuestionId: 0x7DD, VarStoreId: 0x1, VarOffset: 0xC, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0, Default
+				OneOfOption Option: "Enabled" Value: 1
+			End 
+		End 
+		OneOf Prompt: "LAN Power Enable", Help: "Enable or disable LAN Power", QuestionFlags: 0x14, QuestionId: 0x28, VarStoreId: 0x1, VarOffset: 0xE, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+			OneOfOption Option: "Manual" Value: 2
+		End 
+		OneOf Prompt: "WLAN/WIFI Power Enable", Help: "Enable or disable the power of WLAN/WIFI", QuestionFlags: 0x14, QuestionId: 0x29, VarStoreId: 0x1, VarOffset: 0xD, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+			OneOfOption Option: "Manual" Value: 2
+		End 
+		OneOf Prompt: "NVMe RAID mode", Help: "Enable or disable NVMe RAID mode. Please setting the 'PCIe/GFX Lanes Configuration' item according to the RAID configuration", QuestionFlags: 0x10, QuestionId: 0x2A, VarStoreId: 0x1, VarOffset: 0x58, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+	End 
+	Form FormId: 0x16, Title: "Power Saving Configurations"
+		Subtitle Prompt: "Power Saving Configurations", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0x1D2, Value: 0x1
+			OneOf Prompt: "S3/Modern Standby Support", Help: "Switch S3/Modern Standby", QuestionFlags: 0x14, QuestionId: 0x7F4, VarStoreId: 0x1, VarOffset: 0x38, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				Default DefaultId: 0x0 Value: 1
+				OneOfOption Option: "S3 Enable" Value: 0
+				OneOfOption Option: "Modern Standby Enable" Value: 1
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7F4, Value: 0x0
+				EqIdVal QuestionId: 0x1D1, Value: 0x1
+				Or 
+			End 
+			OneOf Prompt: "  Modern Standby Type", Help: "Select S0I2 or S0I3 type for Modern Standby.", QuestionFlags: 0x14, QuestionId: 0x2B, VarStoreId: 0x1, VarOffset: 0x41, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+				OneOfOption Option: "Modern Standby + S0i2" Value: 0
+				OneOfOption Option: "Modern Standby + S0i3" Value: 1, Default
+				OneOfOption Option: "S0i3 with workaround" Value: 3
+				OneOfOption Option: "Modern Standby + S0i2 + S0i3" Value: 2
+			End 
+			SuppressIf 
+				True 
+				OneOf Prompt: "  Reduce Hardware Support", Help: "Enable/Disable Reduce Hardware Support. Please disable PME wakeup, when Reduce Hardware enabled.", QuestionFlags: 0x14, QuestionId: 0x7F3, VarStoreId: 0x1, VarOffset: 0x3C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+					OneOfOption Option: "Disabled" Value: 0, Default
+					OneOfOption Option: "Enabled" Value: 1
+				End 
+			End 
+			OneOf Prompt: "  MS Resource", Help: "Enable: Enable USB current resource for MS; Disable: Disable USB current resource for MS.", QuestionFlags: 0x14, QuestionId: 0x2C, VarStoreId: 0x1, VarOffset: 0x61, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7F4, Value: 0x0
+			OneOf Prompt: "  NVMe D3Cold", Help: "Option for NVMe D3Cold", QuestionFlags: 0x14, QuestionId: 0x2D, VarStoreId: 0x1, VarOffset: 0x9A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0, Default
+				OneOfOption Option: "NVMe D3 for single NVMe" Value: 1
+				OneOfOption Option: "NVMe D3 for multiple NVMe" Value: 2
+			End 
+			SuppressIf 
+				EqIdVal QuestionId: 0x2D, Value: 0x0
+				Numeric Prompt: "    M.2 NVME Tpvperl", Help: "Minimum time from powerrails within specifiedtoleranceto PERST# inactive. Default is 50ms", QuestionFlags: 0x0, QuestionId: 0x2E, VarStoreId: 0x1, VarOffset: 0x87, Flags: 0x11, Size: 16, Min: 0x32, Max: 0x3E8, Step: 0x0
+					Default DefaultId: 0x0 Value: 50
+				End 
+				Numeric Prompt: "    M.2 NVME Trst-cfg", Help: "Minimum period following the end of a Conventional Reset of device before it is permitted to issue Configuration Requests to the device. Default is 0ms", QuestionFlags: 0x0, QuestionId: 0x2F, VarStoreId: 0x1, VarOffset: 0x89, Flags: 0x11, Size: 16, Min: 0x64, Max: 0x3E8, Step: 0x0
+					Default DefaultId: 0x0 Value: 100
+				End 
+			End 
+			OneOf Prompt: "  WLAN D3Cold", Help: "Enabled/Disabled WLAN D3Cold", QuestionFlags: 0x14, QuestionId: 0x30, VarStoreId: 0x1, VarOffset: 0x49C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0, Default
+				OneOfOption Option: "Enabled" Value: 1
+			End 
+		End 
+		OneOf Prompt: "Wake on PME", Help: "Determines the action taken when the system power is off and a PCI Power Management Enable wake up event occurs.", QuestionFlags: 0x4, QuestionId: 0x31, VarStoreId: 0x1, VarOffset: 0x42, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		OneOf Prompt: "Internal PCIe GPP 0 D3", Help: "Enabled Internal PCIe GPP Bridge 0 D3", QuestionFlags: 0x14, QuestionId: 0x32, VarStoreId: 0x1, VarOffset: 0x271, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 4
+		End 
+		OneOf Prompt: "  SOC GPU D3", Help: "Enabled SOC GPU D3", QuestionFlags: 0x14, QuestionId: 0x33, VarStoreId: 0x1, VarOffset: 0x272, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 4, Default
+		End 
+		OneOf Prompt: "  SOC HD Audio D3", Help: "Enabled SOC HD Audio D3", QuestionFlags: 0x14, QuestionId: 0x34, VarStoreId: 0x1, VarOffset: 0x273, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 4, Default
+		End 
+		OneOf Prompt: "  SOC USB3.1 D3", Help: "Enabled SOC USB3.1 0 D3", QuestionFlags: 0x14, QuestionId: 0x35, VarStoreId: 0x1, VarOffset: 0x274, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 4, Default
+		End 
+		OneOf Prompt: "  SOC ACP D3", Help: "Enabled SOC ACP D3", QuestionFlags: 0x14, QuestionId: 0x36, VarStoreId: 0x1, VarOffset: 0x275, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 4, Default
+		End 
+		OneOf Prompt: "  SOC Azalia D3", Help: "Enabled SOC Azalia D3", QuestionFlags: 0x14, QuestionId: 0x37, VarStoreId: 0x1, VarOffset: 0x276, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 4, Default
+		End 
+		OneOf Prompt: "Internal PCIe GPP 2 D3", Help: "Enabled Internal PCIe GPP Bridge 2 D3", QuestionFlags: 0x14, QuestionId: 0x38, VarStoreId: 0x1, VarOffset: 0x277, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 4
+		End 
+		OneOf Prompt: "  SOC USB2.0 D3", Help: "Enabled SOC USB2.0 D3", QuestionFlags: 0x14, QuestionId: 0x39, VarStoreId: 0x1, VarOffset: 0x278, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 4, Default
+		End 
+		OneOf Prompt: "  SOC USB3.1 for USB4 D3", Help: "Enabled SOC USB3.1 for USB4 D3", QuestionFlags: 0x14, QuestionId: 0x3A, VarStoreId: 0x1, VarOffset: 0x279, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 4, Default
+		End 
+		OneOf Prompt: "  SOC USB4 D3", Help: "Enabled SOC USB4 D3", QuestionFlags: 0x14, QuestionId: 0x3B, VarStoreId: 0x1, VarOffset: 0x27A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 4, Default
+		End 
+		OneOf Prompt: "Internal USB4 PCIe Tunneling D3", Help: "Enabled Internal USB4 PCIe Tunneling D3 and add into PEP Device Dependency List", QuestionFlags: 0x14, QuestionId: 0x3C, VarStoreId: 0x1, VarOffset: 0x27B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 4, Default
+		End 
+		OneOf Prompt: "  SOC USB4 PCIe Endpoint D3", Help: "Enabled SOC USB4 PCIe Endpoint D3", QuestionFlags: 0x14, QuestionId: 0x3D, VarStoreId: 0x1, VarOffset: 0x27C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 4, Default
+		End 
+		OneOf Prompt: "Keep Wlan Power In S3/S4 state", Help: "Enable or disable the Wlan Power In S3/S4 state", QuestionFlags: 0x14, QuestionId: 0x3E, VarStoreId: 0x1, VarOffset: 0x86, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enable Wlan Power In S3 And S4" Value: 3
+		End 
+		OneOf Prompt: "Unused GPP Clocks Off", Help: "Turn Unused GPP Clocks Off", QuestionFlags: 0x14, QuestionId: 0x3F, VarStoreId: 0x1, VarOffset: 0x18, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		OneOf Prompt: "Clock PM: CLK_REQ0", Help: "Clock PM: CLK_REQ0", QuestionFlags: 0x14, QuestionId: 0x40, VarStoreId: 0x1, VarOffset: 0x19, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		OneOf Prompt: "Clock PM: CLK_REQ1", Help: "Clock PM: CLK_REQ1", QuestionFlags: 0x14, QuestionId: 0x41, VarStoreId: 0x1, VarOffset: 0x1A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		OneOf Prompt: "Clock PM: CLK_REQ2", Help: "Clock PM: CLK_REQ2", QuestionFlags: 0x14, QuestionId: 0x42, VarStoreId: 0x1, VarOffset: 0x1B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		OneOf Prompt: "Clock PM: CLK_REQ3", Help: "Clock PM: CLK_REQ3", QuestionFlags: 0x14, QuestionId: 0x43, VarStoreId: 0x1, VarOffset: 0x1C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		OneOf Prompt: "Clock PM: CLK_REQ4", Help: "Clock PM: CLK_REQ4", QuestionFlags: 0x14, QuestionId: 0x44, VarStoreId: 0x1, VarOffset: 0x1D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		OneOf Prompt: "Clock PM: CLK_REQ5", Help: "Clock PM: CLK_REQ5", QuestionFlags: 0x14, QuestionId: 0x45, VarStoreId: 0x1, VarOffset: 0x1E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		OneOf Prompt: "Clock PM: CLK_REQ6", Help: "Clock PM: CLK_REQ6", QuestionFlags: 0x14, QuestionId: 0x46, VarStoreId: 0x1, VarOffset: 0x1F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0x7DD, Value: 0x0
+			OneOf Prompt: "PCIe x4 Slot D3 Cold", Help: "Enabled/Disabled PCIe x4 Slot D3 Cold", QuestionFlags: 0x14, QuestionId: 0x47, VarStoreId: 0x1, VarOffset: 0x463, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0, Default
+				OneOfOption Option: "Renesas XHCI" Value: 1
+				OneOfOption Option: "Realtek SD Card Reader" Value: 2
+			End 
+		End 
+	End 
+	Form FormId: 0x1F, Title: "USB/Thunderbolt Configurations"
+		Subtitle Prompt: "USB/Thunderbolt Configurations", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "PD USB4 Control Enable/Disable", Help: "Enable or disable the PD control of USB4", QuestionFlags: 0x14, QuestionId: 0x48, VarStoreId: 0x1, VarOffset: 0x9C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		Numeric Prompt: "USB4 Bus Reserved", Help: "Reserve USB4 Bus Reserved (0 ~ 255)", QuestionFlags: 0x0, QuestionId: 0x49, VarStoreId: 0x1, VarOffset: 0x3AD, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			Default DefaultId: 0x0 Value: 96
+		End 
+		Numeric Prompt: "USB4 IO Reserved (KB)", Help: "USB4 IO Reserved", QuestionFlags: 0x0, QuestionId: 0x4A, VarStoreId: 0x1, VarOffset: 0x479, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			Default DefaultId: 0x0 Value: 16
+		End 
+		Numeric Prompt: "USB4 Non-Prefetch Memory Reserved", Help: "Reserve USB4 Non-Prefetch Memory (0 ~ 65534 MB)", QuestionFlags: 0x0, QuestionId: 0x4B, VarStoreId: 0x1, VarOffset: 0x3AE, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xFFFF, Step: 0x0
+			Default DefaultId: 0x0 Value: 384
+		End 
+		Numeric Prompt: "USB4 non-Prefetch MMIO align (0 ~ 65534 MB)", Help: "USB4 non-Prefetch MMIO align (0 ~ 65534 MB)", QuestionFlags: 0x0, QuestionId: 0x4C, VarStoreId: 0x1, VarOffset: 0x3B4, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xFFFF, Step: 0x0
+			Default DefaultId: 0x0 Value: 64
+		End 
+		OneOf Prompt: "USB4 Prefetch Memory Reserved", Help: "Reserve USB4 Prefetch Memory", QuestionFlags: 0x14, QuestionId: 0x4D, VarStoreId: 0x1, VarOffset: 0x3B0, Flags: 0x12, Size: 32, Min: 0x2, Max: 0x20000, Step: 0x0
+			OneOfOption Option: "2MB" Value: 2
+			OneOfOption Option: "4MB" Value: 4
+			OneOfOption Option: "8MB" Value: 8
+			OneOfOption Option: "16MB" Value: 16
+			OneOfOption Option: "32MB" Value: 32
+			OneOfOption Option: "64MB" Value: 64
+			OneOfOption Option: "128MB" Value: 128
+			OneOfOption Option: "256MB" Value: 256
+			OneOfOption Option: "512MB" Value: 512
+			OneOfOption Option: "1GB" Value: 1024
+			OneOfOption Option: "2GB" Value: 2048
+			OneOfOption Option: "4GB" Value: 4096
+			OneOfOption Option: "8GB" Value: 8192
+			OneOfOption Option: "16GB" Value: 16384
+			OneOfOption Option: "32GB" Value: 32768
+			OneOfOption Option: "64GB" Value: 65536, Default
+			OneOfOption Option: "128GB" Value: 131072
+		End 
+		OneOf Prompt: "USB4 Prefetch MMIO align", Help: "USB4 Prefetch MMIO align", QuestionFlags: 0x14, QuestionId: 0x4E, VarStoreId: 0x1, VarOffset: 0x3B6, Flags: 0x12, Size: 32, Min: 0x2, Max: 0x10000, Step: 0x0
+			OneOfOption Option: "2MB" Value: 2
+			OneOfOption Option: "4MB" Value: 4
+			OneOfOption Option: "8MB" Value: 8
+			OneOfOption Option: "16MB" Value: 16
+			OneOfOption Option: "32MB" Value: 32
+			OneOfOption Option: "64MB" Value: 64
+			OneOfOption Option: "128MB" Value: 128
+			OneOfOption Option: "256MB" Value: 256
+			OneOfOption Option: "512MB" Value: 512
+			OneOfOption Option: "1GB" Value: 1024
+			OneOfOption Option: "2GB" Value: 2048
+			OneOfOption Option: "4GB" Value: 4096
+			OneOfOption Option: "8GB" Value: 8192
+			OneOfOption Option: "16GB" Value: 16384, Default
+			OneOfOption Option: "32GB" Value: 32768
+			OneOfOption Option: "64GB" Value: 65536
+		End 
+		OneOf Prompt: "USB Camera Enable", Help: "Enable or disable the power of USB CAMERA", QuestionFlags: 0x14, QuestionId: 0x4F, VarStoreId: 0x1, VarOffset: 0x52, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		OneOf Prompt: "USB Finger Printer Enable", Help: "Enable or disable the power of USB Finger Printer", QuestionFlags: 0x14, QuestionId: 0x80D, VarStoreId: 0x1, VarOffset: 0x79, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		OneOf Prompt: "UCSI Support", Help: "Enable/Disable UCSI (USB Type-C Connector System Software Interface)", QuestionFlags: 0x14, QuestionId: 0x50, VarStoreId: 0x1, VarOffset: 0x14, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			Default DefaultId: 0x0 Value: 0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x50, Value: 0x0
+			OneOf Prompt: "  UCSI tunnel location", Help: "UCSI tunnel can be put on ECRAM or MMIO space, this option specify which one is selected.", QuestionFlags: 0x14, QuestionId: 0x51, VarStoreId: 0x1, VarOffset: 0x15, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "UCSI tunnel at EC RAM" Value: 0
+				OneOfOption Option: "UCSI tunnel at MMIO 0xFEEC2000" Value: 1, Default
+			End 
+		End 
+		OneOf Prompt: "USBC Port Harware Disable Support", Help: "Enable/Disable USBC Port ", QuestionFlags: 0x14, QuestionId: 0x52, VarStoreId: 0x1, VarOffset: 0x3C4, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		OneOf Prompt: "Reconfig Rebalance Resources by OS", Help: "Reconfigure / Rebalance the PCI resources by OS", QuestionFlags: 0x14, QuestionId: 0x53, VarStoreId: 0x1, VarOffset: 0x3C5, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		OneOf Prompt: "PD Thunderbolt3 Alt Mode", Help: "Control PD Thunderbolt3 Alt Mode Enable/Disable", QuestionFlags: 0x14, QuestionId: 0x54, VarStoreId: 0x1, VarOffset: 0x4D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Enabled" Value: 0, Default
+			OneOfOption Option: "Disabled" Value: 1
+		End 
+		OneOf Prompt: "USB4 ACPI _DEP Support", Help: "Recommend users set it to Disabled before installing OS image or before installing AMD USB4 CM driver. This option will be auto updated to Enabled once AMD USB4 CM driver is installed.", QuestionFlags: 0x14, QuestionId: 0x55, VarStoreId: 0x1, VarOffset: 0x465, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+	End 
+	Form FormId: 0x17, Title: "Graphics Configurations"
+		Subtitle Prompt: "Graphics Configurations", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x99, Value: 0x1
+			OneOf Prompt: "EVAL Slot Power Enable", Help: "Enable or disable the power of EVAL Slot", QuestionFlags: 0x14, QuestionId: 0x56, VarStoreId: 0x1, VarOffset: 0x10, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default
+			End 
+		End 
+		OneOf Prompt: "EVAL CARD T-Diode Routing Select", Help: "Select which APU eSPI port route to EC", QuestionFlags: 0x14, QuestionId: 0x57, VarStoreId: 0x1, VarOffset: 0x55, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "EC" Value: 0, Default
+			OneOfOption Option: "APU SMBUS0" Value: 1
+		End 
+		GrayOutIf 
+			True 
+			OneOf Prompt: "Special Display Features", Help: "Enable/Disable HybridGraphics", QuestionFlags: 0x14, QuestionId: 0x7DE, VarStoreId: 0x1, VarOffset: 0x4, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "HybridGraphics" Value: 4, Default
+			End 
+		End 
+		OneOf Prompt: "D3Cold Support", Help: "Enable/Disable PCIe x8 Slot D3Cold", QuestionFlags: 0x14, QuestionId: 0x7DF, VarStoreId: 0x1, VarOffset: 0x3E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Dummy D3Cold" Value: 2
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7DF, Value: 0x0
+			OneOf Prompt: "  Discrete GPU Hotplug Mode", Help: "Select Discrete GPU Hotplug Mode - HotplugEnhanced or HotplugBasic", QuestionFlags: 0x14, QuestionId: 0x58, VarStoreId: 0x1, VarOffset: 0x2D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+				OneOfOption Option: "Basic Mode" Value: 0
+				OneOfOption Option: "Enhanced Mode" Value: 1, Default
+				OneOfOption Option: "Non-Hotplug Mode" Value: 2
+			End 
+			OneOf Prompt: "  Discrete GPU D3Cold HPD Support", Help: "Enable/Disable Discrete GPU D3Cold HPD function", QuestionFlags: 0x14, QuestionId: 0x59, VarStoreId: 0x1, VarOffset: 0x59, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0, Default
+				OneOfOption Option: "Enabled" Value: 1
+			End 
+			OneOf Prompt: "  PME Turn Off Support", Help: "Enable to support sending PME_Turn_Off message to Discrete GPU when going to D3Cold", QuestionFlags: 0x14, QuestionId: 0x5A, VarStoreId: 0x1, VarOffset: 0x5A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0
+				OneOfOption Option: "Enabled" Value: 1, Default
+			End 
+			OneOf Prompt: "D3Cold Force Gen1", Help: "Force Discrete GPU to Gen1 before entering D3Cold (before sending PME_Turn_Off message)", QuestionFlags: 0x14, QuestionId: 0x5B, VarStoreId: 0x1, VarOffset: 0x66, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0, Default
+				OneOfOption Option: "Enabled" Value: 1
+			End 
+			Numeric Prompt: "  SLOTPWR-PWREN Timing(ms)", Help: "EVAL_SLOT_POWER Up to EVAL_PWREN Up Delay Time 0 ~ 50(ms), default 1ms", QuestionFlags: 0x0, QuestionId: 0x5C, VarStoreId: 0x1, VarOffset: 0x8B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x32, Step: 0x1
+				Default DefaultId: 0x0 Value: 1
+			End 
+			Numeric Prompt: "  PWREN-RST Timing (ms)", Help: "EVAL_PWREN Up to EVAL_RST Up Delay Time 0 ~ 150(ms), default 80ms", QuestionFlags: 0x0, QuestionId: 0x5D, VarStoreId: 0x1, VarOffset: 0x8C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x96, Step: 0x1
+				Default DefaultId: 0x0 Value: 80
+			End 
+			Numeric Prompt: "  PERST-WAKEL23 Timing (ms)", Help: "EVAL_RST to LC_WAKE_FROM_L23 Time 1 ~ 30(ms)", QuestionFlags: 0x0, QuestionId: 0x5E, VarStoreId: 0x1, VarOffset: 0x8D, Flags: 0x10, Size: 8, Min: 0x1, Max: 0x1E, Step: 0x0
+				Default DefaultId: 0x0 Value: 10
+			End 
+			Numeric Prompt: "  DLACT-CFGACC Timing (ms)", Help: "DL_ACTIVE to Config Access Delay Time 1 ~ 100(ms)", QuestionFlags: 0x0, QuestionId: 0x5F, VarStoreId: 0x1, VarOffset: 0x8E, Flags: 0x10, Size: 8, Min: 0x1, Max: 0x64, Step: 0x0
+				Default DefaultId: 0x0 Value: 100
+			End 
+		End 
+		OneOf Prompt: "NVIDIA DGPU Power Enable", Help: "For NVIDIA mobile DGPU card only. Output DGPU_EN# A19 pin and DGPU_SEL# B17 pin to high at every power on state.", QuestionFlags: 0x14, QuestionId: 0x60, VarStoreId: 0x1, VarOffset: 0x62, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		OneOf Prompt: "Discrete GPU _DSM Function A", Help: "PCI-SIG ECN _DSM Function A for Discrete GPU's GPP bridge.", QuestionFlags: 0x14, QuestionId: 0x61, VarStoreId: 0x1, VarOffset: 0x67, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		OneOf Prompt: "Discrete GPU _DSM Function B", Help: "PCI-SIG ECN _DSM Function B for Discrete GPU's GPP bridge.", QuestionFlags: 0x14, QuestionId: 0x62, VarStoreId: 0x1, VarOffset: 0x68, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		OneOf Prompt: "Non-Eval Discrete GPU Support", Help: "Enable to support Non-Eval Discrete GPU that doesn't have specific EVAL_PWRGD(B30), EVAL_PRESENT#(A5)", QuestionFlags: 0x14, QuestionId: 0x63, VarStoreId: 0x1, VarOffset: 0x40, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		OneOf Prompt: "Discrete GPU HPD Circuitry", Help: "Enable/Disable Discrete GPU Display HPD Circuitry", QuestionFlags: 0x14, QuestionId: 0x64, VarStoreId: 0x1, VarOffset: 0x2E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "OR Circuitry" Value: 0, Default
+			OneOfOption Option: "Pulse Circuitry" Value: 1
+		End 
+		OneOf Prompt: "Discrete GPU's USB Port", Help: "Disable Discrete GPU's USB Port or keep default setting", QuestionFlags: 0x14, QuestionId: 0x65, VarStoreId: 0x1, VarOffset: 0x63, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Keep Default Setting" Value: 0, Default
+			OneOfOption Option: "Disabled" Value: 1
+		End 
+		OneOf Prompt: "Discrete GPU's SSID/SVID", Help: "Program Discrete GPU's SSID/SVID depends on HybridGraphics setting", QuestionFlags: 0x14, QuestionId: 0x802, VarStoreId: 0x1, VarOffset: 0x6A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Keep Default Setting" Value: 0
+			OneOfOption Option: "Program by Vendor" Value: 1, Default
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x802, Value: 0x0
+			Numeric Prompt: "  Discrete GPU's VGA SSID/SVID", Help: "Overwrite Discrete GPU's VGA SSID/SVID. Default value 0 means depends on HybridGraphics setting.", QuestionFlags: 0x10, QuestionId: 0x66, VarStoreId: 0x1, VarOffset: 0x3A5, Flags: 0x22, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "  Discrete GPU's AUDIO SSID/SVID", Help: "Overwrite Discrete GPU's AUDIO SSID/SVID. Default value 0 means depends on HybridGraphics setting.", QuestionFlags: 0x10, QuestionId: 0x67, VarStoreId: 0x1, VarOffset: 0x3A9, Flags: 0x22, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 0
+			End 
+		End 
+		OneOf Prompt: "Discrete GPU BOMACO Support", Help: "Enable/Disable Discrete GPU BOMACO Support", QuestionFlags: 0x14, QuestionId: 0x7E4, VarStoreId: 0x1, VarOffset: 0x2F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7E4, Value: 0x0
+			Numeric Prompt: "  MACO-RST Timing   (us)", Help: "MACO-PWR Timing: MACO_EN assert to PERSTb assert 10 ~ 255(us), default 10us", QuestionFlags: 0x0, QuestionId: 0x68, VarStoreId: 0x1, VarOffset: 0x30, Flags: 0x10, Size: 8, Min: 0xA, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 10
+			End 
+			Numeric Prompt: "  RST-MACO Timing   (ms)", Help: "RST-MACO Timing: PERSTb deassert to MACO_EN deassert 0 ~ 10(ms), default 0ms", QuestionFlags: 0x0, QuestionId: 0x69, VarStoreId: 0x1, VarOffset: 0x33, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xA, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0x7E4, Value: 0x1
+			OneOf Prompt: "  BLINK LED", Help: "Enable/Disable BLINK LED to identify S3/S4 state", QuestionFlags: 0x14, QuestionId: 0x6A, VarStoreId: 0x1, VarOffset: 0x35, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0, Default
+				OneOfOption Option: "Enabled" Value: 1
+				OneOfOption Option: "GPIO 11 Output Low" Value: 2
+				OneOfOption Option: "GPIO 11 Output High" Value: 3
+			End 
+		End 
+		OneOf Prompt: "ATIF Notify Command Code", Help: "Indicates that Notify (VGA, n) is used as a general purpose notification, where n is 0x81 or one of 0xD0 ~ 0xD9.", QuestionFlags: 0x14, QuestionId: 0x6B, VarStoreId: 0x1, VarOffset: 0x468, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xD9, Step: 0x0
+			OneOfOption Option: "Notify VGA 0x81" Value: 0, Default
+			OneOfOption Option: "Notify VGA 0xD0" Value: 208
+			OneOfOption Option: "Notify VGA 0xD1" Value: 209
+			OneOfOption Option: "Notify VGA 0xD2" Value: 210
+			OneOfOption Option: "Notify VGA 0xD3" Value: 211
+			OneOfOption Option: "Notify VGA 0xD4" Value: 212
+			OneOfOption Option: "Notify VGA 0xD5" Value: 213
+			OneOfOption Option: "Notify VGA 0xD6" Value: 214
+			OneOfOption Option: "Notify VGA 0xD7" Value: 215
+			OneOfOption Option: "Notify VGA 0xD8" Value: 216
+			OneOfOption Option: "Notify VGA 0xD9" Value: 217
+		End 
+		OneOf Prompt: "ATIF Function 21 Support", Help: "Enable / Disable ATIF Function 21", QuestionFlags: 0x14, QuestionId: 0x6C, VarStoreId: 0x1, VarOffset: 0x469, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x6C, Value: 0x0
+			OneOf Prompt: "  External Graphics Port", Help: "It's for ATIF Function 21 Flags Bit0", QuestionFlags: 0x14, QuestionId: 0x6D, VarStoreId: 0x1, VarOffset: 0x46A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0, Default
+				OneOfOption Option: "Enabled" Value: 1
+			End 
+			OneOf Prompt: "  Hide XConnect GUI", Help: "It's for ATIF Function 21 Flags Bit1", QuestionFlags: 0x14, QuestionId: 0x6E, VarStoreId: 0x1, VarOffset: 0x46B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0, Default
+				OneOfOption Option: "Enabled" Value: 1
+			End 
+			OneOf Prompt: "  Run Time PM and D3", Help: "It's for ATIF Function 21 Flags Bit2", QuestionFlags: 0x14, QuestionId: 0x6F, VarStoreId: 0x1, VarOffset: 0x46C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0, Default
+				OneOfOption Option: "Enabled" Value: 1
+			End 
+			OneOf Prompt: "  Support ATIF ATPX", Help: "It's for ATIF Function 21 Flags Bit3", QuestionFlags: 0x14, QuestionId: 0x70, VarStoreId: 0x1, VarOffset: 0x46D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 0, Default
+				OneOfOption Option: "Enabled" Value: 1
+			End 
+		End 
+		OneOf Prompt: "ATIF Function 22 Support", Help: "0: Disabled ATIF Function 22; 1: Target Graphics Controller = Undefined; 2: Target Graphics Controller = iGPU; 3: Target Graphics Controller = dGPU.", QuestionFlags: 0x14, QuestionId: 0x71, VarStoreId: 0x1, VarOffset: 0x46E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Undefined" Value: 1
+			OneOfOption Option: "Integrated Graphics" Value: 2
+			OneOfOption Option: "Discrete Graphics" Value: 3
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x71, Value: 0x0
+			Numeric Prompt: "  GPU Package Power Limit Value", Help: "ATIF Function 22 GPU Package Power Limit Value", QuestionFlags: 0x10, QuestionId: 0x72, VarStoreId: 0x1, VarOffset: 0x46F, Flags: 0x22, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 0
+			End 
+		End 
+		OneOf Prompt: "ATIF Function 23 Support", Help: "Enable/Disable ATIF Function 23 Support", QuestionFlags: 0x14, QuestionId: 0x73, VarStoreId: 0x1, VarOffset: 0x80, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x73, Value: 0x0
+			Numeric Prompt: "  Vari-Bright Maximum Performance", Help: "Vari-Bright level for Maximum Performance on DC: 0 - 4", QuestionFlags: 0x0, QuestionId: 0x74, VarStoreId: 0x1, VarOffset: 0x81, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "  Vari-Bright Better Performance", Help: "Vari-Bright level for Better Performance on DC: 0 - 4", QuestionFlags: 0x0, QuestionId: 0x75, VarStoreId: 0x1, VarOffset: 0x82, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+				Default DefaultId: 0x0 Value: 1
+			End 
+			Numeric Prompt: "  Vari-Bright Better Battery", Help: "Vari-Bright level for Better Battery on DC: 0 - 4", QuestionFlags: 0x0, QuestionId: 0x76, VarStoreId: 0x1, VarOffset: 0x83, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+				Default DefaultId: 0x0 Value: 3
+			End 
+			Numeric Prompt: "  Vari-Bright Battery Saver", Help: "Vari-Bright level for Battery Saver on DC: 0 - 4", QuestionFlags: 0x0, QuestionId: 0x77, VarStoreId: 0x1, VarOffset: 0x84, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+				Default DefaultId: 0x0 Value: 3
+			End 
+		End 
+		OneOf Prompt: "ATIF Function 24 Support", Help: "Enable/Disable ATIF Function 24 Support", QuestionFlags: 0x14, QuestionId: 0x78, VarStoreId: 0x1, VarOffset: 0x48B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x78, Value: 0x0
+			Numeric Prompt: "  ISP Device number", Help: "ISP Device number: 0 - 100", QuestionFlags: 0x0, QuestionId: 0x79, VarStoreId: 0x1, VarOffset: 0x48C, Flags: 0x11, Size: 16, Min: 0x0, Max: 0x64, Step: 0x1
+				Default DefaultId: 0x0 Value: 1
+			End 
+		End 
+		OneOf Prompt: "Primary Video Adaptor", Help: "Select Internal/External Graphics", QuestionFlags: 0x14, QuestionId: 0x7A, VarStoreId: 0x1, VarOffset: 0x5, Flags: 0x10, Size: 8, Min: 0x1, Max: 0x2, Step: 0x0
+			OneOfOption Option: "Int Graphics (IGD)" Value: 1, Default
+			OneOfOption Option: "Ext Graphics (PEG)" Value: 2
+		End 
+		OneOf Prompt: "Smart Mux Acpi Control", Help: "Enable/Disable Smart Mux Acpi Device with or without _DEP", QuestionFlags: 0x14, QuestionId: 0x7B, VarStoreId: 0x1, VarOffset: 0x473, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled without _DEP" Value: 1
+			OneOfOption Option: "Enabled" Value: 3
+		End 
+		Numeric Prompt: "Display Panel Multiplexer", Help: "Value is accepted from 0 to 7, and it is filled in ATPX Function 1 Bit[20:18].", QuestionFlags: 0x0, QuestionId: 0x7C, VarStoreId: 0x1, VarOffset: 0x474, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x7, Step: 0x0
+			Default DefaultId: 0x0 Value: 0
+		End 
+		OneOf Prompt: "Smart Mux _HID Selection", Help: "Select Smart Mux Acpi Device _HID", QuestionFlags: 0x14, QuestionId: 0x7D, VarStoreId: 0x1, VarOffset: 0x475, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "SMUX1234" Value: 0, Default
+			OneOfOption Option: "MSFT0007" Value: 1
+		End 
+		OneOf Prompt: "Smart Mux MDM Support Level", Help: "Select Smart Mux MDM Support Level - 0: No Support, 1: Development Support, 2: Experimental Support, 3: Full Support.", QuestionFlags: 0x14, QuestionId: 0x7E, VarStoreId: 0x1, VarOffset: 0x476, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "No Support" Value: 0, Default
+			OneOfOption Option: "Development Support" Value: 1
+			OneOfOption Option: "Experimental Support" Value: 2
+			OneOfOption Option: "Full Support" Value: 3
+		End 
+		OneOf Prompt: "Smart Mux First Connected GPU", Help: "Select Smart Mux first connected GPU - 0: Integrated Graphics, 1: Discrete Graphics.", QuestionFlags: 0x14, QuestionId: 0x7F, VarStoreId: 0x1, VarOffset: 0x477, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Integrated Graphics" Value: 0, Default
+			OneOfOption Option: "Discrete Graphics" Value: 1
+		End 
+		OneOf Prompt: "Smart Mux ACPI Method Location", Help: "Select Smart Mux ACPI Method (DMQU & DMCF) Location - 1: Under Mux, 2: Under dGPU.", QuestionFlags: 0x14, QuestionId: 0x80, VarStoreId: 0x1, VarOffset: 0x478, Flags: 0x10, Size: 8, Min: 0x1, Max: 0x2, Step: 0x0
+			OneOfOption Option: "Under Mux" Value: 1
+			OneOfOption Option: "Under dGPU" Value: 2, Default
+		End 
+	End 
+	Form FormId: 0x18, Title: "Display Configurations"
+		Subtitle Prompt: "Display Configurations", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		GrayOutIf 
+			True 
+			OneOf Prompt: "DP0", Help: "DP0 Select only avaliable for Mayan/Lilac", QuestionFlags: 0x4, QuestionId: 0x81, VarStoreId: 0x1, VarOffset: 0x5B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+				OneOfOption Option: "Default" Value: 0, Default
+				OneOfOption Option: "EDP display" Value: 1
+				OneOfOption Option: "DP display" Value: 2
+				OneOfOption Option: "HDMI display" Value: 3
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x803, Value: 0x1
+			OneOf Prompt: "DP1", Help: "DP1 Select only avaliable for Mayan/Lilac", QuestionFlags: 0x4, QuestionId: 0x82, VarStoreId: 0x1, VarOffset: 0x5C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+				OneOfOption Option: "Default" Value: 0, Default
+				OneOfOption Option: "EDP display" Value: 1
+				OneOfOption Option: "DP display" Value: 2
+				OneOfOption Option: "HDMI display" Value: 3
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x803, Value: 0x1
+			OneOf Prompt: "Adjust DP Caps", Help: "DP2 Display Caps:
+  HBR2_DISABLE     = 0x0001,    (BIT0)
+  DP_FIXED_VS_EN   = 0x0002,    (BIT1)
+  HBR3_DISABLE     = 0x0080,    (BIT7)
+  USB_C_TYPE       = 0x0100,    (BIT8)
+  HDMI20_DISABLE   = 0x0200,    (BIT9)
+
+  DP2              = 0x100000,  (BIT20)
+  UHBR10_EN        = 0x200000,  (BIT21)
+  UHBR13_5_EN      = 0x400000,  (BIT22)
+  RECORD_UHBR20_EN = 0x800000,  (BIT23)
+  HDMI_FRL         = 0x2000000, (BIT25)
+  HDMI_FRL_8GbEn   = 0x4000000, (BIT26)
+  HDMI_FRL_10GbEn  = 0x8000000, (BIT27)
+  HDMI_FRL_12GbEn  = 0x10000000,(BIT28)
+
+  Return to Soc Default : 0xFFFFFFFF", QuestionFlags: 0x4, QuestionId: 0x803, VarStoreId: 0x1, VarOffset: 0x466, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Soc Default" Value: 0, Default
+				OneOfOption Option: "Cap override" Value: 1
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x803, Value: 0x0
+			Numeric Prompt: "DP1 Display Caps", Help: "DP1 Display Caps:
+  HBR2_DISABLE     = 0x0001,    (BIT0)
+  DP_FIXED_VS_EN   = 0x0002,    (BIT1)
+  HBR3_DISABLE     = 0x0080,    (BIT7)
+  USB_C_TYPE       = 0x0100,    (BIT8)
+  HDMI20_DISABLE   = 0x0200,    (BIT9)
+
+  DP2              = 0x100000,  (BIT20)
+  UHBR10_EN        = 0x200000,  (BIT21)
+  UHBR13_5_EN      = 0x400000,  (BIT22)
+  RECORD_UHBR20_EN = 0x800000,  (BIT23)
+  HDMI_FRL         = 0x2000000, (BIT25)
+  HDMI_FRL_8GbEn   = 0x4000000, (BIT26)
+  HDMI_FRL_10GbEn  = 0x8000000, (BIT27)
+  HDMI_FRL_12GbEn  = 0x10000000,(BIT28)
+
+  Return to Soc Default : 0xFFFFFFFF", QuestionFlags: 0x14, QuestionId: 0x807, VarStoreId: 0x1, VarOffset: 0x92, Flags: 0x22, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 4294967295
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x804, Value: 0x1
+			OneOf Prompt: "DP2", Help: "DP2 Select only avaliable for Mayan/Lilac", QuestionFlags: 0x4, QuestionId: 0x83, VarStoreId: 0x1, VarOffset: 0x5D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x5, Step: 0x0
+				OneOfOption Option: "Default" Value: 0, Default
+				OneOfOption Option: "EDP display" Value: 1
+				OneOfOption Option: "HDMI display" Value: 3
+				OneOfOption Option: "DP with TypeC display" Value: 4
+				OneOfOption Option: "DP without TypeC display" Value: 5
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x804, Value: 0x1
+			OneOf Prompt: "Adjust DP Caps", Help: "DP2 Display Caps:
+  HBR2_DISABLE     = 0x0001,    (BIT0)
+  DP_FIXED_VS_EN   = 0x0002,    (BIT1)
+  HBR3_DISABLE     = 0x0080,    (BIT7)
+  USB_C_TYPE       = 0x0100,    (BIT8)
+  HDMI20_DISABLE   = 0x0200,    (BIT9)
+
+  DP2              = 0x100000,  (BIT20)
+  UHBR10_EN        = 0x200000,  (BIT21)
+  UHBR13_5_EN      = 0x400000,  (BIT22)
+  RECORD_UHBR20_EN = 0x800000,  (BIT23)
+  HDMI_FRL         = 0x2000000, (BIT25)
+  HDMI_FRL_8GbEn   = 0x4000000, (BIT26)
+  HDMI_FRL_10GbEn  = 0x8000000, (BIT27)
+  HDMI_FRL_12GbEn  = 0x10000000,(BIT28)
+
+  Return to Soc Default : 0xFFFFFFFF", QuestionFlags: 0x4, QuestionId: 0x804, VarStoreId: 0x1, VarOffset: 0x467, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Soc Default" Value: 0, Default
+				OneOfOption Option: "Cap override" Value: 1
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x804, Value: 0x0
+			Numeric Prompt: "DP2 Display Caps", Help: "DP2 Display Caps:
+  HBR2_DISABLE     = 0x0001,    (BIT0)
+  DP_FIXED_VS_EN   = 0x0002,    (BIT1)
+  HBR3_DISABLE     = 0x0080,    (BIT7)
+  USB_C_TYPE       = 0x0100,    (BIT8)
+  HDMI20_DISABLE   = 0x0200,    (BIT9)
+
+  DP2              = 0x100000,  (BIT20)
+  UHBR10_EN        = 0x200000,  (BIT21)
+  UHBR13_5_EN      = 0x400000,  (BIT22)
+  RECORD_UHBR20_EN = 0x800000,  (BIT23)
+  HDMI_FRL         = 0x2000000, (BIT25)
+  HDMI_FRL_8GbEn   = 0x4000000, (BIT26)
+  HDMI_FRL_10GbEn  = 0x8000000, (BIT27)
+  HDMI_FRL_12GbEn  = 0x10000000,(BIT28)
+
+  Return to Soc Default : 0xFFFFFFFF", QuestionFlags: 0x14, QuestionId: 0x808, VarStoreId: 0x1, VarOffset: 0x96, Flags: 0x22, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 4294967295
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x805, Value: 0x1
+			OneOf Prompt: "DP3", Help: "DP3 Select only avaliable for Mayan/Lilac", QuestionFlags: 0x4, QuestionId: 0x84, VarStoreId: 0x1, VarOffset: 0x5E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x5, Step: 0x0
+				OneOfOption Option: "Default" Value: 0, Default
+				OneOfOption Option: "EDP display" Value: 1
+				OneOfOption Option: "HDMI display" Value: 3
+				OneOfOption Option: "DP with TypeC display" Value: 4
+				OneOfOption Option: "DP without TypeC display" Value: 5
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x805, Value: 0x1
+			OneOf Prompt: "Adjust DP Caps", Help: "DP3 Display Caps:
+  HBR2_DISABLE     = 0x0001,    (BIT0)
+  DP_FIXED_VS_EN   = 0x0002,    (BIT1)
+  HBR3_DISABLE     = 0x0080,    (BIT7)
+  USB_C_TYPE       = 0x0100,    (BIT8)
+  HDMI20_DISABLE   = 0x0200,    (BIT9)
+
+  DP2              = 0x100000,  (BIT20)
+  UHBR10_EN        = 0x200000,  (BIT21)
+  UHBR13_5_EN      = 0x400000,  (BIT22)
+  RECORD_UHBR20_EN = 0x800000,  (BIT23)
+  HDMI_FRL         = 0x2000000, (BIT25)
+  HDMI_FRL_8GbEn   = 0x4000000, (BIT26)
+  HDMI_FRL_10GbEn  = 0x8000000, (BIT27)
+  HDMI_FRL_12GbEn  = 0x10000000,(BIT28)
+
+  Return to Soc Default : 0xFFFFFFFF", QuestionFlags: 0x4, QuestionId: 0x805, VarStoreId: 0x1, VarOffset: 0x483, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Soc Default" Value: 0, Default
+				OneOfOption Option: "Cap override" Value: 1
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x805, Value: 0x0
+			Numeric Prompt: "DP3 Display Caps", Help: "DP3 Display Caps:
+  HBR2_DISABLE     = 0x0001,    (BIT0)
+  DP_FIXED_VS_EN   = 0x0002,    (BIT1)
+  HBR3_DISABLE     = 0x0080,    (BIT7)
+  USB_C_TYPE       = 0x0100,    (BIT8)
+  HDMI20_DISABLE   = 0x0200,    (BIT9)
+
+  DP2              = 0x100000,  (BIT20)
+  UHBR10_EN        = 0x200000,  (BIT21)
+  UHBR13_5_EN      = 0x400000,  (BIT22)
+  RECORD_UHBR20_EN = 0x800000,  (BIT23)
+  HDMI_FRL         = 0x2000000, (BIT25)
+  HDMI_FRL_8GbEn   = 0x4000000, (BIT26)
+  HDMI_FRL_10GbEn  = 0x8000000, (BIT27)
+  HDMI_FRL_12GbEn  = 0x10000000,(BIT28)
+
+  Return to Soc Default : 0xFFFFFFFF", QuestionFlags: 0x14, QuestionId: 0x809, VarStoreId: 0x1, VarOffset: 0x484, Flags: 0x22, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 4294967295
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x806, Value: 0x1
+			OneOf Prompt: "DP4", Help: "DP4 Select only avaliable for Mayan/Lilac", QuestionFlags: 0x4, QuestionId: 0x85, VarStoreId: 0x1, VarOffset: 0x5F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x5, Step: 0x0
+				OneOfOption Option: "Default" Value: 0, Default
+				OneOfOption Option: "EDP display" Value: 1
+				OneOfOption Option: "HDMI display" Value: 3
+				OneOfOption Option: "DP with TypeC display" Value: 4
+				OneOfOption Option: "DP without TypeC display" Value: 5
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x806, Value: 0x1
+			OneOf Prompt: "Adjust DP Caps", Help: "DP4 Display Caps:
+  HBR2_DISABLE     = 0x0001,    (BIT0)
+  DP_FIXED_VS_EN   = 0x0002,    (BIT1)
+  HBR3_DISABLE     = 0x0080,    (BIT7)
+  USB_C_TYPE       = 0x0100,    (BIT8)
+  HDMI20_DISABLE   = 0x0200,    (BIT9)
+
+  DP2              = 0x100000,  (BIT20)
+  UHBR10_EN        = 0x200000,  (BIT21)
+  UHBR13_5_EN      = 0x400000,  (BIT22)
+  RECORD_UHBR20_EN = 0x800000,  (BIT23)
+  HDMI_FRL         = 0x2000000, (BIT25)
+  HDMI_FRL_8GbEn   = 0x4000000, (BIT26)
+  HDMI_FRL_10GbEn  = 0x8000000, (BIT27)
+  HDMI_FRL_12GbEn  = 0x10000000,(BIT28)
+
+  Return to Soc Default : 0xFFFFFFFF", QuestionFlags: 0x4, QuestionId: 0x806, VarStoreId: 0x1, VarOffset: 0x47A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "Soc Default" Value: 0, Default
+				OneOfOption Option: "Cap override" Value: 1
+			End 
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x806, Value: 0x0
+			Numeric Prompt: "DP4 Display Caps", Help: "DP4 Display Caps:
+  HBR2_DISABLE     = 0x0001,    (BIT0)
+  DP_FIXED_VS_EN   = 0x0002,    (BIT1)
+  HBR3_DISABLE     = 0x0080,    (BIT7)
+  USB_C_TYPE       = 0x0100,    (BIT8)
+  HDMI20_DISABLE   = 0x0200,    (BIT9)
+
+  DP2              = 0x100000,  (BIT20)
+  UHBR10_EN        = 0x200000,  (BIT21)
+  UHBR13_5_EN      = 0x400000,  (BIT22)
+  RECORD_UHBR20_EN = 0x800000,  (BIT23)
+  HDMI_FRL         = 0x2000000, (BIT25)
+  HDMI_FRL_8GbEn   = 0x4000000, (BIT26)
+  HDMI_FRL_10GbEn  = 0x8000000, (BIT27)
+  HDMI_FRL_12GbEn  = 0x10000000,(BIT28)
+
+  Return to Soc Default : 0xFFFFFFFF", QuestionFlags: 0x14, QuestionId: 0x80A, VarStoreId: 0x1, VarOffset: 0x47B, Flags: 0x22, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 4294967295
+			End 
+		End 
+	End 
+	Form FormId: 0x19, Title: "Audio Configurations"
+		Subtitle Prompt: "Audio Configurations", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "Wake On Voice", Help: "Enable or Disable Wake On Voice", QuestionFlags: 0x14, QuestionId: 0x7F9, VarStoreId: 0x1, VarOffset: 0x56, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		OneOf Prompt: "ACP Power Gating", Help: "Enable or Disable ACP Power Gating", QuestionFlags: 0x10, QuestionId: 0x86, VarStoreId: 0x1, VarOffset: 0x57, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		OneOf Prompt: "ACP CLock Gating", Help: "Enable or Disable ACP CLOCK Gating", QuestionFlags: 0x14, QuestionId: 0x87, VarStoreId: 0x1, VarOffset: 0x60, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		OneOf Prompt: "Verb Table Select", Help: "Select the verb table for the corresponding HDA Codec PnP ID
+", QuestionFlags: 0x14, QuestionId: 0x88, VarStoreId: 0x1, VarOffset: 0x47F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+			OneOfOption Option: "ALC245 Crb Default: SVID/SSID: 1022/D595" Value: 0, Default
+			OneOfOption Option: "ALC245_05112020   : SVID/SSID: 10EC/1208" Value: 1
+			OneOfOption Option: "ALC256_06082020   : SVID/SSID: 10EC/1208" Value: 2
+			OneOfOption Option: "CX11970EVK        : SVID/SSID: D595/1022" Value: 3
+			OneOfOption Option: "Senary            : SVID/SSID: 14F1/0101" Value: 4
+		End 
+		OneOf Prompt: "USB Sideband Audio", Help: "Enable or Disable USB Sideband Audio", QuestionFlags: 0x14, QuestionId: 0x89, VarStoreId: 0x1, VarOffset: 0x48A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+	End 
+	Form FormId: 0x1A, Title: "I2C Configurations"
+		Subtitle Prompt: "I2C Configurations", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "Touch Panel Support", Help: "Enable/Disable exposing of _HID(PNP0C50) in ACPI ASL code to OS", QuestionFlags: 0x14, QuestionId: 0x7F5, VarStoreId: 0x1, VarOffset: 0x6, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x13, Step: 0x0
+			OneOfOption Option: "Under I2C 0 Bus" Value: 0
+			OneOfOption Option: "Under I2C 1 Bus" Value: 1
+			OneOfOption Option: "Under I2C 2 Bus" Value: 2
+			OneOfOption Option: "Under I2C 3 Bus" Value: 3
+			OneOfOption Option: "ELAN TSP Under I2C 0 Bus" Value: 16
+			OneOfOption Option: "ELAN TSP Under I2C 1 Bus" Value: 17
+			OneOfOption Option: "ELAN TSP Under I2C 2 Bus" Value: 18
+			OneOfOption Option: "ELAN TSP Under I2C 3 Bus" Value: 19
+			OneOfOption Option: "Under USB 6 Bus" Value: 4
+			OneOfOption Option: "Disabled" Value: 5, Default
+		End 
+		OneOf Prompt: "Touch Pad Support", Help: "Enable/Disable exposing of _HID(PNP0C50) in ACPI ASL code to OS", QuestionFlags: 0x14, QuestionId: 0x7F6, VarStoreId: 0x1, VarOffset: 0x7, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+			OneOfOption Option: "Under I2C 0 Bus" Value: 0, Default
+			OneOfOption Option: "Under I2C 1 Bus" Value: 1
+			OneOfOption Option: "Under I2C 2 Bus" Value: 2
+			OneOfOption Option: "Under I2C 3 Bus" Value: 3
+			OneOfOption Option: "Disabled" Value: 4
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x7F6, Value: 0x4
+			Numeric Prompt: "    Touchpad Slave address", Help: "Touchpad Slave address", QuestionFlags: 0x0, QuestionId: 0x8A, VarStoreId: 0x1, VarOffset: 0x26E, Flags: 0x20, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 44
+			End 
+			Numeric Prompt: "    Touchpad HID Descriptor address", Help: "Touchpad HID Descriptor address", QuestionFlags: 0x0, QuestionId: 0x8B, VarStoreId: 0x1, VarOffset: 0x26F, Flags: 0x20, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 32
+			End 
+		End 
+		OneOf Prompt: "Nfc Support", Help: "Enable/Disable exposing of _HID(BCM2F25) in ACPI ASL code to OS", QuestionFlags: 0x14, QuestionId: 0x7F7, VarStoreId: 0x1, VarOffset: 0x8, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+			OneOfOption Option: "Under I2C 0 Bus" Value: 0
+			OneOfOption Option: "Under I2C 1 Bus" Value: 1
+			OneOfOption Option: "Under I2C 2 Bus" Value: 2
+			OneOfOption Option: "Under I2C 3 Bus" Value: 3
+			OneOfOption Option: "Disabled" Value: 4, Default
+		End 
+		OneOf Prompt: "MITT/WITT Selection", Help: "MITT/WITT Selection", QuestionFlags: 0x14, QuestionId: 0x8C, VarStoreId: 0x1, VarOffset: 0x17, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+			OneOfOption Option: "MITT Only" Value: 0
+			OneOfOption Option: "WITT Only" Value: 1
+			OneOfOption Option: "Both disable" Value: 2, Default
+		End 
+	End 
+	Form FormId: 0x1B, Title: "Thermal Configurations"
+		Subtitle Prompt: "Thermal Configurations", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "APU PROCHOT# setting", Help: "Charger monitors motherboard power consumption at runtime and assert CHG_PROCHOT# when it is closing to maximum supported threshold. This option sets whether pass-through its status to APU_PROCHOT#", QuestionFlags: 0x14, QuestionId: 0x8D, VarStoreId: 0x1, VarOffset: 0x270, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0
+			OneOfOption Option: "Disable APU_PROCHOT#" Value: 0
+			OneOfOption Option: "Enable APU_PROCHOT# in pure-DC case" Value: 1
+			OneOfOption Option: "Enable APU_PROCHOT# in pure-AC case" Value: 2
+			OneOfOption Option: "Enable APU_PROCHOT# in either pure-DC or pure-AC case (not AC+DC)" Value: 3, Default
+		End 
+		OneOf Prompt: "AMD DPTC interface", Help: "Dynamic Power and Thermal Control Interface Enable/Disable", QuestionFlags: 0x14, QuestionId: 0x8E, VarStoreId: 0x1, VarOffset: 0x2A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		OneOf Prompt: "STT sensor reporting", Help: "Enable temperature report or STT through APML", QuestionFlags: 0x14, QuestionId: 0x8F, VarStoreId: 0x1, VarOffset: 0x2B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Report onboard sensors" Value: 1
+			OneOfOption Option: "Report onboard + eval card sensors" Value: 2
+		End 
+	End 
+	Form FormId: 0x1C, Title: "MP2 Configurations"
+		Subtitle Prompt: "MP2 Configurations", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "Power Sensors Routing Select", Help: "Enable or disable Power Sensors Routing Select", QuestionFlags: 0x14, QuestionId: 0x7FF, VarStoreId: 0x1, VarOffset: 0x53, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "WALLE lite PDT" Value: 0
+			OneOfOption Option: "WALLE lite PM log" Value: 1, Default
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0x7FF, Value: 0x0
+			OneOf Prompt: "MP2 FW Selection", Help: "Select which MP2 FW to load", QuestionFlags: 0x14, QuestionId: 0x800, VarStoreId: 0x1, VarOffset: 0x54, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+				OneOfOption Option: "MP2_SFH" Value: 0, Default
+				OneOfOption Option: "MP2_WalleLite" Value: 1
+			End 
+		End 
+		OneOf Prompt: "Turn off Xtal (S3/S5)", Help: "Disable the Xtal during S3/S5", QuestionFlags: 0x14, QuestionId: 0x90, VarStoreId: 0x1, VarOffset: 0x9B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		OneOf Prompt: "Sensor Fusion User Mode Driver", Help: "Enable/Disable Sensor Fusion User Mode Driver", QuestionFlags: 0x14, QuestionId: 0x80B, VarStoreId: 0x1, VarOffset: 0x3F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0x80B, Value: 0x0
+			OneOf Prompt: "Reserved Memory For MP2", Help: "Reserved Memory For MP2", QuestionFlags: 0x10, QuestionId: 0x91, VarStoreId: 0x1, VarOffset: 0x3A4, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				OneOfOption Option: "Disabled" Value: 255, Default
+				OneOfOption Option: "128 KB" Value: 0
+				OneOfOption Option: "256 KB" Value: 1
+				OneOfOption Option: "512 KB" Value: 2
+				OneOfOption Option: "1 MB" Value: 3
+				OneOfOption Option: "2 MB" Value: 4
+				OneOfOption Option: "4 MB" Value: 5
+				OneOfOption Option: "8 MB" Value: 6
+				OneOfOption Option: "16 MB" Value: 7
+				OneOfOption Option: "32 MB" Value: 8
+				OneOfOption Option: "64 MB" Value: 9
+			End 
+		End 
+		OneOf Prompt: "MP2 Privilege Mode", Help: "MP2 Privilege Mode Setting", QuestionFlags: 0x10, QuestionId: 0x92, VarStoreId: 0x1, VarOffset: 0x43, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		OneOf Prompt: "Accelerator Sensor", Help: "Accelerator Sensor", QuestionFlags: 0x10, QuestionId: 0x93, VarStoreId: 0x1, VarOffset: 0x44, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		OneOf Prompt: "Magnet Sensor", Help: "Magnet Sensor", QuestionFlags: 0x10, QuestionId: 0x94, VarStoreId: 0x1, VarOffset: 0x45, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		OneOf Prompt: "SRA Sensor", Help: "SRA Sensor", QuestionFlags: 0x10, QuestionId: 0x95, VarStoreId: 0x1, VarOffset: 0x46, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		OneOf Prompt: "Light Sensor", Help: "Light Sensor", QuestionFlags: 0x10, QuestionId: 0x96, VarStoreId: 0x1, VarOffset: 0x47, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		OneOf Prompt: "Proximity Sensor", Help: "Proximity Sensor", QuestionFlags: 0x10, QuestionId: 0x97, VarStoreId: 0x1, VarOffset: 0x48, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		OneOf Prompt: "Wake On Human Presence detection WA", Help: "Switch to control if the wake on Human Presence Detection WA is enabled", QuestionFlags: 0x10, QuestionId: 0x98, VarStoreId: 0x1, VarOffset: 0x462, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Enabled" Value: 1
+			OneOfOption Option: "Disabled" Value: 0, Default
+		End 
+	End 
+	Form FormId: 0x1D, Title: "EC/PD Configurations"
+		Subtitle Prompt: "EC/PD Configurations", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "Charger mode BYPASS", Help: "Enable/Disable charger BYPASS mode.", QuestionFlags: 0x14, QuestionId: 0x99, VarStoreId: 0x1, VarOffset: 0x16, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		OneOf Prompt: "KBC Support", Help: "Enable/Disable KBC Support under OS", QuestionFlags: 0x14, QuestionId: 0x9A, VarStoreId: 0x1, VarOffset: 0x20, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		OneOf Prompt: "AcDcSwitch", Help: "Enable/disable AcDcSwitch.", QuestionFlags: 0x14, QuestionId: 0x9B, VarStoreId: 0x1, VarOffset: 0x21, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x9B, Value: 0x0
+			Numeric Prompt: "  AmdDcTimer", Help: "AmdDcTimer Setting.", QuestionFlags: 0x0, QuestionId: 0x9C, VarStoreId: 0x1, VarOffset: 0x22, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "  AmdAcTimer", Help: "AmdAcTimer Setting.", QuestionFlags: 0x0, QuestionId: 0x9D, VarStoreId: 0x1, VarOffset: 0x23, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fake DC Level", Help: "This filed used for specify the fake battery percentage, it will take effect if AC/DC switch enabled w/o real battery", QuestionFlags: 0x0, QuestionId: 0x9E, VarStoreId: 0x1, VarOffset: 0x45E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x64, Step: 0x0
+				Default DefaultId: 0x0 Value: 94
+			End 
+		End 
+		OneOf Prompt: "VDD adjust for BoardDesign", Help: "VDD adjust Enable/Disable.", QuestionFlags: 0x14, QuestionId: 0x9F, VarStoreId: 0x1, VarOffset: 0x85, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		GrayOutIf 
+			EqIdVal QuestionId: 0x9F, Value: 0x0
+			OneOf Prompt: "  MEM VDDQ voltage", Help: "MEM VDDQ Setting.", QuestionFlags: 0x14, QuestionId: 0xA0, VarStoreId: 0x1, VarOffset: 0x24, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+				OneOfOption Option: "voltage (0.75V)" Value: 0, Default
+				OneOfOption Option: "voltage (+25mv)" Value: 1
+				OneOfOption Option: "voltage (+50mv)" Value: 2
+				OneOfOption Option: "voltage (-25mv)" Value: 3
+				OneOfOption Option: "voltage (-50mv)" Value: 4
+			End 
+			OneOf Prompt: "  VDDIO_MEM_S3 voltage", Help: "VDDIO_MEM_S3 Setting.", QuestionFlags: 0x14, QuestionId: 0xA1, VarStoreId: 0x1, VarOffset: 0x25, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x14, Step: 0x0
+				OneOfOption Option: "voltage (1.1V)" Value: 0, Default
+				OneOfOption Option: "voltage (+10mv)" Value: 1
+				OneOfOption Option: "voltage (+20mv)" Value: 2
+				OneOfOption Option: "voltage (+30mv)" Value: 3
+				OneOfOption Option: "voltage (+40mv)" Value: 4
+				OneOfOption Option: "voltage (+50mv)" Value: 5
+				OneOfOption Option: "voltage (+60mv)" Value: 6
+				OneOfOption Option: "voltage (+70mv)" Value: 7
+				OneOfOption Option: "voltage (+80mv)" Value: 8
+				OneOfOption Option: "voltage (+90mv)" Value: 9
+				OneOfOption Option: "voltage (+100mv)" Value: 10
+				OneOfOption Option: "voltage (-10mv)" Value: 11
+				OneOfOption Option: "voltage (-20mv)" Value: 12
+				OneOfOption Option: "voltage (-30mv)" Value: 13
+				OneOfOption Option: "voltage (-40mv)" Value: 14
+				OneOfOption Option: "voltage (-50mv)" Value: 15
+				OneOfOption Option: "voltage (-60mv)" Value: 16
+				OneOfOption Option: "voltage (-70mv)" Value: 17
+				OneOfOption Option: "voltage (-80mv)" Value: 18
+				OneOfOption Option: "voltage (-90mv)" Value: 19
+				OneOfOption Option: "voltage (-100mv)" Value: 20
+			End 
+			OneOf Prompt: "  VDD MISC S5 voltage", Help: "VDD MISC S5 Setting.", QuestionFlags: 0x14, QuestionId: 0xA2, VarStoreId: 0x1, VarOffset: 0x29, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x14, Step: 0x0
+				OneOfOption Option: "voltage (0.75V)" Value: 0, Default
+				OneOfOption Option: "voltage (+10mv)" Value: 1
+				OneOfOption Option: "voltage (+20mv)" Value: 2
+				OneOfOption Option: "voltage (+30mv)" Value: 3
+				OneOfOption Option: "voltage (+40mv)" Value: 4
+				OneOfOption Option: "voltage (+50mv)" Value: 5
+				OneOfOption Option: "voltage (+60mv)" Value: 6
+				OneOfOption Option: "voltage (+70mv)" Value: 7
+				OneOfOption Option: "voltage (+80mv)" Value: 8
+				OneOfOption Option: "voltage (+90mv)" Value: 9
+				OneOfOption Option: "voltage (+100mv)" Value: 10
+				OneOfOption Option: "voltage (-10mv)" Value: 11
+				OneOfOption Option: "voltage (-20mv)" Value: 12
+				OneOfOption Option: "voltage (-30mv)" Value: 13
+				OneOfOption Option: "voltage (-40mv)" Value: 14
+				OneOfOption Option: "voltage (-50mv)" Value: 15
+				OneOfOption Option: "voltage (-60mv)" Value: 16
+				OneOfOption Option: "voltage (-70mv)" Value: 17
+				OneOfOption Option: "voltage (-80mv)" Value: 18
+				OneOfOption Option: "voltage (-90mv)" Value: 19
+				OneOfOption Option: "voltage (-100mv)" Value: 20
+			End 
+			OneOf Prompt: "  VDD_MISC voltage", Help: "VDD_MISC  Setting.", QuestionFlags: 0x14, QuestionId: 0xA3, VarStoreId: 0x1, VarOffset: 0x27, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x14, Step: 0x0
+				OneOfOption Option: "voltage (0.75V)" Value: 0, Default
+				OneOfOption Option: "voltage (+10mv)" Value: 1
+				OneOfOption Option: "voltage (+20mv)" Value: 2
+				OneOfOption Option: "voltage (+30mv)" Value: 3
+				OneOfOption Option: "voltage (+40mv)" Value: 4
+				OneOfOption Option: "voltage (+50mv)" Value: 5
+				OneOfOption Option: "voltage (+60mv)" Value: 6
+				OneOfOption Option: "voltage (+70mv)" Value: 7
+				OneOfOption Option: "voltage (+80mv)" Value: 8
+				OneOfOption Option: "voltage (+90mv)" Value: 9
+				OneOfOption Option: "voltage (+100mv)" Value: 10
+				OneOfOption Option: "voltage (-10mv)" Value: 11
+				OneOfOption Option: "voltage (-20mv)" Value: 12
+				OneOfOption Option: "voltage (-30mv)" Value: 13
+				OneOfOption Option: "voltage (-40mv)" Value: 14
+				OneOfOption Option: "voltage (-50mv)" Value: 15
+				OneOfOption Option: "voltage (-60mv)" Value: 16
+				OneOfOption Option: "voltage (-70mv)" Value: 17
+				OneOfOption Option: "voltage (-80mv)" Value: 18
+				OneOfOption Option: "voltage (-90mv)" Value: 19
+				OneOfOption Option: "voltage (-100mv)" Value: 20
+			End 
+			OneOf Prompt: "  VDD11 voltage", Help: "VDD11 Setting.", QuestionFlags: 0x14, QuestionId: 0xA4, VarStoreId: 0x1, VarOffset: 0x28, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x14, Step: 0x0
+				OneOfOption Option: "voltage (1.1V)" Value: 0, Default
+				OneOfOption Option: "voltage (+10mv)" Value: 1
+				OneOfOption Option: "voltage (+20mv)" Value: 2
+				OneOfOption Option: "voltage (+30mv)" Value: 3
+				OneOfOption Option: "voltage (+40mv)" Value: 4
+				OneOfOption Option: "voltage (+50mv)" Value: 5
+				OneOfOption Option: "voltage (+60mv)" Value: 6
+				OneOfOption Option: "voltage (+70mv)" Value: 7
+				OneOfOption Option: "voltage (+80mv)" Value: 8
+				OneOfOption Option: "voltage (+90mv)" Value: 9
+				OneOfOption Option: "voltage (+100mv)" Value: 10
+				OneOfOption Option: "voltage (-10mv)" Value: 11
+				OneOfOption Option: "voltage (-20mv)" Value: 12
+				OneOfOption Option: "voltage (-30mv)" Value: 13
+				OneOfOption Option: "voltage (-40mv)" Value: 14
+				OneOfOption Option: "voltage (-50mv)" Value: 15
+				OneOfOption Option: "voltage (-60mv)" Value: 16
+				OneOfOption Option: "voltage (-70mv)" Value: 17
+				OneOfOption Option: "voltage (-80mv)" Value: 18
+				OneOfOption Option: "voltage (-90mv)" Value: 19
+				OneOfOption Option: "voltage (-100mv)" Value: 20
+			End 
+		End 
+		OneOf Prompt: "POST LED on enable", Help: "POST LED turn on/off control", QuestionFlags: 0x14, QuestionId: 0xA5, VarStoreId: 0x1, VarOffset: 0x460, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+		OneOf Prompt: "Smart Mux Support", Help: "Smart Mux dGPU/HyGraphic/1.5/2.0 support", QuestionFlags: 0x14, QuestionId: 0x80C, VarStoreId: 0x1, VarOffset: 0x461, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Hybrid Graphics Mode" Value: 1
+			OneOfOption Option: "Discrete Mode" Value: 2
+			OneOfOption Option: "Smart Mux 1.5" Value: 3
+			OneOfOption Option: "Smart Mux 2.0" Value: 4
+		End 
+		OneOf Prompt: "EC UDC Log Support", Help: "Enable/Disable EC UDC Log", QuestionFlags: 0x14, QuestionId: 0xA6, VarStoreId: 0x1, VarOffset: 0x480, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1, Default
+		End 
+	End 
+	Form FormId: 0x1E, Title: "Debug Configurations"
+		Subtitle Prompt: "Debug Configurations", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "Serial Debug Message Under OS", Help: "Enable Serial Debug Message Under OS", QuestionFlags: 0x14, QuestionId: 0xA7, VarStoreId: 0x1, VarOffset: 0xA, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			Default DefaultId: 0x0 Value: 0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		OneOf Prompt: "Debug Print In ASL", Help: "Enable Debug Print In ASL", QuestionFlags: 0x14, QuestionId: 0xA8, VarStoreId: 0x1, VarOffset: 0xB, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			Default DefaultId: 0x0 Value: 0
+			OneOfOption Option: "Disabled" Value: 0
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		OneOf Prompt: "iLA TraceMemoryEn", Help: "Reserved 1M bytes MMIO space on 1M boundary when iLA TraceMemoryEn enabled", QuestionFlags: 0x14, QuestionId: 0xA9, VarStoreId: 0x1, VarOffset: 0x4E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		GrayOutIf 
+			True 
+			Text Prompt: "  iLA TraceMemoryEn reserved MMIO", Help: " ", Text: "0"
+		End 
+		OneOf Prompt: "StallForUnlock", Help: "StallForUnlock Enable/Disable", QuestionFlags: 0x14, QuestionId: 0xAA, VarStoreId: 0x1, VarOffset: 0x39, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		OneOf Prompt: "Debug Data Preserve", Help: "Debug Data Preserve Enable/Disable", QuestionFlags: 0x14, QuestionId: 0xAB, VarStoreId: 0x1, VarOffset: 0x49B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+	End 
+	Form FormId: 0xD, Title: "AMD PMF Settings"
+		Subtitle Prompt: "AMD PMF Settings", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "AMD PMF Device Support", Help: "Enable/Disable AMD PMF Device", QuestionFlags: 0x14, QuestionId: 0xAC, VarStoreId: 0x1, VarOffset: 0x9D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0xAC, Value: 0x0
+			Ref Prompt: "APMF Multiple Binaries Settings", Help: "APMF Multiple Binaries Detail Settings", QuestionFlags: 0x0, QuestionId: 0xAD, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x26
+			Ref Prompt: "APMF Function 1 Settings", Help: "APMF Function 1 Detail Settings", QuestionFlags: 0x0, QuestionId: 0xAE, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x21
+			Ref Prompt: "APMF Function 3 Settings", Help: "APMF Function 3 Detail Settings", QuestionFlags: 0x0, QuestionId: 0xAF, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0xE
+			Ref Prompt: "APMF Function 4 Settings", Help: "APMF Function 4 Detail Settings", QuestionFlags: 0x0, QuestionId: 0xB0, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x22
+			Ref Prompt: "APMF Function 5 Settings", Help: "APMF Function 5 Detail Settings", QuestionFlags: 0x0, QuestionId: 0xB1, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x10
+			Ref Prompt: "APMF Function 6 Settings", Help: "APMF Function 6 Detail Settings", QuestionFlags: 0x0, QuestionId: 0xB2, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x11
+			Ref Prompt: "APMF Function 9 Settings", Help: "APMF Function 9 Detail Settings", QuestionFlags: 0x0, QuestionId: 0xB3, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x12
+			Ref Prompt: "APMF Function 11 Settings", Help: "APMF Function 11 Detail Settings", QuestionFlags: 0x0, QuestionId: 0xB4, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x13
+			Ref Prompt: "APMF Function 12 Settings", Help: "APMF Function 12 Detail Settings", QuestionFlags: 0x0, QuestionId: 0xB5, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x14
+			Ref Prompt: "APMF Function 13 Settings", Help: "APMF Function 13 Detail Settings", QuestionFlags: 0x0, QuestionId: 0xB6, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x20
+			Ref Prompt: "APMF Function 14 Settings", Help: "APMF Function 14 Detail Settings", QuestionFlags: 0x0, QuestionId: 0xB7, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x23
+			Ref Prompt: "APMF Function 16 Settings", Help: "APMF Function 16 Detail Settings", QuestionFlags: 0x0, QuestionId: 0xB8, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x24
+		End 
+	End 
+	Form FormId: 0x26, Title: "APMF Multiple Binaries Settings"
+		Subtitle Prompt: "APMF Multiple Binaries Settings", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "APMF Multiple Binaries Support", Help: "APMF Multiple Binaries Support Enable/Disable", QuestionFlags: 0x14, QuestionId: 0xB9, VarStoreId: 0x1, VarOffset: 0x48F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0xB9, Value: 0x0
+			OneOf Prompt: "PMF Policy Binaries Index", Help: "Choose the PMF Policy Binary to be loaded", QuestionFlags: 0x14, QuestionId: 0xBA, VarStoreId: 0x1, VarOffset: 0x490, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x9, Step: 0x0
+				OneOfOption Option: "PMF Binary 0" Value: 0, Default
+				OneOfOption Option: "PMF Binary 1" Value: 1
+				OneOfOption Option: "PMF Binary 2" Value: 2
+				OneOfOption Option: "PMF Binary 3" Value: 3
+				OneOfOption Option: "PMF Binary 4" Value: 4
+				OneOfOption Option: "PMF Binary 5" Value: 5
+				OneOfOption Option: "PMF Binary 6" Value: 6
+				OneOfOption Option: "PMF Binary 7" Value: 7
+				OneOfOption Option: "PMF Binary 8" Value: 8
+				OneOfOption Option: "PMF Binary 9" Value: 9
+			End 
+			OneOf Prompt: "PMF Binary 0 Size", Help: "Choose the size of PMF Binary", QuestionFlags: 0x14, QuestionId: 0xBB, VarStoreId: 0x1, VarOffset: 0x491, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xA, Step: 0x0
+				OneOfOption Option: "0 KB" Value: 0, Default
+				OneOfOption Option: "30 KB" Value: 1
+				OneOfOption Option: "60 KB" Value: 2
+				OneOfOption Option: "90 KB" Value: 3
+				OneOfOption Option: "120 KB" Value: 4
+				OneOfOption Option: "150 KB" Value: 5
+				OneOfOption Option: "180 KB" Value: 6
+				OneOfOption Option: "210 KB" Value: 7
+				OneOfOption Option: "240 KB" Value: 8
+				OneOfOption Option: "270 KB" Value: 9
+				OneOfOption Option: "300 KB" Value: 10
+			End 
+			OneOf Prompt: "PMF Binary 1 Size", Help: "Choose the size of PMF Binary", QuestionFlags: 0x14, QuestionId: 0xBC, VarStoreId: 0x1, VarOffset: 0x492, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xA, Step: 0x0
+				OneOfOption Option: "0 KB" Value: 0, Default
+				OneOfOption Option: "30 KB" Value: 1
+				OneOfOption Option: "60 KB" Value: 2
+				OneOfOption Option: "90 KB" Value: 3
+				OneOfOption Option: "120 KB" Value: 4
+				OneOfOption Option: "150 KB" Value: 5
+				OneOfOption Option: "180 KB" Value: 6
+				OneOfOption Option: "210 KB" Value: 7
+				OneOfOption Option: "240 KB" Value: 8
+				OneOfOption Option: "270 KB" Value: 9
+				OneOfOption Option: "300 KB" Value: 10
+			End 
+			OneOf Prompt: "PMF Binary 2 Size", Help: "Choose the size of PMF Binary", QuestionFlags: 0x14, QuestionId: 0xBD, VarStoreId: 0x1, VarOffset: 0x493, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xA, Step: 0x0
+				OneOfOption Option: "0 KB" Value: 0, Default
+				OneOfOption Option: "30 KB" Value: 1
+				OneOfOption Option: "60 KB" Value: 2
+				OneOfOption Option: "90 KB" Value: 3
+				OneOfOption Option: "120 KB" Value: 4
+				OneOfOption Option: "150 KB" Value: 5
+				OneOfOption Option: "180 KB" Value: 6
+				OneOfOption Option: "210 KB" Value: 7
+				OneOfOption Option: "240 KB" Value: 8
+				OneOfOption Option: "270 KB" Value: 9
+				OneOfOption Option: "300 KB" Value: 10
+			End 
+			OneOf Prompt: "PMF Binary 3 Size", Help: "Choose the size of PMF Binary", QuestionFlags: 0x14, QuestionId: 0xBE, VarStoreId: 0x1, VarOffset: 0x494, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xA, Step: 0x0
+				OneOfOption Option: "0 KB" Value: 0, Default
+				OneOfOption Option: "30 KB" Value: 1
+				OneOfOption Option: "60 KB" Value: 2
+				OneOfOption Option: "90 KB" Value: 3
+				OneOfOption Option: "120 KB" Value: 4
+				OneOfOption Option: "150 KB" Value: 5
+				OneOfOption Option: "180 KB" Value: 6
+				OneOfOption Option: "210 KB" Value: 7
+				OneOfOption Option: "240 KB" Value: 8
+				OneOfOption Option: "270 KB" Value: 9
+				OneOfOption Option: "300 KB" Value: 10
+			End 
+			OneOf Prompt: "PMF Binary 4 Size", Help: "Choose the size of PMF Binary", QuestionFlags: 0x14, QuestionId: 0xBF, VarStoreId: 0x1, VarOffset: 0x495, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xA, Step: 0x0
+				OneOfOption Option: "0 KB" Value: 0, Default
+				OneOfOption Option: "30 KB" Value: 1
+				OneOfOption Option: "60 KB" Value: 2
+				OneOfOption Option: "90 KB" Value: 3
+				OneOfOption Option: "120 KB" Value: 4
+				OneOfOption Option: "150 KB" Value: 5
+				OneOfOption Option: "180 KB" Value: 6
+				OneOfOption Option: "210 KB" Value: 7
+				OneOfOption Option: "240 KB" Value: 8
+				OneOfOption Option: "270 KB" Value: 9
+				OneOfOption Option: "300 KB" Value: 10
+			End 
+			OneOf Prompt: "PMF Binary 5 Size", Help: "Choose the size of PMF Binary", QuestionFlags: 0x14, QuestionId: 0xC0, VarStoreId: 0x1, VarOffset: 0x496, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xA, Step: 0x0
+				OneOfOption Option: "0 KB" Value: 0, Default
+				OneOfOption Option: "30 KB" Value: 1
+				OneOfOption Option: "60 KB" Value: 2
+				OneOfOption Option: "90 KB" Value: 3
+				OneOfOption Option: "120 KB" Value: 4
+				OneOfOption Option: "150 KB" Value: 5
+				OneOfOption Option: "180 KB" Value: 6
+				OneOfOption Option: "210 KB" Value: 7
+				OneOfOption Option: "240 KB" Value: 8
+				OneOfOption Option: "270 KB" Value: 9
+				OneOfOption Option: "300 KB" Value: 10
+			End 
+			OneOf Prompt: "PMF Binary 6 Size", Help: "Choose the size of PMF Binary", QuestionFlags: 0x14, QuestionId: 0xC1, VarStoreId: 0x1, VarOffset: 0x497, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xA, Step: 0x0
+				OneOfOption Option: "0 KB" Value: 0, Default
+				OneOfOption Option: "30 KB" Value: 1
+				OneOfOption Option: "60 KB" Value: 2
+				OneOfOption Option: "90 KB" Value: 3
+				OneOfOption Option: "120 KB" Value: 4
+				OneOfOption Option: "150 KB" Value: 5
+				OneOfOption Option: "180 KB" Value: 6
+				OneOfOption Option: "210 KB" Value: 7
+				OneOfOption Option: "240 KB" Value: 8
+				OneOfOption Option: "270 KB" Value: 9
+				OneOfOption Option: "300 KB" Value: 10
+			End 
+			OneOf Prompt: "PMF Binary 7 Size", Help: "Choose the size of PMF Binary", QuestionFlags: 0x14, QuestionId: 0xC2, VarStoreId: 0x1, VarOffset: 0x498, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xA, Step: 0x0
+				OneOfOption Option: "0 KB" Value: 0, Default
+				OneOfOption Option: "30 KB" Value: 1
+				OneOfOption Option: "60 KB" Value: 2
+				OneOfOption Option: "90 KB" Value: 3
+				OneOfOption Option: "120 KB" Value: 4
+				OneOfOption Option: "150 KB" Value: 5
+				OneOfOption Option: "180 KB" Value: 6
+				OneOfOption Option: "210 KB" Value: 7
+				OneOfOption Option: "240 KB" Value: 8
+				OneOfOption Option: "270 KB" Value: 9
+				OneOfOption Option: "300 KB" Value: 10
+			End 
+			OneOf Prompt: "PMF Binary 8 Size", Help: "Choose the size of PMF Binary", QuestionFlags: 0x14, QuestionId: 0xC3, VarStoreId: 0x1, VarOffset: 0x499, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xA, Step: 0x0
+				OneOfOption Option: "0 KB" Value: 0, Default
+				OneOfOption Option: "30 KB" Value: 1
+				OneOfOption Option: "60 KB" Value: 2
+				OneOfOption Option: "90 KB" Value: 3
+				OneOfOption Option: "120 KB" Value: 4
+				OneOfOption Option: "150 KB" Value: 5
+				OneOfOption Option: "180 KB" Value: 6
+				OneOfOption Option: "210 KB" Value: 7
+				OneOfOption Option: "240 KB" Value: 8
+				OneOfOption Option: "270 KB" Value: 9
+				OneOfOption Option: "300 KB" Value: 10
+			End 
+			OneOf Prompt: "PMF Binary 9 Size", Help: "Choose the size of PMF Binary", QuestionFlags: 0x14, QuestionId: 0xC4, VarStoreId: 0x1, VarOffset: 0x49A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xA, Step: 0x0
+				OneOfOption Option: "0 KB" Value: 0, Default
+				OneOfOption Option: "30 KB" Value: 1
+				OneOfOption Option: "60 KB" Value: 2
+				OneOfOption Option: "90 KB" Value: 3
+				OneOfOption Option: "120 KB" Value: 4
+				OneOfOption Option: "150 KB" Value: 5
+				OneOfOption Option: "180 KB" Value: 6
+				OneOfOption Option: "210 KB" Value: 7
+				OneOfOption Option: "240 KB" Value: 8
+				OneOfOption Option: "270 KB" Value: 9
+				OneOfOption Option: "300 KB" Value: 10
+			End 
+		End 
+	End 
+	Form FormId: 0x21, Title: "APMF Function 1 Settings"
+		Subtitle Prompt: "APMF Function 1 Settings", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		Numeric Prompt: "Heartbeat Time Interval", Help: "Time interval in seconds for PMF to send heartbeat signal to BIOS.", QuestionFlags: 0x0, QuestionId: 0xC5, VarStoreId: 0x1, VarOffset: 0x458, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+			Default DefaultId: 0x0 Value: 60
+		End 
+	End 
+	Form FormId: 0xE, Title: "APMF Function 3 Settings"
+		Subtitle Prompt: "APMF Function 3 Settings", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "AMPF Function 3", Help: "AMPF Function 3 Enable/Disable", QuestionFlags: 0x14, QuestionId: 0xC6, VarStoreId: 0x1, VarOffset: 0x9E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0xC6, Value: 0x0
+			Numeric Prompt: "AC_Best_Performance_Limit", Help: " ", QuestionFlags: 0x0, QuestionId: 0xC7, VarStoreId: 0x1, VarOffset: 0x9F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_AC_Best_Performance_Limit", Help: " ", QuestionFlags: 0x0, QuestionId: 0xC8, VarStoreId: 0x1, VarOffset: 0xA0, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "AC_Better_Performance_Limit", Help: " ", QuestionFlags: 0x0, QuestionId: 0xC9, VarStoreId: 0x1, VarOffset: 0xA4, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_AC_Better_Performance_Limit", Help: " ", QuestionFlags: 0x0, QuestionId: 0xCA, VarStoreId: 0x1, VarOffset: 0xA5, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "AC_Better_Battery_Limit", Help: " ", QuestionFlags: 0x0, QuestionId: 0xCB, VarStoreId: 0x1, VarOffset: 0xA9, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_AC_Better_Battery_Limit", Help: " ", QuestionFlags: 0x0, QuestionId: 0xCC, VarStoreId: 0x1, VarOffset: 0xAA, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "DC_Best_Performance_Limit", Help: " ", QuestionFlags: 0x0, QuestionId: 0xCD, VarStoreId: 0x1, VarOffset: 0xAE, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_DC_Best_Performance_Limit", Help: " ", QuestionFlags: 0x0, QuestionId: 0xCE, VarStoreId: 0x1, VarOffset: 0xAF, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "DC_Better_Performance_Limit", Help: " ", QuestionFlags: 0x0, QuestionId: 0xCF, VarStoreId: 0x1, VarOffset: 0xB3, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_DC_Better_Performance_Limit", Help: " ", QuestionFlags: 0x0, QuestionId: 0xD0, VarStoreId: 0x1, VarOffset: 0xB4, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "DC_Better_Battery_Limit", Help: " ", QuestionFlags: 0x0, QuestionId: 0xD1, VarStoreId: 0x1, VarOffset: 0xB8, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_DC_Better_Battery_Limit", Help: " ", QuestionFlags: 0x0, QuestionId: 0xD2, VarStoreId: 0x1, VarOffset: 0xB9, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "DC_Battery_Saver_Limit", Help: " ", QuestionFlags: 0x0, QuestionId: 0xD3, VarStoreId: 0x1, VarOffset: 0xBD, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_DC_Battery_Saver_Limit", Help: " ", QuestionFlags: 0x0, QuestionId: 0xD4, VarStoreId: 0x1, VarOffset: 0xBE, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+		End 
+	End 
+	Form FormId: 0x22, Title: "APMF Function 4 Settings"
+		Subtitle Prompt: "APMF Function 4 Settings", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "AMPF Function 4", Help: "AMPF Function 4 Enable/Disable", QuestionFlags: 0x14, QuestionId: 0xD5, VarStoreId: 0x1, VarOffset: 0x45C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+	End 
+	Form FormId: 0x10, Title: "APMF Function 5 Settings"
+		Subtitle Prompt: "APMF Function 5 Settings", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "AMPF Function 5", Help: "AMPF Function 5 Enable/Disable", QuestionFlags: 0x14, QuestionId: 0xD6, VarStoreId: 0x1, VarOffset: 0xF3, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0xD6, Value: 0x0
+			Numeric Prompt: "T_Balanced_to_Perf", Help: " ", QuestionFlags: 0x0, QuestionId: 0xD7, VarStoreId: 0x1, VarOffset: 0xF4, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "T_Perf_to_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0xD8, VarStoreId: 0x1, VarOffset: 0xF8, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "T_Quiet_to_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0xD9, VarStoreId: 0x1, VarOffset: 0xFC, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "T_Balanced_to_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0xDA, VarStoreId: 0x1, VarOffset: 0x100, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Pfloor_Perf", Help: " ", QuestionFlags: 0x0, QuestionId: 0xDB, VarStoreId: 0x1, VarOffset: 0x104, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Pfloor_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0xDC, VarStoreId: 0x1, VarOffset: 0x108, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Pfloor_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0xDD, VarStoreId: 0x1, VarOffset: 0x10C, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "P_delta_Balanced_to_Perf", Help: " ", QuestionFlags: 0x0, QuestionId: 0xDE, VarStoreId: 0x1, VarOffset: 0x110, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "P_delta_Perf_to_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0xDF, VarStoreId: 0x1, VarOffset: 0x114, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "P_delta_Quiet_to_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0xE0, VarStoreId: 0x1, VarOffset: 0x118, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "P_delta_Balanced_to_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0xE1, VarStoreId: 0x1, VarOffset: 0x11C, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_APU_Perf_on_Lap", Help: " ", QuestionFlags: 0x0, QuestionId: 0xE2, VarStoreId: 0x1, VarOffset: 0x120, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_HS2_Perf_on_Lap", Help: " ", QuestionFlags: 0x0, QuestionId: 0xE3, VarStoreId: 0x1, VarOffset: 0x121, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_APU_Perf", Help: " ", QuestionFlags: 0x0, QuestionId: 0xE4, VarStoreId: 0x1, VarOffset: 0x122, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_HS2_Perf", Help: " ", QuestionFlags: 0x0, QuestionId: 0xE5, VarStoreId: 0x1, VarOffset: 0x123, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_APU_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0xE6, VarStoreId: 0x1, VarOffset: 0x124, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_HS2_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0xE7, VarStoreId: 0x1, VarOffset: 0x125, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_APU_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0xE8, VarStoreId: 0x1, VarOffset: 0x126, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_HS2", Help: " ", QuestionFlags: 0x0, QuestionId: 0xE9, VarStoreId: 0x1, VarOffset: 0x127, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STTMinLimit_Perf_on_lap", Help: " ", QuestionFlags: 0x0, QuestionId: 0xEA, VarStoreId: 0x1, VarOffset: 0x128, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STTMinLimit_Perf", Help: " ", QuestionFlags: 0x0, QuestionId: 0xEB, VarStoreId: 0x1, VarOffset: 0x12C, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STTMinLimit_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0xEC, VarStoreId: 0x1, VarOffset: 0x130, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STTMinLimit_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0xED, VarStoreId: 0x1, VarOffset: 0x134, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "FPPT_Perf_on_lap", Help: " ", QuestionFlags: 0x0, QuestionId: 0xEE, VarStoreId: 0x1, VarOffset: 0x138, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_Perf_on_lap", Help: " ", QuestionFlags: 0x0, QuestionId: 0xEF, VarStoreId: 0x1, VarOffset: 0x13C, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPL_Perf_on_lap", Help: " ", QuestionFlags: 0x0, QuestionId: 0xF0, VarStoreId: 0x1, VarOffset: 0x140, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_APUOnly_Perf_on_Lap", Help: " ", QuestionFlags: 0x0, QuestionId: 0xF1, VarStoreId: 0x1, VarOffset: 0x144, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "FPPT_Perf", Help: " ", QuestionFlags: 0x0, QuestionId: 0xF2, VarStoreId: 0x1, VarOffset: 0x148, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_Perf", Help: " ", QuestionFlags: 0x0, QuestionId: 0xF3, VarStoreId: 0x1, VarOffset: 0x14C, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPL_Perf", Help: " ", QuestionFlags: 0x0, QuestionId: 0xF4, VarStoreId: 0x1, VarOffset: 0x150, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_APUOnly_Perf", Help: " ", QuestionFlags: 0x0, QuestionId: 0xF5, VarStoreId: 0x1, VarOffset: 0x154, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "FPPT_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0xF6, VarStoreId: 0x1, VarOffset: 0x158, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0xF7, VarStoreId: 0x1, VarOffset: 0x15C, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPL_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0xF8, VarStoreId: 0x1, VarOffset: 0x160, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_APUOnly_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0xF9, VarStoreId: 0x1, VarOffset: 0x164, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "FPPT_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0xFA, VarStoreId: 0x1, VarOffset: 0x168, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0xFB, VarStoreId: 0x1, VarOffset: 0x16C, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPL_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0xFC, VarStoreId: 0x1, VarOffset: 0x170, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_APUOnly_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0xFD, VarStoreId: 0x1, VarOffset: 0x174, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_Perf", Help: " ", QuestionFlags: 0x0, QuestionId: 0xFE, VarStoreId: 0x1, VarOffset: 0x178, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0xFF, VarStoreId: 0x1, VarOffset: 0x17C, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x100, VarStoreId: 0x1, VarOffset: 0x180, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+		End 
+	End 
+	Form FormId: 0x11, Title: "APMF Function 6 Settings"
+		Subtitle Prompt: "APMF Function 6 Settings", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "AMPF Function 6", Help: "AMPF Function 6 Enable/Disable", QuestionFlags: 0x14, QuestionId: 0x101, VarStoreId: 0x1, VarOffset: 0x184, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x101, Value: 0x0
+			Numeric Prompt: "ConditionTemp_In_Bag_Policy", Help: " ", QuestionFlags: 0x0, QuestionId: 0x102, VarStoreId: 0x1, VarOffset: 0x185, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "ConditionTemp_In_Bag_S4_Policy", Help: " ", QuestionFlags: 0x0, QuestionId: 0x103, VarStoreId: 0x1, VarOffset: 0x186, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "FPPT_In_Bag_Policy", Help: " ", QuestionFlags: 0x0, QuestionId: 0x104, VarStoreId: 0x1, VarOffset: 0x187, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_In_Bag_Policy", Help: " ", QuestionFlags: 0x0, QuestionId: 0x105, VarStoreId: 0x1, VarOffset: 0x18B, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_ApuOnly_In_Bag_Policy", Help: " ", QuestionFlags: 0x0, QuestionId: 0x106, VarStoreId: 0x1, VarOffset: 0x18F, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPL_In_Bag_Policy", Help: " ", QuestionFlags: 0x0, QuestionId: 0x107, VarStoreId: 0x1, VarOffset: 0x193, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STTMinLimit_In_Bag_Policy", Help: " ", QuestionFlags: 0x0, QuestionId: 0x108, VarStoreId: 0x1, VarOffset: 0x197, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_APU_In_Bag_Policy", Help: " ", QuestionFlags: 0x0, QuestionId: 0x109, VarStoreId: 0x1, VarOffset: 0x19B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_HS2_In_Bag_Policy", Help: " ", QuestionFlags: 0x0, QuestionId: 0x10A, VarStoreId: 0x1, VarOffset: 0x19C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_In_Bag_Policy", Help: " ", QuestionFlags: 0x0, QuestionId: 0x10B, VarStoreId: 0x1, VarOffset: 0x19D, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "FPPT_In_Bag_Exit_Policy", Help: " ", QuestionFlags: 0x0, QuestionId: 0x10C, VarStoreId: 0x1, VarOffset: 0x1A1, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_In_Bag_Exit_Policy", Help: " ", QuestionFlags: 0x0, QuestionId: 0x10D, VarStoreId: 0x1, VarOffset: 0x1A5, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_ApuOnly_In_Bag_Exit_Policy", Help: " ", QuestionFlags: 0x0, QuestionId: 0x10E, VarStoreId: 0x1, VarOffset: 0x1A9, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPL_In_Bag_Exit_Policy", Help: " ", QuestionFlags: 0x0, QuestionId: 0x10F, VarStoreId: 0x1, VarOffset: 0x1AD, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STTMinLimit_In_Bag_Exit_Policy", Help: " ", QuestionFlags: 0x0, QuestionId: 0x110, VarStoreId: 0x1, VarOffset: 0x1B1, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_APU_In_Bag_Exit_Policy", Help: " ", QuestionFlags: 0x0, QuestionId: 0x111, VarStoreId: 0x1, VarOffset: 0x1B5, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_HS2_In_Bag_Exit_Policy", Help: " ", QuestionFlags: 0x0, QuestionId: 0x112, VarStoreId: 0x1, VarOffset: 0x1B6, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+		End 
+	End 
+	Form FormId: 0x12, Title: "APMF Function 9 Settings"
+		Subtitle Prompt: "APMF Function 9 Settings", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "AMPF Function 9", Help: "AMPF Function 9 Enable/Disable", QuestionFlags: 0x14, QuestionId: 0x113, VarStoreId: 0x1, VarOffset: 0x1B7, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x113, Value: 0x0
+			Numeric Prompt: "fPPT_BestPerfAC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x114, VarStoreId: 0x1, VarOffset: 0x1B8, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "sPPT_BestPerfAC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x115, VarStoreId: 0x1, VarOffset: 0x1BC, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "sPPT_APUOnlyBestPerfAC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x116, VarStoreId: 0x1, VarOffset: 0x1C0, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPL_BestPerfAC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x117, VarStoreId: 0x1, VarOffset: 0x1C4, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STTMinLimit_BestPerfAC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x118, VarStoreId: 0x1, VarOffset: 0x1C8, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_APU_BestPerfAC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x119, VarStoreId: 0x1, VarOffset: 0x1CC, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_HS2_BestPerfAC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x11A, VarStoreId: 0x1, VarOffset: 0x1CD, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_BestPerfAC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x11B, VarStoreId: 0x1, VarOffset: 0x1CE, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "fPPT_BetterPerfAC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x11C, VarStoreId: 0x1, VarOffset: 0x1D2, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "sPPT_BetterPerfAC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x11D, VarStoreId: 0x1, VarOffset: 0x1D6, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "sPPT_APUOnlyBetterPerfAC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x11E, VarStoreId: 0x1, VarOffset: 0x1DA, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPL_BetterPerfAC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x11F, VarStoreId: 0x1, VarOffset: 0x1DE, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STTMinLimit_BetterPerfAC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x120, VarStoreId: 0x1, VarOffset: 0x1E2, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_APU_BetterPerfAC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x121, VarStoreId: 0x1, VarOffset: 0x1E6, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_HS2_BetterPerfAC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x122, VarStoreId: 0x1, VarOffset: 0x1E7, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_BetterPerfAC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x123, VarStoreId: 0x1, VarOffset: 0x1E8, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "fPPT_BetterBatteryAC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x124, VarStoreId: 0x1, VarOffset: 0x1EC, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "sPPT_BetterBatteryAC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x125, VarStoreId: 0x1, VarOffset: 0x1F0, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "sPPT_APUOnlyBetterBatteryAC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x126, VarStoreId: 0x1, VarOffset: 0x1F4, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPL_BetterBatteryAC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x127, VarStoreId: 0x1, VarOffset: 0x1F8, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STTMinLimit_BetterBatteryAC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x128, VarStoreId: 0x1, VarOffset: 0x1FC, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_APU_BetterBatteryAC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x129, VarStoreId: 0x1, VarOffset: 0x200, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_HS2_BetterBatteryAC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x12A, VarStoreId: 0x1, VarOffset: 0x201, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_BetterBatteryAC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x12B, VarStoreId: 0x1, VarOffset: 0x202, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "fPPT_BestPerfDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x12C, VarStoreId: 0x1, VarOffset: 0x206, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "sPPT_BestPerfDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x12D, VarStoreId: 0x1, VarOffset: 0x20A, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "sPPT_APUOnlyBestPerfDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x12E, VarStoreId: 0x1, VarOffset: 0x20E, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPL_BestPerfDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x12F, VarStoreId: 0x1, VarOffset: 0x212, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STTMinLimit_BestPerfDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x130, VarStoreId: 0x1, VarOffset: 0x216, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_APU_BestPerfDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x131, VarStoreId: 0x1, VarOffset: 0x21A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_HS2_BestPerfDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x132, VarStoreId: 0x1, VarOffset: 0x21B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_BestPerfDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x133, VarStoreId: 0x1, VarOffset: 0x21C, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "fPPT_BetterPerfDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x134, VarStoreId: 0x1, VarOffset: 0x220, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "sPPT_BetterPerfDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x135, VarStoreId: 0x1, VarOffset: 0x224, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "sPPT_APUOnlyBetterPerfDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x136, VarStoreId: 0x1, VarOffset: 0x228, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPL_BetterPerfDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x137, VarStoreId: 0x1, VarOffset: 0x22C, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STTMinLimit_BetterPerfDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x138, VarStoreId: 0x1, VarOffset: 0x230, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_APU_BetterPerfDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x139, VarStoreId: 0x1, VarOffset: 0x234, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_HS2_BetterPerfDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x13A, VarStoreId: 0x1, VarOffset: 0x235, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_BetterPerfDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x13B, VarStoreId: 0x1, VarOffset: 0x236, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "fPPT_BetterBatteryDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x13C, VarStoreId: 0x1, VarOffset: 0x23A, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "sPPT_BetterBatteryDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x13D, VarStoreId: 0x1, VarOffset: 0x23E, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "sPPT_APUOnlyBetterBatteryDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x13E, VarStoreId: 0x1, VarOffset: 0x242, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPL_BetterBatteryDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x13F, VarStoreId: 0x1, VarOffset: 0x246, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STTMinLimit_BetterBatteryDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x140, VarStoreId: 0x1, VarOffset: 0x24A, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_APU_BetterBatteryDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x141, VarStoreId: 0x1, VarOffset: 0x24E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_HS2_BetterBatteryDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x142, VarStoreId: 0x1, VarOffset: 0x24F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_BetterBatteryDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x143, VarStoreId: 0x1, VarOffset: 0x250, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "fPPT_BatterySaverDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x144, VarStoreId: 0x1, VarOffset: 0x254, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "sPPT_BatterySaverDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x145, VarStoreId: 0x1, VarOffset: 0x258, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "sPPT_APUOnlyBetterBatteryDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x146, VarStoreId: 0x1, VarOffset: 0x25C, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPL_BatterySaverDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x147, VarStoreId: 0x1, VarOffset: 0x260, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STTMinLimit_BatterySaverDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x148, VarStoreId: 0x1, VarOffset: 0x264, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_APU_BatterySaverDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x149, VarStoreId: 0x1, VarOffset: 0x268, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_HS2_BatterySaverDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x14A, VarStoreId: 0x1, VarOffset: 0x269, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_BatterySaverDC", Help: " ", QuestionFlags: 0x0, QuestionId: 0x14B, VarStoreId: 0x1, VarOffset: 0x26A, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+		End 
+	End 
+	Form FormId: 0x13, Title: "APMF Function 11 Settings"
+		Subtitle Prompt: "APMF Function 11 Settings", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "AMPF Function 11", Help: "AMPF Function 11 Enable/Disable", QuestionFlags: 0x14, QuestionId: 0x14C, VarStoreId: 0x1, VarOffset: 0x27D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x14C, Value: 0x0
+			Numeric Prompt: "Flags", Help: " ", QuestionFlags: 0x0, QuestionId: 0x14D, VarStoreId: 0x1, VarOffset: 0x27E, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "T_Perf_to_Turbo", Help: " ", QuestionFlags: 0x0, QuestionId: 0x14E, VarStoreId: 0x1, VarOffset: 0x280, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "T_Balanced_to_Perf", Help: " ", QuestionFlags: 0x0, QuestionId: 0x14F, VarStoreId: 0x1, VarOffset: 0x284, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "T_Quiet_to_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x150, VarStoreId: 0x1, VarOffset: 0x288, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "T_Balanced_to_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x151, VarStoreId: 0x1, VarOffset: 0x28C, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "T_Perf_to_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x152, VarStoreId: 0x1, VarOffset: 0x290, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "T_Turbo_to_Perf", Help: " ", QuestionFlags: 0x0, QuestionId: 0x153, VarStoreId: 0x1, VarOffset: 0x294, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Pfloor_Turbo", Help: " ", QuestionFlags: 0x0, QuestionId: 0x154, VarStoreId: 0x1, VarOffset: 0x298, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "FPPT_Turbo", Help: " ", QuestionFlags: 0x0, QuestionId: 0x155, VarStoreId: 0x1, VarOffset: 0x29C, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_Turbo", Help: " ", QuestionFlags: 0x0, QuestionId: 0x156, VarStoreId: 0x1, VarOffset: 0x2A0, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_APUOnly_Turbo", Help: " ", QuestionFlags: 0x0, QuestionId: 0x157, VarStoreId: 0x1, VarOffset: 0x2A4, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPL_Turbo", Help: " ", QuestionFlags: 0x0, QuestionId: 0x158, VarStoreId: 0x1, VarOffset: 0x2A8, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_MinLimit_Turbo", Help: " ", QuestionFlags: 0x0, QuestionId: 0x159, VarStoreId: 0x1, VarOffset: 0x2AC, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempAPU_Turbo", Help: " ", QuestionFlags: 0x0, QuestionId: 0x15A, VarStoreId: 0x1, VarOffset: 0x2B0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempHS2_Turbo", Help: " ", QuestionFlags: 0x0, QuestionId: 0x15B, VarStoreId: 0x1, VarOffset: 0x2B1, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_Turbo", Help: " ", QuestionFlags: 0x0, QuestionId: 0x15C, VarStoreId: 0x1, VarOffset: 0x2B2, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Pfloor_Performance", Help: " ", QuestionFlags: 0x0, QuestionId: 0x15D, VarStoreId: 0x1, VarOffset: 0x2B6, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "FPPT_Performance", Help: " ", QuestionFlags: 0x0, QuestionId: 0x15E, VarStoreId: 0x1, VarOffset: 0x2BA, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_Performance", Help: " ", QuestionFlags: 0x0, QuestionId: 0x15F, VarStoreId: 0x1, VarOffset: 0x2BE, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_APUOnly_Performance", Help: " ", QuestionFlags: 0x0, QuestionId: 0x160, VarStoreId: 0x1, VarOffset: 0x2C2, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPL_Performance", Help: " ", QuestionFlags: 0x0, QuestionId: 0x161, VarStoreId: 0x1, VarOffset: 0x2C6, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_MinLimit_Performance", Help: " ", QuestionFlags: 0x0, QuestionId: 0x162, VarStoreId: 0x1, VarOffset: 0x2CA, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempAPU_Performance", Help: " ", QuestionFlags: 0x0, QuestionId: 0x163, VarStoreId: 0x1, VarOffset: 0x2CE, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempHS2_Performance", Help: " ", QuestionFlags: 0x0, QuestionId: 0x164, VarStoreId: 0x1, VarOffset: 0x2CF, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_Performance", Help: " ", QuestionFlags: 0x0, QuestionId: 0x165, VarStoreId: 0x1, VarOffset: 0x2D0, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Pfloor_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x166, VarStoreId: 0x1, VarOffset: 0x2D4, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "FPPT_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x167, VarStoreId: 0x1, VarOffset: 0x2D8, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x168, VarStoreId: 0x1, VarOffset: 0x2DC, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_APUOnly_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x169, VarStoreId: 0x1, VarOffset: 0x2E0, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPL_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x16A, VarStoreId: 0x1, VarOffset: 0x2E4, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_MinLimit_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x16B, VarStoreId: 0x1, VarOffset: 0x2E8, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempAPU_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x16C, VarStoreId: 0x1, VarOffset: 0x2EC, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempHS2_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x16D, VarStoreId: 0x1, VarOffset: 0x2ED, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x16E, VarStoreId: 0x1, VarOffset: 0x2EE, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Pfloor_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x16F, VarStoreId: 0x1, VarOffset: 0x2F2, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "FPPT_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x170, VarStoreId: 0x1, VarOffset: 0x2F6, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x171, VarStoreId: 0x1, VarOffset: 0x2FA, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_APUOnly_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x172, VarStoreId: 0x1, VarOffset: 0x2FE, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPL_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x173, VarStoreId: 0x1, VarOffset: 0x302, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_MinLimit_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x174, VarStoreId: 0x1, VarOffset: 0x306, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempAPU_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x175, VarStoreId: 0x1, VarOffset: 0x30A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempHS2_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x176, VarStoreId: 0x1, VarOffset: 0x30B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x177, VarStoreId: 0x1, VarOffset: 0x30C, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+		End 
+	End 
+	Form FormId: 0x14, Title: "APMF Function 12 Settings"
+		Subtitle Prompt: "APMF Function 12 Settings", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "AMPF Function 12", Help: "AMPF Function 12 Enable/Disable", QuestionFlags: 0x14, QuestionId: 0x178, VarStoreId: 0x1, VarOffset: 0x310, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x178, Value: 0x0
+			Numeric Prompt: "Flags", Help: " ", QuestionFlags: 0x0, QuestionId: 0x179, VarStoreId: 0x1, VarOffset: 0x311, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "T_Perf_to_Turbo", Help: " ", QuestionFlags: 0x0, QuestionId: 0x17A, VarStoreId: 0x1, VarOffset: 0x313, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "T_Balanced_to_Perf", Help: " ", QuestionFlags: 0x0, QuestionId: 0x17B, VarStoreId: 0x1, VarOffset: 0x317, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "T_Quiet_to_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x17C, VarStoreId: 0x1, VarOffset: 0x31B, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "T_Balanced_to_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x17D, VarStoreId: 0x1, VarOffset: 0x31F, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "T_Perf_to_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x17E, VarStoreId: 0x1, VarOffset: 0x323, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "T_Turbo_to_Perf", Help: " ", QuestionFlags: 0x0, QuestionId: 0x17F, VarStoreId: 0x1, VarOffset: 0x327, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Pfloor_Turbo", Help: " ", QuestionFlags: 0x0, QuestionId: 0x180, VarStoreId: 0x1, VarOffset: 0x32B, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "FPPT_Turbo", Help: " ", QuestionFlags: 0x0, QuestionId: 0x181, VarStoreId: 0x1, VarOffset: 0x32F, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_Turbo", Help: " ", QuestionFlags: 0x0, QuestionId: 0x182, VarStoreId: 0x1, VarOffset: 0x333, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_APUOnly_Turbo", Help: " ", QuestionFlags: 0x0, QuestionId: 0x183, VarStoreId: 0x1, VarOffset: 0x337, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPL_Turbo", Help: " ", QuestionFlags: 0x0, QuestionId: 0x184, VarStoreId: 0x1, VarOffset: 0x33B, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_MinLimit_Turbo", Help: " ", QuestionFlags: 0x0, QuestionId: 0x185, VarStoreId: 0x1, VarOffset: 0x33F, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempAPU_Turbo", Help: " ", QuestionFlags: 0x0, QuestionId: 0x186, VarStoreId: 0x1, VarOffset: 0x343, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempHS2_Turbo", Help: " ", QuestionFlags: 0x0, QuestionId: 0x187, VarStoreId: 0x1, VarOffset: 0x344, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_Turbo", Help: " ", QuestionFlags: 0x0, QuestionId: 0x188, VarStoreId: 0x1, VarOffset: 0x345, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Pfloor_Performance", Help: " ", QuestionFlags: 0x0, QuestionId: 0x189, VarStoreId: 0x1, VarOffset: 0x349, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "FPPT_Performance", Help: " ", QuestionFlags: 0x0, QuestionId: 0x18A, VarStoreId: 0x1, VarOffset: 0x34D, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_Performance", Help: " ", QuestionFlags: 0x0, QuestionId: 0x18B, VarStoreId: 0x1, VarOffset: 0x351, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_APUOnly_Performance", Help: " ", QuestionFlags: 0x0, QuestionId: 0x18C, VarStoreId: 0x1, VarOffset: 0x355, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPL_Performance", Help: " ", QuestionFlags: 0x0, QuestionId: 0x18D, VarStoreId: 0x1, VarOffset: 0x359, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_MinLimit_Performance", Help: " ", QuestionFlags: 0x0, QuestionId: 0x18E, VarStoreId: 0x1, VarOffset: 0x35D, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempAPU_Performance", Help: " ", QuestionFlags: 0x0, QuestionId: 0x18F, VarStoreId: 0x1, VarOffset: 0x361, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempHS2_Performance", Help: " ", QuestionFlags: 0x0, QuestionId: 0x190, VarStoreId: 0x1, VarOffset: 0x362, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_Performance", Help: " ", QuestionFlags: 0x0, QuestionId: 0x191, VarStoreId: 0x1, VarOffset: 0x363, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Pfloor_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x192, VarStoreId: 0x1, VarOffset: 0x367, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "FPPT_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x193, VarStoreId: 0x1, VarOffset: 0x36B, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x194, VarStoreId: 0x1, VarOffset: 0x36F, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_APUOnly_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x195, VarStoreId: 0x1, VarOffset: 0x373, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPL_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x196, VarStoreId: 0x1, VarOffset: 0x377, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_MinLimit_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x197, VarStoreId: 0x1, VarOffset: 0x37B, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempAPU_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x198, VarStoreId: 0x1, VarOffset: 0x37F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempHS2_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x199, VarStoreId: 0x1, VarOffset: 0x380, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x19A, VarStoreId: 0x1, VarOffset: 0x381, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Pfloor_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x19B, VarStoreId: 0x1, VarOffset: 0x385, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "FPPT_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x19C, VarStoreId: 0x1, VarOffset: 0x389, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x19D, VarStoreId: 0x1, VarOffset: 0x38D, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_APUOnly_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x19E, VarStoreId: 0x1, VarOffset: 0x391, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPL_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x19F, VarStoreId: 0x1, VarOffset: 0x395, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_MinLimit_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1A0, VarStoreId: 0x1, VarOffset: 0x399, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempAPU_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1A1, VarStoreId: 0x1, VarOffset: 0x39D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempHS2_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1A2, VarStoreId: 0x1, VarOffset: 0x39E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1A3, VarStoreId: 0x1, VarOffset: 0x39F, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+		End 
+	End 
+	Form FormId: 0x20, Title: "APMF Function 13 Settings"
+		Subtitle Prompt: "APMF Function 13 Settings", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "AMPF Function 13", Help: "AMPF Function 13 Enable/Disable", QuestionFlags: 0x14, QuestionId: 0x1A4, VarStoreId: 0x1, VarOffset: 0x3C7, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		SuppressIf 
+			EqIdVal QuestionId: 0x1A4, Value: 0x0
+			Numeric Prompt: "T_Balanced_to_Perf", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1A5, VarStoreId: 0x1, VarOffset: 0x3C8, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "T_Perf_to_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1A6, VarStoreId: 0x1, VarOffset: 0x3CC, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "T_Quiet_to_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1A7, VarStoreId: 0x1, VarOffset: 0x3D0, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "T_Balanced_to_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1A8, VarStoreId: 0x1, VarOffset: 0x3D4, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Pfloor_Perf", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1A9, VarStoreId: 0x1, VarOffset: 0x3D8, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Pfloor_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1AA, VarStoreId: 0x1, VarOffset: 0x3DC, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Pfloor_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1AB, VarStoreId: 0x1, VarOffset: 0x3E0, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "P_delta_Balanced_to_Perf", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1AC, VarStoreId: 0x1, VarOffset: 0x3E4, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "P_delta_Perf_to_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1AD, VarStoreId: 0x1, VarOffset: 0x3E8, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "P_delta_Quiet_to_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1AE, VarStoreId: 0x1, VarOffset: 0x3EC, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "P_delta_Balanced_to_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1AF, VarStoreId: 0x1, VarOffset: 0x3F0, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_APU_Perf_on_Lap", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1B0, VarStoreId: 0x1, VarOffset: 0x3F4, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_HS2_Perf_on_Lap", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1B1, VarStoreId: 0x1, VarOffset: 0x3F5, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_APU_Perf", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1B2, VarStoreId: 0x1, VarOffset: 0x3F6, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_HS2_Perf", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1B3, VarStoreId: 0x1, VarOffset: 0x3F7, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_APU_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1B4, VarStoreId: 0x1, VarOffset: 0x3F8, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_HS2_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1B5, VarStoreId: 0x1, VarOffset: 0x3F9, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_APU_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1B6, VarStoreId: 0x1, VarOffset: 0x3FA, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STT_SkinTempLimit_HS2", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1B7, VarStoreId: 0x1, VarOffset: 0x3FB, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STTMinLimit_Perf_on_lap", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1B8, VarStoreId: 0x1, VarOffset: 0x3FC, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STTMinLimit_Perf", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1B9, VarStoreId: 0x1, VarOffset: 0x400, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STTMinLimit_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1BA, VarStoreId: 0x1, VarOffset: 0x404, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "STTMinLimit_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1BB, VarStoreId: 0x1, VarOffset: 0x408, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "FPPT_Perf_on_lap", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1BC, VarStoreId: 0x1, VarOffset: 0x40C, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_Perf_on_lap", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1BD, VarStoreId: 0x1, VarOffset: 0x410, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPL_Perf_on_lap", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1BE, VarStoreId: 0x1, VarOffset: 0x414, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_APUOnly_Perf_on_Lap", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1BF, VarStoreId: 0x1, VarOffset: 0x418, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "FPPT_Perf", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1C0, VarStoreId: 0x1, VarOffset: 0x41C, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_Perf", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1C1, VarStoreId: 0x1, VarOffset: 0x420, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPL_Perf", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1C2, VarStoreId: 0x1, VarOffset: 0x424, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_APUOnly_Perf", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1C3, VarStoreId: 0x1, VarOffset: 0x428, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "FPPT_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1C4, VarStoreId: 0x1, VarOffset: 0x42C, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1C5, VarStoreId: 0x1, VarOffset: 0x430, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPL_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1C6, VarStoreId: 0x1, VarOffset: 0x434, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_APUOnly_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1C7, VarStoreId: 0x1, VarOffset: 0x438, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "FPPT_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1C8, VarStoreId: 0x1, VarOffset: 0x43C, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1C9, VarStoreId: 0x1, VarOffset: 0x440, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPL_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1CA, VarStoreId: 0x1, VarOffset: 0x444, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "SPPT_APUOnly_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1CB, VarStoreId: 0x1, VarOffset: 0x448, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_Perf", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1CC, VarStoreId: 0x1, VarOffset: 0x44C, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_Balanced", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1CD, VarStoreId: 0x1, VarOffset: 0x450, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+			Numeric Prompt: "Fan_ID_Quiet", Help: " ", QuestionFlags: 0x0, QuestionId: 0x1CE, VarStoreId: 0x1, VarOffset: 0x454, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x1
+				Default DefaultId: 0x0 Value: 0
+			End 
+		End 
+	End 
+	Form FormId: 0x23, Title: "APMF Function 14 Settings"
+		Subtitle Prompt: "APMF Function 14 Settings", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "AMPF Function 14", Help: "AMPF Function 14 Enable/Disable", QuestionFlags: 0x14, QuestionId: 0x1CF, VarStoreId: 0x1, VarOffset: 0x45F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+	End 
+	Form FormId: 0x24, Title: "APMF Function 16 Settings"
+		Subtitle Prompt: "APMF Function 16 Settings", Help: "", Flags: 0x0
+		End 
+		Subtitle Prompt: " ", Help: "", Flags: 0x0
+		End 
+		OneOf Prompt: "AMPF Function 16", Help: "AMPF Function 16 Enable/Disable", QuestionFlags: 0x14, QuestionId: 0x1D0, VarStoreId: 0x1, VarOffset: 0x482, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0
+			OneOfOption Option: "Disabled" Value: 0, Default
+			OneOfOption Option: "Enabled" Value: 1
+		End 
+		DisableIf 
+			True 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x1D1, VarStoreId: 0x1, VarOffset: 0x4F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x1D2, VarStoreId: 0x1, VarOffset: 0x7C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x1D3, VarStoreId: 0x1, VarOffset: 0x0, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xFFFF, Step: 0x0
+			End 
+			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x1D4, VarStoreId: 0x1, VarOffset: 0x7B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0
+			End 
+		End 
+	End 
+End 

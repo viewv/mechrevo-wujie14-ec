@@ -1,0 +1,28 @@
+# wujie_fand — 无界14+ 现代风扇曲线守护进程
+# 安装:
+#   sudo cp wujie_fand.py /usr/local/bin/
+#   sudo cp wujie_fand.json /etc/   (可选, 不放则用内置默认曲线)
+#   sudo cp wujie-fand.service /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now wujie-fand
+#
+# 查看日志: journalctl -u wujie-fand -f
+# 恢复EC自动: sudo systemctl stop wujie-fand (自动恢复)
+
+[Unit]
+Description=Wujie14+ modern fan curve daemon (EC manual PWM)
+After=multi-user.target
+# 确保温度驱动就绪
+After=systemd-modules-load.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/local/bin/wujie_fand.py run
+Restart=on-failure
+RestartSec=3
+# 停止时发SIGTERM, 脚本会恢复EC自动控制
+KillSignal=SIGTERM
+TimeoutStopSec=10
+
+[Install]
+WantedBy=multi-user.target

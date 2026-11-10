@@ -1,0 +1,23 @@
+# wujie-kblight — 键盘背光常亮守护
+# 安装:
+#   sudo cp wujie_kblight.py /usr/local/bin/
+#   sudo cp wujie-kblight.service /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now wujie-kblight
+#
+# 停止后自动恢复原厂"30秒无操作熄灭"行为
+
+[Unit]
+Description=Wujie14+ keyboard backlight always-on daemon
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/local/bin/wujie_kblight.py run
+Restart=on-failure
+RestartSec=3
+KillSignal=SIGTERM
+TimeoutStopSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,35 @@
+MIT License
+
+Copyright (c) 2026 viewv
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+----
+
+附加声明 / ADDITIONAL DISCLAIMER:
+
+本仓库中的工具直接读写笔记本电脑嵌入式控制器(EC)寄存器, 属于非官方逆向产物。
+使用本仓库中的任何内容对您的硬件造成的一切后果(包括但不限于过热、硬件损坏、
+数据丢失、无法开机等), 作者不承担任何责任。风险自负, 仅供学习研究。
+
+The tools in this repository directly read/write laptop Embedded Controller
+registers and are the product of unofficial reverse engineering. The author
+takes NO responsibility for any consequences (overheating, hardware damage,
+data loss, failure to boot, etc.) caused by using anything from this
+repository. USE AT YOUR OWN RISK, for educational purposes only.
