@@ -5,8 +5,15 @@
 > 分析环境: Linux + [opencode](https://opencode.ai) + GLM-5.3
 > 基于 https://tieba.baidu.com/p/9138748926 发布的原版 2.31bios，需要提前下载刷入
 
-对机械革命无界14+的32MB SPI固件(BIOS + ITE EC)做了逆向,
+最近翻出来我这台老笔点，发现还是可以用的，但是BIOS和EC实在是有点问题，使用AI 对机械革命无界14+的32MB SPI固件(BIOS + ITE EC)做了逆向，
 把固件里**预留但从未对用户开放的功能**全部挖了出来, 并做成可直接使用的Linux工具。
+
+值得注意的是，这台电脑默认的固态休眠支持很差，在Linux甚至现在的Windows上因为休眠出问题会造成严重的死机问题，建议加入内核参数：
+
+```
+nvme_core.default_ps_max_latency_us=15000
+iomem=relaxed                ← 允许用户态访问非RAM物理地址，如果要使用本工具
+```
 
 ## 功能一览
 
